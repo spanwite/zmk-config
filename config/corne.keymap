@@ -1,0 +1,3 @@
+#include "../config-parts/base.dtsi"
+
+#include "../config-parts/layer-1.dtsi"
