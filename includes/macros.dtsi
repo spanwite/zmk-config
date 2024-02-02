@@ -1,0 +1,16 @@
+ZMK_BEHAVIOR(m_type_email, macro,
+    wait-ms = <30>;
+    tap-ms = <40>;
+    bindings = <
+        &kp N &kp N3 &kp R &kp Q &kp N1 &kp N3 &kp N3 &kp N7
+        &kp AT_SIGN
+        &kp Y &kp A
+        &kp DOT
+        &kp R &kp U
+    >;
+)
+
+ZMK_BEHAVIOR(td_at_email, tap_dance,
+    tapping-term-ms = <300>;
+    bindings = <&kp AT_SIGN>, <&m_type_email>;
+)

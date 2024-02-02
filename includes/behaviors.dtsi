@@ -1,0 +1,82 @@
+/*
+ * Shifted dot types colon
+ *
+ * Tap: .
+ * Shift-Tap: :
+*/
+ZMK_BEHAVIOR(mm_dot_colon, mod_morph,
+    bindings = <&kp KP_DOT>, <&kp COLON>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+
+/*
+ * Shifted comma types semicolon
+ *
+ * Tap: ,
+ * Shift-Tap: ;
+*/
+ZMK_BEHAVIOR(mm_comma_semi, mod_morph,
+    bindings = <&kp KP_COMMA>, <&kp SEMI>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+
+/*
+ * Shifted minus types plus
+ *
+ * Tap: -
+ * Shift-Tap: +
+*/
+ZMK_BEHAVIOR(mm_minus_plus, mod_morph,
+    bindings = <&kp MINUS>, <&kp PLUS>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+
+/*
+ * Shifted exclamation types question
+ *
+ * Tap: !
+ * Shift-Tap: ?
+*/
+ZMK_BEHAVIOR(mm_excl_qst, mod_morph,
+    bindings = <&kp EXCLAMATION>, <&kp QUESTION_MARK>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+
+/*
+ * Shifted backspace deletes + Layer Tap
+ *
+ * Tap: Backspace
+ * Shift-Tap: Delete
+ * Hold: Switch Layer
+*/
+ZMK_BEHAVIOR(mm_bspc_del_lnav, mod_morph,
+    bindings = <&lt L_NAV BACKSPACE>, <&kp DELETE>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+
+/*
+ * Sticky Shift + Caps Word + Shift
+ *
+ * Tap: Sticky Shift
+ * Shift-Tap: Caps Word
+ * Double-Tap: Caps Word 
+ * Hold: Shift
+*/
+ZMK_BEHAVIOR(mm_smart_shift, mod_morph,
+    bindings = <&sk LSHIFT>, <&caps_word>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+
+/*
+ * Space + Minus + Underscore + Switch layer
+ *
+ * Tap: Space
+ * LShift-Tap: -
+ * RShift-Tap: _
+ * Hold: Switch Layer
+*/
+ZMK_BEHAVIOR(mm_smart_space, mod_morph,
+    bindings = <&sl L_NUMBER SPACE>, <&kp MINUS>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+    keep-mods = <(MOD_RSFT)>;
+)
