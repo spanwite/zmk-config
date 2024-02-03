@@ -1,0 +1,56 @@
+/*
+ * Alt+Tab swapper
+ * Requires PR #1366
+ */
+ZMK_BEHAVIOR(swapper, tri_state,
+    bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+    ignored-key-positions = <LT2>;
+)
+
+
+/*
+ * Sticky Shift + Caps Word + Shift
+ *
+ * Tap: Sticky Shift
+ * Shift-Tap: Caps Word
+ * Double-Tap: Caps Word 
+ * Hold: Shift
+*/
+ZMK_BEHAVIOR(smart_shift, mod_morph,
+    bindings = <&sk LSHIFT>, <&caps_word>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+
+
+/*
+ * Space + Minus + Underscore + Switch layer
+ *
+ * Tap: Space
+ * LShift-Tap: -
+ * RShift-Tap: _
+ * Hold: Number-Layer
+*/
+ZMK_BEHAVIOR(spc_mns_lnum, mod_morph,
+    bindings = <&sl LNUM SPACE>, <&kp MINUS>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+    keep-mods = <(MOD_RSFT)>;
+)
+
+
+/*
+ * Tap: Num Word
+ * Double-Tap: Sticky Number-Layer
+ * Hold: Number-Layer
+*/
+#define SMART_NUM &smart_num LNUM 0
+
+ZMK_BEHAVIOR(smart_num, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    bindings = <&mo>, <&num_dance>;
+)
+ZMK_BEHAVIOR(num_dance, tap_dance,
+    tapping-term-ms = <200>;
+    bindings = <&num_word>, <&sl LNUM>;
+)

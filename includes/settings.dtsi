@@ -1,0 +1,27 @@
+/*
+ * From: https://github.com/urob/zmk-config/
+ * Requires PR #1451
+ */
+&num_word {
+    layers = <LNUM>;
+    continue-list = <BSPC DEL DOT COMMA KP_PLUS KP_MINUS KP_MULTIPLY KP_DIVIDE EQUAL>;
+};
+
+&lt {
+    tapping-term-ms = <300>;
+
+    // Quickly tap-tap-holding the lt button will repeat the tap behavior
+    // For example enter-enter-hold, will output multiple enter while you
+    // keep holding the key.
+    // But holding enter without double tapping, will activate the layer.
+     quick-tap-ms = <200>;
+
+     flavor = "balanced";
+};
+
+&sk {
+    // Deactivate shift on press of next key instead of on release
+    // to prevent capitalization of multiple characters when rolling
+    // keys (such as `ST`).
+    quick-release;
+};

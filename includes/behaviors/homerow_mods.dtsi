@@ -1,0 +1,24 @@
+#define MAKE_HRM(NAME, TRIGGER_POS) \
+    ZMK_BEHAVIOR(NAME, hold_tap, \
+        flavor = "balanced"; \
+        tapping-term-ms = <280>; \
+        quick-tap-ms = <175>; \
+        require-prior-idle-ms = <150>; \
+        bindings = <&kp>, <&kp>; \
+        hold-trigger-key-positions = <TRIGGER_POS>; \
+        hold-trigger-on-release; \
+    )
+
+MAKE_HRM(hml, KEYS_R KEYS_T)
+MAKE_HRM(hmr, KEYS_L KEYS_T)
+
+/*
+ * Non-Positional Homerow Mods
+ * Used for &mm_gresc_meh behavior on left hand.
+ */
+ZMK_BEHAVIOR(hm, hold_tap,
+    bindings = <&kp>, <&kp>;
+    flavor = "balanced";
+    tapping-term-ms = <HM_TAPPING_TERM>;
+    quick-tap-ms = <200>;
+)

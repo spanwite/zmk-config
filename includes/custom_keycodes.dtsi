@@ -1,0 +1,9 @@
+// Meh keys
+#DEFINE MY_MEH LS(LALT)
+#DEFINE MY_HYPER LC(MY_MEH)
+
+// Shortcuts
+#define MY_UNDO LC(Z)
+#define MY_CUT LC(X)
+#define MY_COPY LC(C)
+#define MY_PASTE LC(V)

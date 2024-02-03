@@ -14,3 +14,17 @@ ZMK_BEHAVIOR(td_at_email, tap_dance,
     tapping-term-ms = <300>;
     bindings = <&kp AT_SIGN>, <&m_type_email>;
 )
+
+#define MAKE_ALT_MACRO(NAME, KP_KEYS) \
+    ZMK_BEHAVIOR(NAME, macro, \
+        wait-ms = <40>; \
+        tap-ms = <40>; \
+        bindings \
+        = <&macro_press   &kp LALT> \
+        , <&macro_tap     KP_KEYS> \
+        , <&macro_release &kp LALT> \
+        ; \
+    )
+
+MAKE_ALT_MACRO(m_lbkt, &kp KP_N9 &kp KP_N1)
+MAKE_ALT_MACRO(m_rbkt, &kp KP_N9 &kp KP_N3)
