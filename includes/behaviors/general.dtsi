@@ -37,7 +37,7 @@ ZMK_BEHAVIOR(semi_less_than, mod_morph,
  * Shift-Tap: ?
 */
 ZMK_BEHAVIOR(mm_excl_qst, mod_morph,
-    bindings = <&kp EXCLAMATION>, <&kp QUESTION_MARK>;
+    bindings = <&kp EXCLAMATION>, <&kp QUESTION>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
@@ -65,4 +65,31 @@ ZMK_BEHAVIOR(mm_gresc_meh, mod_morph,
     bindings = <&hm MY_MEH ESCAPE>, <&kp GRAVE>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
     keep-mods = <(MOD_LSFT)>;
+)
+
+/*
+ * Sticky Shift + Caps Word + Shift
+ *
+ * Tap: Sticky Shift
+ * Shift-Tap: Caps Word
+ * Double-Tap: Caps Word 
+ * Hold: Shift
+*/
+ZMK_BEHAVIOR(smart_shift, mod_morph,
+    bindings = <&sk LSHIFT>, <&caps_word>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+
+/*
+ * Space + Minus + Underscore + Switch layer
+ *
+ * Tap: Space
+ * LShift-Tap: -
+ * RShift-Tap: _
+ * Hold: Number-Layer
+*/
+ZMK_BEHAVIOR(spc_mns_lnum, mod_morph,
+    bindings = <&lt LNUM SPACE>, <&kp MINUS>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+    keep-mods = <(MOD_RSFT)>;
 )

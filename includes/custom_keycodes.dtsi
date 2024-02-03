@@ -1,6 +1,6 @@
 // Meh keys
-#DEFINE MY_MEH LS(LALT)
-#DEFINE MY_HYPER LC(MY_MEH)
+#define MY_MEH LS(LALT)
+#define MY_HYPER LC(LS(LALT))
 
 // Shortcuts
 #define MY_UNDO LC(Z)
