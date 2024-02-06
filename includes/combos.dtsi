@@ -7,19 +7,13 @@
  ╰───────────╮ LH2 LH1 LH0 │ RH0 RH1 RH2 ╭───────────╯
              ╰─────────────┴─────────────╯             */
 
-// use require-prior-idle-ms for combos
+// Use require-prior-idle-ms for combos
 #undef COMBO_HOOK
 #define COMBO_HOOK require-prior-idle-ms = <150>;
 
 #define COMBO_TERM_FAST 18
 #define COMBO_TERM_SLOW 30
 
-/* Horizontal combos - right hand */
-ZMK_COMBO(lpar, &kp LPAR, RT1 RT2, QWERTY LSYM LNUM, COMBO_TERM_FAST)
-ZMK_COMBO(rpar, &kp RPAR, RT2 RT3, QWERTY LSYM LNUM, COMBO_TERM_FAST)
-
-ZMK_COMBO(lbrc, &kp LBRC, RM1 RM2, QWERTY LSYM LNUM, COMBO_TERM_FAST)
-ZMK_COMBO(rbrc, &kp RBRC, RM2 RM3, QWERTY LSYM LNUM, COMBO_TERM_FAST)
-
-ZMK_COMBO(lbkt, &m_lbkt, RB1 RB2, QWERTY LSYM LNUM, COMBO_TERM_FAST)
-ZMK_COMBO(rbkt, &m_rbkt, RB2 RB3, QWERTY LSYM LNUM, COMBO_TERM_FAST)
+/* Horizontal combos - left hand */
+ZMK_COMBO(combo_lang_switch, &kp LC(LSHIFT), LM1 LM2, QWERTY LNUM, COMBO_TERM_FAST)
+ZMK_COMBO(combo_enter, &kp ENTER, LH0 LH1 LH2, QWERTY LNUM LNAV, COMBO_TERM_FAST)

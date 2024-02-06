@@ -14,7 +14,6 @@ MAKE_HRM(hmr, KEYS_L KEYS_T)
 
 /*
  * Non-Positional Homerow Mods
- * Used for &mm_gresc_meh behavior on left hand.
  */
 ZMK_BEHAVIOR(hm, hold_tap,
     bindings = <&kp>, <&kp>;
