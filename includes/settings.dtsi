@@ -1,10 +1,11 @@
 /*
- * From: https://github.com/urob/zmk-config/
+ * From: https://github.com/urob/zmk
  * Requires PR #1451
  */
 &num_word {
     layers = <LNUM>;
-    continue-list = <BACKSPACE DELETE KP_DOT KP_COMMA KP_PLUS KP_MINUS KP_MULTIPLY KP_DIVIDE KP_EQUAL LPAR RPAR PERCENT>;
+    continue-list = <KP_DOT KP_PLUS KP_MINUS KP_MULTIPLY KP_DIVIDE EQUAL LPAR RPAR PERCENT>;
+    ignore-modifiers;
 };
 
 &lt {

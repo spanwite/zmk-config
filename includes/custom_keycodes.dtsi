@@ -1,5 +1,5 @@
 // Meh keys
-#define MY_MEH LC(LS(LALT))
+#define MY_MEH LC(LSHIFT)
 
 // Shortcuts
 #define MY_UNDO LC(Z)

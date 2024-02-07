@@ -1,3 +1,4 @@
+// TODO: AT_SIGN + This macro
 ZMK_BEHAVIOR(m_type_email, macro,
     wait-ms = <0>;
     tap-ms = <5>;
@@ -10,24 +11,33 @@ ZMK_BEHAVIOR(m_type_email, macro,
     >;
 )
 
-// Windows sleep key
-#define SLEEP_POWER &ht_sleep_power 0 0
+#define WIN_POWER &ht_win_power 0 0
 
-ZMK_BEHAVIOR(ht_sleep_power, hold_tap,
-    tapping-term-ms = <300>;
-    bindings = <&m_win_sleep>, <&td_win_power>;
+ZMK_BEHAVIOR(ht_win_power, hold_tap,
+    tapping-term-ms = <280>;
+    bindings = <&m_win_restart>, <&td_win_power>;
 )
-
 ZMK_BEHAVIOR(td_win_power, tap_dance,
     tapping-term-ms = <300>;
-    bindings = <&none>, <&kp A>;
+    bindings = <&none>, <&m_win_sleep>, <&m_win_shutdown>;
 )
 
 ZMK_BEHAVIOR(m_win_sleep, macro,
     wait-ms = <50>;
     tap-ms = <5>;
-    bindings = <&kp LG(X) &kp U &kp S>;
+    bindings = <&kp LG(X) &kp UP &kp UP &kp RIGHT &kp DOWN &kp ENTER>;
 )
+ZMK_BEHAVIOR(m_win_shutdown, macro,
+    wait-ms = <50>;
+    tap-ms = <5>;
+    bindings = <&kp LG(X) &kp UP &kp UP &kp RIGHT &kp DOWN &kp DOWN &kp ENTER>;
+)
+ZMK_BEHAVIOR(m_win_restart, macro,
+    wait-ms = <50>;
+    tap-ms = <5>;
+    bindings = <&kp LG(X) &kp UP &kp UP &kp RIGHT &kp UP &kp ENTER>;
+)
+
 
 #define MAKE_ALT_MACRO(NAME, KP_KEYS) \
     ZMK_BEHAVIOR(NAME, macro, \
@@ -40,5 +50,4 @@ ZMK_BEHAVIOR(m_win_sleep, macro,
         ; \
     )
 
-MAKE_ALT_MACRO(m_lbkt, &kp KP_N9 &kp KP_N1)
-MAKE_ALT_MACRO(m_rbkt, &kp KP_N9 &kp KP_N3)
+MAKE_ALT_MACRO(m_comma, &kp KP_N0 &kp KP_N1 &kp KP_N3 &kp KP_N0)
