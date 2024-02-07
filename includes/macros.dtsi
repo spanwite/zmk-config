@@ -10,9 +10,23 @@ ZMK_BEHAVIOR(m_type_email, macro,
     >;
 )
 
-ZMK_BEHAVIOR(td_at_email, tap_dance,
-    tapping-term-ms = <200>;
-    bindings = <&kp AT_SIGN>, <&m_type_email>;
+// Windows sleep key
+#define SLEEP_POWER &ht_sleep_power 0 0
+
+ZMK_BEHAVIOR(ht_sleep_power, hold_tap,
+    tapping-term-ms = <300>;
+    bindings = <&m_win_sleep>, <&td_win_power>;
+)
+
+ZMK_BEHAVIOR(td_win_power, tap_dance,
+    tapping-term-ms = <300>;
+    bindings = <&none>, <&kp A>;
+)
+
+ZMK_BEHAVIOR(m_win_sleep, macro,
+    wait-ms = <50>;
+    tap-ms = <5>;
+    bindings = <&kp LG(X) &kp U &kp S>;
 )
 
 #define MAKE_ALT_MACRO(NAME, KP_KEYS) \
