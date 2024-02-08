@@ -1,0 +1,14 @@
+// TODO: AT_SIGN + This macro
+ZMK_BEHAVIOR(m_type_email, macro,
+    wait-ms = <0>;
+    tap-ms = <5>;
+    bindings = <
+        &kp N &kp N3 &kp R &kp Q &kp N1 &kp N3 &kp N3 &kp N7
+        &kp AT_SIGN
+        &kp Y &kp A
+        &kp DOT
+        &kp R &kp U
+    >;
+)
+
+MAKE_ALT_MACRO(m_comma, &kp KP_N0 &kp KP_N1 &kp KP_N3 &kp KP_N0)

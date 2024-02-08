@@ -3,7 +3,7 @@
  * Requires PR #1451
  */
 &num_word {
-    layers = <LNUM>;
+    layers = <NUM>;
     continue-list = <KP_DOT KP_PLUS KP_MINUS KP_MULTIPLY KP_DIVIDE EQUAL LPAR RPAR PERCENT>;
     ignore-modifiers;
 };

@@ -1,0 +1,31 @@
+// Homerow mods
+MAKE_HRM(hml, KEYS_R KEYS_T)
+MAKE_HRM(hmr, KEYS_L KEYS_T)
+
+// Tap: @ | Double-tap: Macro type my email
+ZMK_BEHAVIOR(td_at_email, tap_dance,
+    bindings = <&kp AT_SIGN>, <&m_type_email>;
+)
+
+// Tap: Sticky layer | Hold: Momentary layer
+// TODO: REMOVE
+#define SHL(LAYER) &sticky_hold_layer LAYER LAYER
+
+ZMK_BEHAVIOR(sticky_hold_layer, hold_tap,
+    bindings = <&mo>, <&sl>;
+    flavor = "balanced";
+    tapping-term-ms = <280>;
+)
+
+// Tap: Backspace | Shift-tap: Delete | Hold: activate layer "symbol"
+SIMPLE_MORPH(bspc_del_adjust, SFT, &lt ADJUST BACKSPACE, &kp DELETE)
+
+// Tap: Escape | LShift-tap: ~ | RShift-tap: `
+ZMK_BEHAVIOR(mm_gresc, mod_morph,
+    bindings = <&kp ESCAPE>, <&kp GRAVE>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+    keep-mods = <(MOD_LSFT)>;
+)
+
+// Tap: Left bracket | Ctrl-tap: Right bracket
+SIMPLE_MORPH(mm_lr_bkt, CTL, &kp LBKT, &kp RBKT)

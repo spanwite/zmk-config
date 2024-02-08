@@ -15,5 +15,9 @@
 #define COMBO_TERM_SLOW 30
 
 /* Horizontal combos - left hand */
-ZMK_COMBO(combo_lang_switch, &kp LC(LSHIFT), LM1 LM2, QWERTY LNUM, COMBO_TERM_FAST)
-ZMK_COMBO(combo_enter, &kp ENTER, LH0 LH1 LH2, QWERTY LNUM LNAV, COMBO_TERM_FAST)
+ZMK_COMBO(cb_lang_switch, &kp LC(LSHIFT), LM1 LM2, BASE NUM, COMBO_TERM_FAST)
+ZMK_COMBO(cb_enter, &kp ENTER, LH0 LH1 LH2, BASE NUM NAV, COMBO_TERM_FAST)
+
+/* Horizontal combos - right hand */
+ZMK_COMBO(cb_bsps, &kp BACKSPACE, RT1 RT2, BASE NAV NUM, COMBO_TERM_FAST)
+ZMK_COMBO(cb_del, &kp ENTER, RT2 RT3, BASE NAV NUM, COMBO_TERM_FAST)

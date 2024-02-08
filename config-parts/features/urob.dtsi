@@ -4,8 +4,9 @@ ZMK_BEHAVIOR(swapper, tri_state,
     ignored-key-positions = <LT2>;
 )
 
-// Tap: Num Word | Double-tap: Sticky layer "number" | Hold: activate layer "number"
-#define SMART_NUM &smart_num LNUM 0
+
+// Tap: Num word | Double-tap: Sticky layer NUM | Hold: Momentary layer NUM
+#define SMART_NUM &smart_num NUM 0
 
 ZMK_BEHAVIOR(smart_num, hold_tap,
     flavor = "balanced";
@@ -14,6 +15,5 @@ ZMK_BEHAVIOR(smart_num, hold_tap,
     bindings = <&mo>, <&num_dance>;
 )
 ZMK_BEHAVIOR(num_dance, tap_dance,
-    tapping-term-ms = <200>;
-    bindings = <&num_word>, <&sl LNUM>;
+    bindings = <&num_word>, <&sl NUM>;
 )
