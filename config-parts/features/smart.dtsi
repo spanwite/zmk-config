@@ -1,5 +1,5 @@
 // Tap: Sticky Shift | Shift-tap: Caps Word | Double-tap: Caps Word | Hold: Momentary layer NAV
-#define SHIFT_NAV &smart_shift NAV 0
+#define SHIFT_L(LAYER) &smart_shift LAYER 0
 
 ZMK_BEHAVIOR(smart_shift, hold_tap,
     bindings = <&mo>, <&shift_caps_word>;
@@ -11,7 +11,7 @@ SIMPLE_MORPH(shift_caps_word, SFT, &sk LSHIFT, &caps_word)
 
 
 // Tap: Space | Shift-tap: Dot -> Space -> Sticky Shift | Hold: activate layer "number"
-#define SPC_MACRO_NUM &ht_space NUM 0
+#define SPC_L(LAYER) &ht_space LAYER 0
 
 ZMK_BEHAVIOR(ht_space, hold_tap,
     flavor = "balanced";

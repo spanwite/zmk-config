@@ -1,3 +1,5 @@
+#define WIN_WAIT_MS 500
+
 // Tap: None | Double-tap: Windows sleep | Triple-tap: Windows restart | Hold: Windows shutdown
 #define WIN_POWER &ht_win_power 0 0
 
@@ -10,18 +12,19 @@ ZMK_BEHAVIOR(td_win_power, tap_dance,
     bindings = <&none>, <&m_win_sleep>, <&m_win_restart>;
 )
 
+// TODO: combo tap macro
 ZMK_BEHAVIOR(m_win_sleep, macro,
-    wait-ms = <50>;
+    wait-ms = <WIN_WAIT_MS>;
     tap-ms = <5>;
     bindings = <&kp LG(X) &kp UP &kp UP &kp RIGHT &kp DOWN &kp ENTER>;
 )
 ZMK_BEHAVIOR(m_win_shutdown, macro,
-    wait-ms = <50>;
+    wait-ms = <WIN_WAIT_MS>;
     tap-ms = <5>;
     bindings = <&kp LG(X) &kp UP &kp UP &kp RIGHT &kp DOWN &kp DOWN &kp ENTER>;
 )
 ZMK_BEHAVIOR(m_win_restart, macro,
-    wait-ms = <50>;
+    wait-ms = <WIN_WAIT_MS>;
     tap-ms = <5>;
     bindings = <&kp LG(X) &kp UP &kp UP &kp RIGHT &kp UP &kp ENTER>;
 )
