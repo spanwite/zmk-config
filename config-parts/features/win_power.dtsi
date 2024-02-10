@@ -1,4 +1,4 @@
-#define WIN_WAIT_MS 250
+#define WIN_WAIT_MS 100
 
 // Tap: None | Double-tap: Windows sleep | Triple-tap: Windows restart | Hold: Windows shutdown
 #define WIN_POWER &ht_win_power 0 0
