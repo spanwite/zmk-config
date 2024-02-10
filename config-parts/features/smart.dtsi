@@ -4,7 +4,7 @@
 ZMK_BEHAVIOR(smart_shift, hold_tap,
     bindings = <&mo>, <&shift_caps_word>;
     tapping-term-ms = <200>;
-    quick-tap-ms = <175>;
+    quick-tap-ms = <QUICK_TAP_MS>;
     flavor = "balanced";
 )
 SIMPLE_MORPH(shift_caps_word, SFT, &sk LSHIFT, &caps_word)
@@ -16,7 +16,7 @@ SIMPLE_MORPH(shift_caps_word, SFT, &sk LSHIFT, &caps_word)
 ZMK_BEHAVIOR(ht_space, hold_tap,
     flavor = "balanced";
     tapping-term-ms = <200>;
-    quick-tap-ms = <175>;
+    quick-tap-ms = <QUICK_TAP_MS>;
     bindings = <&mo>, <&spc_morph>;
 )
 SIMPLE_MORPH(spc_morph, SFT, &kp SPACE, &m_dot_spc)

@@ -1,3 +1,5 @@
+#define QUICK_TAP_MS 175
+
 &caps_word {  // mods deactivate caps-word, requires PR #1451
     /delete-property/ ignore-modifiers;
 };

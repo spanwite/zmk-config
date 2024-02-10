@@ -12,7 +12,6 @@ ZMK_BEHAVIOR(td_win_power, tap_dance,
     bindings = <&none>, <&m_win_sleep>, <&m_win_restart>;
 )
 
-// TODO: combo tap macro
 ZMK_BEHAVIOR(m_win_sleep, macro,
     wait-ms = <WIN_WAIT_MS>;
     tap-ms = <5>;
