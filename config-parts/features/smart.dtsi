@@ -1,8 +1,8 @@
-// Tap: Sticky Shift | Shift-tap: Caps Word | Double-tap: Caps Word | Hold: Momentary layer NAV
-#define SHIFT_L(LAYER) &smart_shift LAYER 0
+// Tap: Sticky Shift | Shift-tap: Caps Word | Double-tap: Caps Word | Hold: Shift
+#define SMART_SHIFT &smart_shift LSHIFT 0
 
 ZMK_BEHAVIOR(smart_shift, hold_tap,
-    bindings = <&mo>, <&shift_caps_word>;
+    bindings = <&kp>, <&shift_caps_word>;
     tapping-term-ms = <200>;
     quick-tap-ms = <QUICK_TAP_MS>;
     flavor = "balanced";

@@ -11,13 +11,11 @@
 #undef COMBO_HOOK
 #define COMBO_HOOK require-prior-idle-ms = <150>;
 
-#define COMBO_TERM_FAST 18
-#define COMBO_TERM_SLOW 30
+#define COMBO_TERM_FAST 30
+#define COMBO_TERM_SLOW 40
 
 /* Horizontal combos - left hand */
 ZMK_COMBO(cb_lang_switch, &kp LC(LSHIFT), LM1 LM2, BASE NUM, COMBO_TERM_FAST)
 ZMK_COMBO(cb_enter, &kp ENTER, LH0 LH1 LH2, BASE NUM NAV, COMBO_TERM_FAST)
-
-/* Horizontal combos - right hand */
-ZMK_COMBO(cb_bsps, &kp BACKSPACE, RT1 RT2, BASE NAV NUM, COMBO_TERM_FAST)
-ZMK_COMBO(cb_del, &kp ENTER, RT2 RT3, BASE NAV NUM, COMBO_TERM_FAST)
+ZMK_COMBO(cb_bsps, &kp BACKSPACE, LT1 LT2, BASE NAV NUM, COMBO_TERM_FAST)
+ZMK_COMBO(cb_del, &kp DELETE, LT2 LT3, BASE NAV NUM, COMBO_TERM_FAST)

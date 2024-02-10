@@ -8,7 +8,8 @@ ZMK_BEHAVIOR(td_at_email, tap_dance,
 )
 
 // Tap: Backspace | Shift-tap: Delete | Hold: Momentary layer SYM
-SIMPLE_MORPH(bspc_del_adjust, SFT, &lt ADJUST BACKSPACE, &kp DELETE)
+// todo rename
+SIMPLE_MORPH(bspc_del_sym, SFT, &lt SYM BACKSPACE, &kp DELETE)
 
 // Tap: Escape | LShift-tap: ~ | RShift-tap: `
 ZMK_BEHAVIOR(mm_gresc, mod_morph,
