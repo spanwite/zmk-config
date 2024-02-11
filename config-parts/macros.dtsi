@@ -33,6 +33,14 @@ MAKE_ALT_MACRO(m_less, &kp KP_N6 &kp KP_N0)
 
 // '
 MAKE_ALT_MACRO(m_sqt, &kp KP_N3 &kp KP_N9)
-
 MAKE_ALT_MACRO(m_pipe, &kp KP_N1 &kp KP_N2 &kp KP_N4)
 
+// ? &
+MAKE_ALT_MACRO(m_qst, &kp KP_N6 &kp KP_N3)
+MAKE_ALT_MACRO(m_amps, &kp KP_N3 &kp KP_N8)
+
+// ' "
+MAKE_ALT_MACRO(m_sqt, &kp KP_N3 &kp KP_N9)
+MAKE_ALT_MACRO(m_dqt, &kp KP_N3 &kp KP_N4)
+
+MAKE_ALT_MACRO(m_at_sign, &kp KP_N6 &kp KP_N4)
