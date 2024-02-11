@@ -2,13 +2,7 @@
 MAKE_HRM(hml, KEYS_R KEYS_T)
 MAKE_HRM(hmr, KEYS_L KEYS_T)
 
-// Tap: @ | Double-tap: Type my email
-ZMK_BEHAVIOR(td_at_email, tap_dance,
-    bindings = <&kp AT_SIGN>, <&m_type_email>;
-)
-
 // Tap: Backspace | Shift-tap: Delete | Hold: Momentary layer SYM
-// todo rename
 SIMPLE_MORPH(bspc_del_sym, SFT, &lt SYM BACKSPACE, &kp DELETE)
 
 // Tap: Escape | LShift-tap: ~ | RShift-tap: `
@@ -21,9 +15,9 @@ ZMK_BEHAVIOR(mm_gresc, mod_morph,
 // Tap: Left bracket | Ctrl-tap: Right bracket
 SIMPLE_MORPH(mm_lr_bkt, CTL, &kp LBKT, &kp RBKT)
 
-// Tap: None | Double-tap: Toggle layer GAME
-ZMK_BEHAVIOR(td_game, tap_dance,
-    bindings = <&none>, <&tog GAME>;
+// Tap: None | Double-tap: Toggle layer GAME_FPS
+ZMK_BEHAVIOR(td_profiles, tap_dance,
+    bindings = <&none>, <&tog GAME_FPS>, <&kp A>;
 )
 
 // Tap: None | Double-tap: CapsLock
