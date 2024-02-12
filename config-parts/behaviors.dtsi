@@ -2,9 +2,6 @@
 MAKE_HRM(hml, KEYS_R KEYS_T)
 MAKE_HRM(hmr, KEYS_L KEYS_T)
 
-// Tap: Backspace | Shift-tap: Delete | Hold: Momentary layer SYM
-SIMPLE_MORPH(bspc_del_sym, SFT, &lt SYM BACKSPACE, &kp DELETE)
-
 // Tap: Escape | LShift-tap: ~ | RShift-tap: `
 ZMK_BEHAVIOR(mm_gresc, mod_morph,
     bindings = <&kp ESCAPE>, <&kp GRAVE>;
@@ -17,7 +14,7 @@ SIMPLE_MORPH(mm_lr_bkt, CTL, &kp LBKT, &kp RBKT)
 
 // Tap: None | Double-tap: Toggle layer GAME_FPS
 ZMK_BEHAVIOR(td_profiles, tap_dance,
-    bindings = <&none>, <&tog GAME_FPS>, <&kp A>;
+    bindings = <&none>, <&tog MEDIA>, <&tog GAME_FPS>;
 )
 
 // Tap: None | Double-tap: CapsLock
