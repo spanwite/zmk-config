@@ -21,3 +21,11 @@ ZMK_BEHAVIOR(td_profiles, tap_dance,
 ZMK_BEHAVIOR(td_capslock, tap_dance,
     bindings = <&none>, <&kp CAPSLOCK>;
 )
+
+// Tap: Dot | Hold: Layer FN
+ZMK_BEHAVIOR(ht_mdot_l, hold_tap,
+    bindings = <&mo>, <&m_dot>;
+    tapping-term-ms = <300>;
+    quick-tap-ms = <200>;
+    flavor = "balanced";
+)

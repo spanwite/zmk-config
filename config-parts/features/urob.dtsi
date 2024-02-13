@@ -1,7 +1,7 @@
 // Alt+Tab swapper
 ZMK_BEHAVIOR(swapper, tri_state,
     bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
-    ignored-key-positions = <LT3>;
+    ignored-key-positions = <LM3>;
 )
 
 
