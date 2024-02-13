@@ -1,4 +1,4 @@
-#define WIN_WAIT_MS 200
+#define WIN_WAIT_MS 250
 #define ENTER_MENU &kp LG(X) &kp UP &kp UP &kp RIGHT
 
 // Tap: None | Double-tap: Windows sleep | Triple-tap: Windows restart | Hold: Windows shutdown

@@ -16,7 +16,8 @@
 #define XXX &none
 
 #define MEH LC(LALT)
-#define HYPER LC(LS(LALT))
+
+#define _BT_SEL_KEYS_ &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR
 
 #include "../config-parts/utils/helpers.dtsi"
 #include "../config-parts/settings.dtsi"
@@ -26,6 +27,7 @@
 #include "../config-parts/features/urob.dtsi"
 #include "../config-parts/features/win_power.dtsi"
 #include "../config-parts/features/smart.dtsi"
+#include "../config-parts/features/nav.dtsi"
 
 #include "../config-parts/layers/base.dtsi"
 #include "../config-parts/layers/num.dtsi"
@@ -35,4 +37,4 @@
 #include "../config-parts/layers/media.dtsi"
 #include "../config-parts/layers/game_fps.dtsi"
 
-ZMK_CONDITIONAL_LAYER(NAV MEDIA, FN)
+ZMK_CONDITIONAL_LAYER(NUM SYM, FN)

@@ -11,35 +11,24 @@ ZMK_BEHAVIOR(m_type_email, macro,
     >;
 )
 
-// Combos
-
-// []
 MAKE_ALT_MACRO(m_lbkt, &kp KP_N9 &kp KP_N1)
 MAKE_ALT_MACRO(m_rbkt, &kp KP_N9 &kp KP_N3)
 
-// {}
 MAKE_ALT_MACRO(m_lbrc, &kp KP_N1 &kp KP_N2 &kp KP_N3)
 MAKE_ALT_MACRO(m_rbrc, &kp KP_N1 &kp KP_N2 &kp KP_N5)
 
-// , : ^
 MAKE_ALT_MACRO(m_comma, &kp KP_N4 &kp KP_N4)
 MAKE_ALT_MACRO(m_dot, &kp KP_N4 &kp KP_N6)
 MAKE_ALT_MACRO(m_colon, &kp KP_N5 &kp KP_N8)
 MAKE_ALT_MACRO(m_caret, &kp KP_N9 &kp KP_N4)
-
-// > <
-MAKE_ALT_MACRO(m_greater, &kp KP_N6 &kp KP_N2)
-MAKE_ALT_MACRO(m_less, &kp KP_N6 &kp KP_N0)
-
-// '
-MAKE_ALT_MACRO(m_sqt, &kp KP_N3 &kp KP_N9)
 MAKE_ALT_MACRO(m_pipe, &kp KP_N1 &kp KP_N2 &kp KP_N4)
 
-// ? &
+MAKE_ALT_MACRO(m_less, &kp KP_N6 &kp KP_N0)
+MAKE_ALT_MACRO(m_greater, &kp KP_N6 &kp KP_N2)
+
 MAKE_ALT_MACRO(m_qst, &kp KP_N6 &kp KP_N3)
 MAKE_ALT_MACRO(m_amps, &kp KP_N3 &kp KP_N8)
 
-// ' "
 MAKE_ALT_MACRO(m_sqt, &kp KP_N3 &kp KP_N9)
 MAKE_ALT_MACRO(m_dqt, &kp KP_N3 &kp KP_N4)
 

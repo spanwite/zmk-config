@@ -12,9 +12,9 @@ ZMK_BEHAVIOR(mm_gresc, mod_morph,
 // Tap: Left bracket | Ctrl-tap: Right bracket
 SIMPLE_MORPH(mm_lr_bkt, CTL, &kp LBKT, &kp RBKT)
 
-// Tap: None | Double-tap: Toggle layer GAME_FPS
+// Tap Dance profile management
 ZMK_BEHAVIOR(td_profiles, tap_dance,
-    bindings = <&none>, <&tog MEDIA>, <&tog GAME_FPS>;
+    bindings = <&tog MEDIA>, <&tog GAME_FPS>;
 )
 
 // Tap: None | Double-tap: CapsLock
