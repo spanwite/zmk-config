@@ -5,7 +5,7 @@
 #include "../zmk-nodefree-config/helper.h"
 
 #include "../config-parts/utils/helpers.dtsi"
-#include "../config-parts/custom_keycodes.dtsi"
+#include "../config-parts/custom_keys.dtsi"
 #include "../config-parts/settings.dtsi"
 #include "../config-parts/macros.dtsi"
 #include "../config-parts/combos.dtsi"
@@ -14,6 +14,7 @@
 #include "../config-parts/features/win_power.dtsi"
 #include "../config-parts/features/smart.dtsi"
 #include "../config-parts/features/nav.dtsi"
+#include "../config-parts/features/mouse.dtsi"
 
 #include "../config-parts/layers/base.dtsi"
 #include "../config-parts/layers/num.dtsi"
@@ -22,3 +23,4 @@
 #include "../config-parts/layers/fn.dtsi"
 #include "../config-parts/layers/media.dtsi"
 #include "../config-parts/layers/game_fps.dtsi"
+#include "../config-parts/layers/mouse.dtsi"
