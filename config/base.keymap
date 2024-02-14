@@ -4,22 +4,8 @@
 
 #include "../zmk-nodefree-config/helper.h"
 
-#define BASE 0
-#define NUM 1
-#define SYM 2
-#define NAV 3
-#define FN 4
-#define MEDIA 5
-#define GAME_FPS 6
-
-#define ___ &trans
-#define XXX &none
-
-#define MEH LC(LALT)
-
-#define _BT_SEL_KEYS_ &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR
-
 #include "../config-parts/utils/helpers.dtsi"
+#include "../config-parts/custom_keycodes.dtsi"
 #include "../config-parts/settings.dtsi"
 #include "../config-parts/macros.dtsi"
 #include "../config-parts/combos.dtsi"

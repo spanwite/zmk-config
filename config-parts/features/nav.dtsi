@@ -1,4 +1,4 @@
-ZMK_BEHAVIOR(mt_n, hold_tap,
+ZMK_BEHAVIOR(mt_nav, hold_tap,
     bindings = <&kp>, <&kp>;
     flavor = "tap-preferred";
     tapping-term-ms = <220>;
@@ -6,7 +6,7 @@ ZMK_BEHAVIOR(mt_n, hold_tap,
     hold-trigger-key-positions = <0>;
 )
 
-#define NAV_LEFT  &mt_n HOME     LEFT
-#define NAV_RIGHT &mt_n END      RIGHT
-#define NAV_UP    &mt_n LC(HOME) UP
-#define NAV_DOWN  &mt_n LC(END)  DOWN
+#define NAV_LEFT  &mt_nav HOME     LEFT
+#define NAV_RIGHT &mt_nav END      RIGHT
+#define NAV_UP    &mt_nav LC(HOME) UP
+#define NAV_DOWN  &mt_nav LC(END)  DOWN
