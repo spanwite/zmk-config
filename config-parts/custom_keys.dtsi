@@ -6,6 +6,7 @@
 #define MEDIA 5
 #define GAME_FPS 6
 #define MOUSE 7
+#define SYS 8
 
 #define ___ &trans
 #define XXX &none

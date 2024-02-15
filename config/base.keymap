@@ -24,3 +24,6 @@
 #include "../config-parts/layers/media.dtsi"
 #include "../config-parts/layers/game_fps.dtsi"
 #include "../config-parts/layers/mouse.dtsi"
+#include "../config-parts/layers/sys.dtsi"
+
+ZMK_CONDITIONAL_LAYER(FN NAV, SYS)
