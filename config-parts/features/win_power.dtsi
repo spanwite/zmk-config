@@ -1,4 +1,4 @@
-#define WIN_WAIT_MS 250
+#define WIN_WAIT_MS 500
 
 #define LANG_TAP(KEY) &kp KEY CNG_LNG &kp KEY
 
