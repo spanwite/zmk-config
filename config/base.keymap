@@ -10,10 +10,8 @@
 #include "../config-parts/macros.dtsi"
 #include "../config-parts/combos.dtsi"
 #include "../config-parts/behaviors.dtsi"
-#include "../config-parts/features/urob.dtsi"
 #include "../config-parts/features/win_power.dtsi"
-#include "../config-parts/features/smart.dtsi"
-#include "../config-parts/features/nav.dtsi"
+#include "../config-parts/features/thumb.dtsi"
 #include "../config-parts/features/mouse.dtsi"
 
 #include "../config-parts/layers/base.dtsi"

@@ -2,6 +2,12 @@
 MAKE_HRM(hml, KEYS_R KEYS_T)
 MAKE_HRM(hmr, KEYS_L KEYS_T)
 
+// Alt+Tab swapper
+ZMK_BEHAVIOR(swapper, tri_state,
+    bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+    ignored-key-positions = <LM3>;
+)
+
 // Tap: Escape | LShift-tap: ~ | RShift-tap: `
 ZMK_BEHAVIOR(mm_gresc, mod_morph,
     bindings = <&kp ESCAPE>, <&kp GRAVE>;
