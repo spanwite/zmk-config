@@ -1,4 +1,4 @@
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500  // 600
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 2500  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
 
 #include <dt-bindings/zmk/mouse.h>
@@ -6,7 +6,7 @@
 ZMK_BEHAVIOR(smart_mouse, tri_state,
     bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
     ignored-key-positions = <
-        LT1 LT3
+        LM1 LM3
         RT0 RT1 RT2 RT3 RT4
         RM1 RM2 RM3 
         RB1 RB2 RB3
@@ -36,4 +36,4 @@ ZMK_BEHAVIOR(smart_mouse, tri_state,
 #define U_WH_L &msc SCRL_LEFT
 #define U_WH_R &msc SCRL_RIGHT
 
-ZMK_COMBO(mouse, &smart_mouse, LT3 LT1, BASE NAV NUM, COMBO_TERM_FAST)
+ZMK_COMBO(mouse, &smart_mouse, LM3 LM1, BASE NAV NUM, COMBO_TERM_FAST)
