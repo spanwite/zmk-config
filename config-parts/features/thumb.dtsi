@@ -11,7 +11,7 @@ SIMPLE_MORPH(shift_caps_word, SFT, &sk LSHIFT, &caps_word)
 
 
 // Tap: Space | Shift-tap: Dot -> Space -> Sticky Shift | Hold: activate layer "number"
-#define SPC_NUM &ht_space NUM 0
+#define SPC_NAV &ht_space NAV 0
 
 ZMK_BEHAVIOR(ht_space, hold_tap,
     flavor = "balanced";
