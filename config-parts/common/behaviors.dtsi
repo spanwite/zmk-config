@@ -1,0 +1,31 @@
+#define MAKE_HRM(NAME, TRIGGER_POS) \
+    ZMK_BEHAVIOR(NAME, hold_tap, \
+        flavor = "balanced"; \
+        tapping-term-ms = <280>; \
+        quick-tap-ms = <QUICK_TAP_MS>; \
+        require-prior-idle-ms = <150>; \
+        bindings = <&kp>, <&kp>; \
+        hold-trigger-key-positions = <TRIGGER_POS>; \
+        hold-trigger-on-release; \
+    )
+
+MAKE_HRM(hml, KEYS_R KEYS_T)
+MAKE_HRM(hmr, KEYS_L KEYS_T)
+
+/* Unused
+
+// Tap: Sticky Shift | Shift-tap: Caps Word | Double-tap: Caps Word | Hold: Momentary layer SYM
+ZMK_BEHAVIOR(lt_shft, hold_tap,
+    bindings = <&mo>, <&shift_caps_word>;
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    flavor = "balanced";
+)
+SIMPLE_MORPH(shift_caps_word, SFT, &sk LSHIFT, &caps_word)
+
+// Tap: None | Double-tap: CapsLock
+ZMK_BEHAVIOR(td_capslock, tap_dance,
+    bindings = <&none>, <&kp CAPSLOCK>;
+)
+
+*/

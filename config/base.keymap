@@ -5,17 +5,14 @@
 #include "../zmk-nodefree-config/helper.h"
 
 #include "../config-parts/utils/helpers.dtsi"
-#include "../config-parts/custom_keys.dtsi"
-#include "../config-parts/settings.dtsi"
-#include "../config-parts/macros.dtsi"
-#include "../config-parts/combos.dtsi"
-#include "../config-parts/behaviors.dtsi"
-#include "../config-parts/features/win_power.dtsi"
-#include "../config-parts/features/thumb.dtsi"
-#include "../config-parts/features/mouse.dtsi"
 
-#include "../config-parts/layers/base.dtsi"
-#include "../config-parts/layers/num.dtsi"
+#include "../config-parts/common/aliases.dtsi"
+#include "../config-parts/common/settings.dtsi"
+#include "../config-parts/common/behaviors.dtsi"
+
+#include "../config-parts/layers/default.dtsi"
+#include "../config-parts/layers/num_word.dtsi"
+#include "../config-parts/layers/num_expr.dtsi"
 #include "../config-parts/layers/sym.dtsi"
 #include "../config-parts/layers/nav.dtsi"
 #include "../config-parts/layers/fn.dtsi"
@@ -23,5 +20,8 @@
 #include "../config-parts/layers/game_fps.dtsi"
 #include "../config-parts/layers/mouse.dtsi"
 #include "../config-parts/layers/sys.dtsi"
+
+#include "../config-parts/macros.dtsi"
+#include "../config-parts/combos.dtsi"
 
 ZMK_CONDITIONAL_LAYER(FN NAV, SYS)

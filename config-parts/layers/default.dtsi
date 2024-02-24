@@ -1,11 +1,71 @@
-ZMK_LAYER(num,
+#include "../features/win_power.dtsi"
+
+#define SMART_NUM &smart_num NUM_WORD 0
+
+ZMK_LAYER(default,
 // ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-     ___             ___             &kp N7          &kp N8          &kp N9          ___                 ___             ___             &kp LPAR        &kp RPAR        ___             ___
+     WIN_POWER       &kp Q           &kp W           &kp E           &kp R           &kp T               &kp Y           &kp U           &kp I           &kp O           &kp P           &kp LBKT 
 // ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-     ___             &kp N0          &kp N4          &kp N5          &kp N6          &tog NUM            ___             &hmr RSHIFT EQUAL  &hmr RCTRL MINUS  &hmr RALT PLUS  &kp RGUI   ___ 
+     &kp GRAVE       &hml LGUI A     &hml LALT S     &hml LCTRL D    &hml LSHIFT F   &kp G               &kp H           &hmr RSHIFT J   &hmr RCTRL K    &hmr RALT L     &hmr RGUI SEMI  &kp SQT 
 // ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-     ___             ___             &kp N1          &kp N2          &kp N3          ___                 ___             &kp PERCENT     &kp STAR        &kp KP_DIVIDE   ___             ___
+     &td_profiles    &kp Z           &kp X           &kp C           &kp V           &kp B               &kp N           &kp M           &kp COMMA       &kp DOT         &kp SLASH       &kp RBKT
 // ╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
-                                                     &kp MINUS        ___            &m_dot              ___             &m_dot          ___ 
+                                                     &lt_num_word NAV 0  &lt_spc SYM 0  &mt MEH ENTER    SMART_NUM       &smart_shft     &lt FN GRAVE       
 //                                                 ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
+)
+
+
+// tap: sticky-shift | shift + tap / double-tap: caps-word | hold: shift
+ZMK_BEHAVIOR(smart_shft, mod_morph,
+    bindings = <&sk LSHFT>, <&caps_word>;
+    mods = <(MOD_LSFT)>;
+)
+
+// tap: space | shift-tap: dot -> space -> sticky shift | hold: activate layer
+ZMK_BEHAVIOR(lt_spc, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    bindings = <&mo>, <&spc_morph>;
+)
+SIMPLE_MORPH(spc_morph, SFT, &kp SPACE, &m_dot_spc)
+ZMK_BEHAVIOR(m_dot_spc, macro,
+    wait-ms = <0>;
+    tap-ms = <5>;
+    bindings = <&m_dot &kp SPACE &sk LSHIFT>;
+)
+
+// tap: num word | hold: activate layer
+ZMK_BEHAVIOR(lt_num_word, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    bindings = <&mo>, <&num_word>;
+)
+
+ZMK_BEHAVIOR(smart_num, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    bindings = <&mo>, <&num_dance>;
+)
+ZMK_BEHAVIOR(num_dance, tap_dance,
+    tapping-term-ms = <200>;
+    bindings = <&num_word>, <&num_expr>;
+)
+ZMK_BEHAVIOR(num_expr, caps_word,
+    layers = <NUM_EXPR>;
+    continue-list = <
+        PLUS MINUS STAR KP_DIVIDE
+        EQUAL PERCENT LPAR RPAR 
+        SPACE BACKSPACE
+        KP_N0 KP_N1 KP_N2 KP_N3 KP_N4 KP_N5 KP_N6 KP_N7 KP_N8 KP_N9
+    >;
+    ignore-numbers;
+    ignore-modifiers;
+)
+
+// Tap Dance profile management
+ZMK_BEHAVIOR(td_profiles, tap_dance,
+    bindings = <&none>, <&tog MEDIA>, <&tog GAME_FPS>;
 )

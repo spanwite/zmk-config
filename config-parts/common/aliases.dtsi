@@ -1,0 +1,16 @@
+#define DEF 0
+#define NUM_WORD 1
+#define NUM_EXPR 2
+#define SYM 3
+#define NAV 4
+#define FN 5
+#define MEDIA 6
+#define GAME_FPS 7
+#define MOUSE 8
+#define SYS 9
+
+#define ___ &trans
+#define XXX &none
+
+#define MEH LC(LALT)
+#define CNG_LNG &kp LC(LSHIFT)
