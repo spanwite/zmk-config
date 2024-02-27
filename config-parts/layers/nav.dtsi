@@ -1,4 +1,4 @@
-#define ZOOM_IN &kp LC(EQUAL)
+#define ZOOM_IN  &kp LC(EQUAL)
 #define ZOOM_OUT &kp LC(MINUS)
 
 #define NAV_LEFT  &mt_nav HOME     LEFT
@@ -6,16 +6,23 @@
 #define NAV_UP    &mt_nav LC(HOME) UP
 #define NAV_DOWN  &mt_nav LC(END)  DOWN
 
+#define PREV &hml LALT LS(TAB)
+
 // PowerToys
-#define PT_RUN &kp MAKE_WIN_MEH(R)
+#define PT_RUN       &kp MAKE_WIN_MEH(O)
+#define PT_COL_PICK  &kp MAKE_WIN_MEH(C)
+#define PT_PIN       &kp MAKE_WIN_MEH(T)
+#define PT_RULLER    &kp MAKE_WIN_MEH(R)
+#define PT_ZONES     &kp MAKE_WIN_MEH(G)
+#define PT_EXTRACTOR &kp MAKE_WIN_MEH(X)
 
 ZMK_LAYER(nav,
 // ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-     ___             ___             ZOOM_OUT        ZOOM_IN         PT_RUN          ___                 ___             ___             ___             ___             ___             ___
+     ___             ___             ZOOM_OUT        ZOOM_IN         PT_RULLER       PT_PIN              ___             ___             ___             PT_RUN          ___             ___
 // ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-     ___             &kp LGUI        &kp LS(TAB)     &kp LCTRL       &swapper        ___                 NAV_LEFT        NAV_DOWN        NAV_UP          NAV_RIGHT       &kp PG_UP       ___
+     ___             &kp LGUI        PREV            &kp LCTRL       &swapper        PT_ZONES            NAV_LEFT        NAV_DOWN        NAV_UP          NAV_RIGHT       &kp PG_UP       ___
 // ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-     ___             ___             ___             ___             ___             ___                 &kp INS         ___             ___             ___             &kp PG_DN       ___
+     ___             ___             PT_EXTRACTOR    PT_COL_PICK     ___             ___                 &kp INS         ___             ___             ___             &kp PG_DN       ___
 // ╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
                                                      ___             ___             ___                 ___             ___             ___ 
 //                                                 ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
