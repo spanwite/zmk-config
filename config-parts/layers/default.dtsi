@@ -1,8 +1,5 @@
 #include "../features/win_power.dtsi"
 
-#define SMART_NUM &smart_num NUM_WORD 0
-#define SMART_SYM &smart_sym SYM 0
-
 ZMK_LAYER(default,
 // ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
      WIN_POWER       &kp Q           &kp W           &kp E           &kp R           &kp T               &kp Y           &kp U           &kp I           &kp O           &kp P           &kp LBKT 
@@ -11,7 +8,7 @@ ZMK_LAYER(default,
 // ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
      &td_profiles    &kp Z           &kp X           &kp C           &kp V           &kp B               &kp N           &kp M           &kp COMMA       &kp DOT         &kp SLASH       &kp RBKT
 // ╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
-                                                     SMART_SYM       &lt_spc NAV 0   &lt FN TAB          &lt FN ENTER    &smart_shft     SMART_NUM       
+                                                     &lt_sym SYM 0   &lt_spc NAV 0   &lt FN TAB          &lt FN ENTER    &smart_shft     &lt_num NUM_WORD 0       
 //                                                 ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
 )
 
@@ -40,28 +37,14 @@ ZMK_BEHAVIOR(lt_num_word, hold_tap,
     bindings = <&mo>, <&num_word>;
 )
 
-ZMK_BEHAVIOR(smart_num, hold_tap,
+ZMK_BEHAVIOR(lt_num, hold_tap,
     flavor = "balanced";
     tapping-term-ms = <200>;
     quick-tap-ms = <QUICK_TAP_MS>;
-    bindings = <&mo>, <&num_dance>;
-)
-ZMK_BEHAVIOR(num_dance, tap_dance,
-    tapping-term-ms = <200>;
-    bindings = <&num_word>, <&num_expr>;
-)
-ZMK_BEHAVIOR(num_expr, caps_word,
-    layers = <NUM_EXPR>;
-    continue-list = <
-        PLUS MINUS STAR KP_DIVIDE EQUAL PERCENT LPAR RPAR 
-        SPACE BACKSPACE DELETE
-        KP_N0 KP_N1 KP_N2 KP_N3 KP_N4 KP_N5 KP_N6 KP_N7 KP_N8 KP_N9
-    >;
-    ignore-numbers;
-    ignore-modifiers;
+    bindings = <&mo>, <&num_word>;
 )
 
-ZMK_BEHAVIOR(smart_sym, hold_tap,
+ZMK_BEHAVIOR(lt_sym, hold_tap,
     flavor = "balanced";
     tapping-term-ms = <200>;
     quick-tap-ms = <QUICK_TAP_MS>;
@@ -77,7 +60,7 @@ ZMK_BEHAVIOR(sym_word, caps_word,
     ignore-modifiers; 
 )
 
-// Tap Dance profile management
+// Tap Dance switch profile
 ZMK_BEHAVIOR(td_profiles, tap_dance,
-    bindings = <&none>, <&tog MEDIA>, <&tog GAME_FPS>;
+    bindings = <&none>, <&tog GAME_FPS>;
 )

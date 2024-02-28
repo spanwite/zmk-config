@@ -33,7 +33,6 @@ ZMK_COMBO(redo,     &kp LC(LS(Z)),  LM3 LB2,     DEF_LAYERS,        COMBO_TERM_F
 ZMK_COMBO(esc,      &kp ESC,        LT3 LM3,     DEF_LAYERS,        COMBO_TERM_SLOW)
 
 /* Horizontal combos - right hand */
-ZMK_COMBO(tab,      &kp TAB,        RM2 RM3,     DEF_LAYERS,  COMBO_TERM_FAST)
-ZMK_COMBO(cancel,   &kp K_CANCEL,   RM1 RM2,     DEF_LAYERS MOUSE,  COMBO_TERM_FAST)
+ZMK_COMBO(cancel,   &kp K_CANCEL,   RM2 RM3,     DEF_LAYERS MOUSE,  COMBO_TERM_FAST)
 
 ZMK_COMBO(num_expr, &num_expr,      RM1 RM2 RM3, DEF_LAYERS,  COMBO_TERM_FAST)
