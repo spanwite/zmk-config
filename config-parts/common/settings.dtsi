@@ -3,6 +3,9 @@
 #define COMBO_TERM_FAST 35
 #define COMBO_TERM_SLOW 40
 
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 3000 
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 20
+
 &caps_word {
     /delete-property/ ignore-modifiers;
 };
@@ -24,5 +27,6 @@
 };
 
 &sk {
+    release-after-ms = <1000>;
     quick-release;
 };

@@ -16,3 +16,4 @@
     )
 
 #define MAKE_WIN_MEH(KEY) LG(LC(LS(KEY)))
+#define MAKE_HYPER(KEY) LC(LS(LA(KEY)))

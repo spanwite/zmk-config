@@ -12,10 +12,6 @@
 MAKE_HRM(hml, KEYS_R KEYS_T)
 MAKE_HRM(hmr, KEYS_L KEYS_T)
 
-SIMPLE_MORPH(mm_excl, SFT, &kp EXCL, &m_end_excl)
-SIMPLE_MORPH(mm_qst, SFT, &m_qst, &m_end_qst)
-SIMPLE_MORPH(mm_at_email, SFT, &kp AT_SIGN, &m_type_email)
-
 ZMK_BEHAVIOR(num_expr, caps_word,
     layers = <NUM_EXPR>;
     continue-list = <

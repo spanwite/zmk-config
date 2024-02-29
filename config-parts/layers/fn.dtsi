@@ -1,6 +1,6 @@
 #define VOL_DOWN    &hmr RCTRL C_VOL_DN
-#define DSK_PREV    &hmr RSHFT LG(LC(LEFT))  // previous desktop
-#define DSK_NEXT    &hmr LALT LG(LC(RIGHT))  // next     desktop
+#define DSK_PREV    &hmr RSHFT LG(LC(LEFT))
+#define DSK_NEXT    &hmr LALT LG(LC(RIGHT))
 
 ZMK_LAYER(fn,
 // ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
