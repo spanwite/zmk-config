@@ -8,7 +8,7 @@ ZMK_LAYER(default,
 // ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
      &td_profiles    &kp Z           &kp X           &kp C           &kp V           &kp B               &kp N           &kp M           &kp COMMA       &kp DOT         &kp SLASH       &kp RBKT
 // ╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
-                                                     &lt_sym SYM 0   &lt_spc NAV 0   &lt FN TAB          &lt FN ENTER    &smart_shft     &lt_num NUM_WORD 0       
+                                                     &lt_sym NAV 0   &lt_spc SYM 0   &lt FN TAB          &lt FN ENTER    &smart_shft     &lt_num NUM_WORD 0       
 //                                                 ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
 )
 
@@ -30,13 +30,6 @@ SIMPLE_MORPH(spc_morph, SFT, &kp SPACE, &m_end_dot)
 
 
 // tap: num word | hold: activate layer
-ZMK_BEHAVIOR(lt_num_word, hold_tap,
-    flavor = "balanced";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <QUICK_TAP_MS>;
-    bindings = <&mo>, <&num_word>;
-)
-
 ZMK_BEHAVIOR(lt_num, hold_tap,
     flavor = "balanced";
     tapping-term-ms = <200>;

@@ -19,8 +19,7 @@ ZMK_COMBO(del,      &kp DELETE,     LT2 LT3,     DEF_LAYERS,        COMBO_TERM_F
 
 ZMK_COMBO(bspc,     &kp BSPC,       LM2 LM3,     DEF_LAYERS,        COMBO_TERM_FAST)
 ZMK_COMBO(cng_lng,  CNG_LNG,        LM1 LM2,     DEF_LAYERS,        COMBO_TERM_FAST)
-ZMK_COMBO(mouse,    &smart_mouse,   LM3 LM1,     DEF_LAYERS,        COMBO_TERM_FAST)
-ZMK_COMBO(num_word, &num_word,      LM3 LM2 LM1, DEF_LAYERS,        COMBO_TERM_FAST)
+ZMK_COMBO(num_word, &num_word,      LM3 LM1,     DEF_LAYERS,        COMBO_TERM_FAST)
 
 ZMK_COMBO(paste,    &kp LC(V),      LB1 LB2,     DEF_LAYERS,        COMBO_TERM_FAST)
 ZMK_COMBO(copy,     &kp LC(C),      LB2 LB3,     DEF_LAYERS,        COMBO_TERM_FAST)
@@ -33,7 +32,11 @@ ZMK_COMBO(redo,     &kp LC(LS(Z)),  LM3 LB2,     DEF_LAYERS,        COMBO_TERM_F
 ZMK_COMBO(esc,      &kp ESC,        LT3 LM3,     DEF_LAYERS,        COMBO_TERM_SLOW)
 
 /* Horizontal combos - right hand */
-ZMK_COMBO(cancel,   &kp K_CANCEL,   RM2 RM3,     DEF_LAYERS,        COMBO_TERM_FAST)
-ZMK_COMBO(tog_mouse,&tog MOUSE,     RM2 RM3,     MOUSE,             COMBO_TERM_FAST)
+ZMK_COMBO(cancel,   &kp K_CANCEL,   RM1 RM2,     DEF_LAYERS,        COMBO_TERM_FAST)
+ZMK_COMBO(tog_mouse,&tog MOUSE,     RM1 RM2,     MOUSE,             COMBO_TERM_FAST)
+ZMK_COMBO(tab,      &kp TAB,        RM2 RM3,     DEF_LAYERS,        COMBO_TERM_FAST)
 
-ZMK_COMBO(num_expr, &num_expr,      RM1 RM2 RM3, DEF_LAYERS,        COMBO_TERM_FAST)
+/* Cross-hand combos */
+ZMK_COMBO(mouse,    &smart_mouse,   LM1 RM1,     DEF_LAYERS,        COMBO_TERM_FAST)
+ZMK_COMBO(num_expr, &num_expr,      LM2 RM2,     DEF_LAYERS,        COMBO_TERM_FAST)
+ZMK_COMBO(sym_word, &sym_word,      LM3 RM3,     DEF_LAYERS,        COMBO_TERM_FAST)
