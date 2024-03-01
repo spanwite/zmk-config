@@ -7,36 +7,41 @@
  ╰───────────╮ LH2 LH1 LH0 │ RH0 RH1 RH2 ╭───────────╯
              ╰─────────────┴─────────────╯             */
 
-// Use require-prior-idle-ms for combos
 #undef COMBO_HOOK
-#define COMBO_HOOK require-prior-idle-ms = <150>;
+#define COMBO_HOOK require-prior-idle-ms = <PRIOR_IDLE_TERM>;
 
-#define DEF_LAYERS DEF NAV SYM NUM_WORD NUM_EXPR
+#define COMBO_TERM 40
 
-/* Horizontal combos - left hand */
-ZMK_COMBO(enter,    &kp ENTER,      LT1 LT2,     DEF_LAYERS,        COMBO_TERM_FAST)
-ZMK_COMBO(del,      &kp DELETE,     LT2 LT3,     DEF_LAYERS,        COMBO_TERM_FAST)
+#define COMBO(NAME, KEYS, BINDINGS, LAYERS) \
+    ZMK_COMBO(NAME, BINDINGS, KEYS, LAYERS, COMBO_TERM)
 
-ZMK_COMBO(bspc,     &kp BSPC,       LM2 LM3,     DEF_LAYERS,        COMBO_TERM_FAST)
-ZMK_COMBO(cng_lng,  CNG_LNG,        LM1 LM2,     DEF_LAYERS,        COMBO_TERM_FAST)
-ZMK_COMBO(num_word, &num_word,      LM3 LM1,     DEF_LAYERS,        COMBO_TERM_FAST)
 
-ZMK_COMBO(paste,    &kp LC(V),      LB1 LB2,     DEF_LAYERS,        COMBO_TERM_FAST)
-ZMK_COMBO(copy,     &kp LC(C),      LB2 LB3,     DEF_LAYERS,        COMBO_TERM_FAST)
-ZMK_COMBO(cut,      &kp LC(X),      LB1 LB3,     DEF_LAYERS,        COMBO_TERM_FAST)
+COMBO(esc,              LT2 LT1,      &kp ESC,               ALPHA NUMPAD CAPS_WORD)
+COMBO(cut,              LT3 LT2,      &kp LC(X),             ALPHA NUMPAD CAPS_WORD)
 
-ZMK_COMBO(undo,     &kp LC(Z),      LM2 LB3,     DEF_LAYERS,        COMBO_TERM_FAST)
-ZMK_COMBO(redo,     &kp LC(LS(Z)),  LM3 LB2,     DEF_LAYERS,        COMBO_TERM_FAST)
+COMBO(enter,            LM2 LM1,      &kp ENTER,             ALPHA NUMPAD CAPS_WORD)
+COMBO(paste,            LM3 LM2,      &th_paste 0 0,         ALPHA NUMPAD CAPS_WORD)
+COMBO(smart_numpad,     LM3 LM1,      &num_word,             ALPHA NUMPAD)
 
-/* Vertical combos - left hand */
-ZMK_COMBO(esc,      &kp ESC,        LT3 LM3,     DEF_LAYERS,        COMBO_TERM_SLOW)
+COMBO(copy,             LB3 LB2,      &th_copy 0 0,          ALPHA NUMPAD CAPS_WORD)
+COMBO(l_change_lang,    LB2 LB1,      CHANGE_LANG,           ALPHA NUMPAD CAPS_WORD)
 
-/* Horizontal combos - right hand */
-ZMK_COMBO(cancel,   &kp K_CANCEL,   RM1 RM2,     DEF_LAYERS,        COMBO_TERM_FAST)
-ZMK_COMBO(tog_mouse,&tog MOUSE,     RM1 RM2,     MOUSE,             COMBO_TERM_FAST)
-ZMK_COMBO(tab,      &kp TAB,        RM2 RM3,     DEF_LAYERS,        COMBO_TERM_FAST)
+COMBO(l_delete,         LT3 LT2 LT1,  &kp DELETE,            ALPHA NUMPAD CAPS_WORD)
+COMBO(l_bspc,           LM3 LM2 LM1,  &th_bspc 0 0,          ALPHA NUMPAD CAPS_WORD)
+COMBO(l_tab,            LB3 LB2 LB1,  &th_tab 0 0,           ALPHA NUMPAD CAPS_WORD)
 
-/* Cross-hand combos */
-ZMK_COMBO(mouse,    &smart_mouse,   LM1 RM1,     DEF_LAYERS,        COMBO_TERM_FAST)
-ZMK_COMBO(num_expr, &num_expr,      LM2 RM2,     DEF_LAYERS,        COMBO_TERM_FAST)
-ZMK_COMBO(sym_word, &sym_word,      LM3 RM3,     DEF_LAYERS,        COMBO_TERM_FAST)
+COMBO(undo,             LM2 LB3,      &kp LC(Z),             ALPHA NUMPAD CAPS_WORD)
+COMBO(redo,             LM3 LB2,      &kp LC(LS(Z)),         ALPHA NUMPAD CAPS_WORD)
+                    
+COMBO(change_lang,      LM1 RM1,      CHANGE_LANG,           ALPHA NUMPAD CAPS_WORD)
+COMBO(my_caps_word,     LM2 RM2,      &my_caps_word,         ALPHA NUMPAD)
+
+COMBO(tab,              RM1 RM2,      &kp TAB,               ALPHA NUMPAD CAPS_WORD)
+COMBO(bspc,             RM2 RM3,      &kp BSPC,              ALPHA NUMPAD CAPS_WORD)
+
+COMBO(logic_or,         RB2 RB3,      &mc_logic_or,          LOWER RAISE SYMBOLS)
+COMBO(triple_dot,       RB1 RB2,      &mc_triple_dot,        LOWER RAISE SYMBOLS)
+COMBO(logic_and,        RM2 RM3,      &mc_logic_and,         LOWER RAISE SYMBOLS)
+COMBO(nullish,          RM1 RM3,      &mc_nullish,           LOWER RAISE SYMBOLS)
+COMBO(strict_eqls,      RM1 RM2,      &th_strict_eqls 0 0,   LOWER RAISE SYMBOLS)
+COMBO(js_arrow_fn,      RT1 RT2,      &th_js_arrow_fn 0 0,   LOWER RAISE SYMBOLS)

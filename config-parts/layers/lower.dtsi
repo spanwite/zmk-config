@@ -1,68 +1,14 @@
-#define WIN_POWER &ht_win_power MAKE_HYPER(F1) 0
-
-ZMK_LAYER(default,
+ZMK_LAYER(lower,
 // ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-     WIN_POWER       &kp Q           &kp W           &kp E           &kp R           &kp T               &kp Y           &kp U           &kp I           &kp O           &kp P           &kp LBKT 
+     ___             ___             &th_lbrc 0 0    &mc_rbrc        &kp DOLLAR      ___                 &kp F12         &kp F7          &kp F8          &kp F9          ___             ___
 // ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-     &kp GRAVE       &hml LGUI A     &hml LALT S     &hml LCTRL D    &hml LSHFT F    &kp G               &kp H           &hmr RSHFT J    &hmr RCTRL K    &hmr RALT L     &hmr RGUI SEMI  &kp SQT 
+     ___             &mm_qst         &th_lpar 0 0    &th_rpar 0 0    &mc_colon       &mc_caret           &kp F11         &hmr RSHFT F4   &hmr RCTRL F5   &hmr RALT F6    &kp RGUI        ___
 // ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-     &td_profiles    &kp Z           &kp X           &kp C           &kp V           &kp B               &kp N           &kp M           &kp COMMA       &kp DOT         &kp SLASH       &kp RBKT
+     ___             &mm_at_email    &mc_lbkt        &mc_rbkt        &th_dqt 0 0     &kp BACKSLASH       &kp F10         &kp F1          &kp F2          &kp F3          ___             ___
 // ╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
-                                                     &lt_sym NAV 0   &lt_spc SYM 0   &lt FN TAB          &lt FN ENTER    &smart_shft     &lt_num NUM_WORD 0       
+                                                     ___             ___             ___                 ___             &lt SYMBOLS UNDER  ___
 //                                                 ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
 )
 
-
-// tap: sticky-shift | shift + tap / double-tap: caps-word | hold: shift
-ZMK_BEHAVIOR(smart_shft, mod_morph,
-    bindings = <&sk LSHFT>, <&caps_word>;
-    mods = <(MOD_LSFT)>;
-)
-
-// tap: space | shift-tap: dot -> space -> sticky shift | hold: activate layer
-ZMK_BEHAVIOR(lt_spc, hold_tap,
-    flavor = "balanced";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <QUICK_TAP_MS>;
-    bindings = <&mo>, <&spc_morph>;
-)
-SIMPLE_MORPH(spc_morph, SFT, &kp SPACE, &m_end_dot)
-
-
-// tap: num word | hold: activate layer
-ZMK_BEHAVIOR(lt_num, hold_tap,
-    flavor = "balanced";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <QUICK_TAP_MS>;
-    bindings = <&mo>, <&num_word>;
-)
-
-ZMK_BEHAVIOR(lt_sym, hold_tap,
-    flavor = "balanced";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <QUICK_TAP_MS>;
-    bindings = <&mo>, <&sym_word>;
-)
-ZMK_BEHAVIOR(sym_word, caps_word,
-    layers = <SYM>;
-    continue-list = <
-        BACKSLASH LPAR RPAR HASH DOLLAR EQUAL PERCENT UNDER STAR MINUS PLUS EXCL
-        BACKSPACE DELETE
-        KP_N0 KP_N1 KP_N2 KP_N3 KP_N4 KP_N5 KP_N6 KP_N7 KP_N8 KP_N9
-    >;
-    ignore-modifiers; 
-)
-
-// Tap Dance switch profile
-ZMK_BEHAVIOR(td_profiles, tap_dance,
-    bindings = <&none>, <&tog GAME_FPS>;
-)
-
-ZMK_BEHAVIOR(ht_win_power, hold_tap,
-    tapping-term-ms = <300>;
-    bindings = <&kp>, <&td_win_power>;
-)
-ZMK_BEHAVIOR(td_win_power, tap_dance,
-    tapping-term-ms = <300>;
-    bindings = <&none>, <&kp MAKE_HYPER(F2)>, <&kp MAKE_HYPER(F3)>;
-)
+SIMPLE_MORPH(mm_qst, SFT, &mc_qst, &mc_end_qst)
+SIMPLE_MORPH(mm_at_email, SFT, &mc_at_sign, &mc_email)

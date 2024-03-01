@@ -1,12 +1,15 @@
-// todo: implement game word
-ZMK_LAYER(game_fps,     
+ZMK_LAYER(alpha,
 // ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-     ___             &kp ESCAPE      &kp Q           &kp W           &kp E           &kp R               ___             ___             ___             ___             ___             ___
+     WIN_POWER       &kp Q           &kp W           &kp E           &kp R           &kp T               &kp Y           &kp U           &kp I           &kp O           &kp P           &kp LBKT
 // ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-     ___             &kp LSHIFT      &kp A           &kp S           &kp D           &kp F               ___             &tog GAME_FPS   &tog GAME_FPS   &tog GAME_FPS   &tog GAME_FPS   ___
+     &mt RBKT GRAVE  &hml LGUI A     &hml LALT S     &hml LCTRL D    &hml LSHFT F    &kp G               &kp H           &hmr RSHFT J    &hmr RCTRL K    &hmr RALT L     &hmr RGUI SEMI  &kp SQT 
 // ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-     &tog GAME_FPS   &kp TAB         &kp Z           &kp X           &kp C           &kp V               ___             ___             ___             ___             ___             ___
+     &td_profiles    &kp Z           &kp X           &kp C           &kp V           &kp B               &kp N           &kp M           &kp COMMA       &kp DOT         &kp SLASH       &kp RBKT
 // ╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
-                                                     &kp LCTRL       &lt NUMPAD SPACE   XXX                 ___             ___             ___
+                                                     &lt_to NAV ALPHA  &lt_spc LOWER 0  &lt_repeat MEDIA 0  &lt_repeat SYSTEM 0  &lt_shft RAISE 0  &to ALPHA               
 //                                                 ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
+)
+
+ZMK_BEHAVIOR(td_profiles, tap_dance,
+    bindings = <&none>, <&tog GAME_FPS>;
 )

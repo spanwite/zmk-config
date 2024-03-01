@@ -1,0 +1,33 @@
+#define SHORTCUT(NAME, BINDINGS) \
+    ZMK_BEHAVIOR(NAME, macro, \
+        wait-ms = <10>; \
+        tap-ms = <10>; \
+        bindings = <&macro_tap BINDINGS>; \
+    )
+
+#define TAPHOLD_SHORTCUT(NAME, TAP, HOLD) \
+    ZMK_BEHAVIOR(NAME, hold_tap, \
+        tapping-term-ms = <TAPPING_TERM>; \
+        flavor = "tap-preferred"; \
+        quick-tap-ms = <QUICK_TAP_TERM>; \
+        require-prior-idle-ms = <PRIOR_IDLE_TERM>; \
+        bindings = <HOLD>, <TAP>; \
+    )
+
+SHORTCUT(mc_copy, &kp LC(C))
+SHORTCUT(mc_sel_copy, &kp LC(A) &kp LC(C))
+TAPHOLD_SHORTCUT(th_copy, &mc_copy, &mc_sel_copy)
+
+SHORTCUT(mc_paste, &kp LC(V))
+SHORTCUT(mc_sel_paste, &kp LC(A) &kp LC(V))
+TAPHOLD_SHORTCUT(th_paste, &mc_paste, &mc_sel_paste)
+
+SHORTCUT(mc_bspc, &kp BSPC)
+SHORTCUT(mc_del_word, &kp LC(BSPC))
+TAPHOLD_SHORTCUT(th_bspc, &mc_bspc, &mc_del_word)
+
+SHORTCUT(mc_tab, &kp TAB)
+SHORTCUT(mc_shft_tab, &kp LS(TAB))
+TAPHOLD_SHORTCUT(th_tab, &mc_tab, &mc_shft_tab)
+
+SHORTCUT(mc_new_close_tab, &kp LC(T) CLOSE_TABS)

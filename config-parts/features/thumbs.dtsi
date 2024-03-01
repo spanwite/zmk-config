@@ -1,0 +1,16 @@
+#define THUMB_LAYERTAP(NAME, TAP) \
+    ZMK_BEHAVIOR(NAME, hold_tap, \
+        tapping-term-ms = <TAPPING_TERM>; \
+        flavor = "balanced"; \
+        quick-tap-ms = <QUICK_TAP_TERM>; \
+        bindings = <&mo>, <TAP>; \
+    )
+
+THUMB_LAYERTAP(lt_spc, &spc_morph)
+SIMPLE_MORPH(spc_morph, SFT, &kp SPACE, &mc_end_dot)
+
+THUMB_LAYERTAP(lt_shft, &shft_morph)
+SIMPLE_MORPH(shft_morph, SFT, &sk LSHIFT, &my_caps_word)
+
+THUMB_LAYERTAP(lt_repeat, &key_repeat)
+THUMB_LAYERTAP(lt_to, &to)

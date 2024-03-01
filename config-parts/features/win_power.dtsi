@@ -1,0 +1,31 @@
+#define WIN_WAIT_MS 500
+
+#define LANG_TAP(KEY) &kp KEY CHANGE_LANG &kp KEY
+
+// Tap: None | Double-tap: Windows sleep | Triple-tap: Windows restart | Hold: Windows shutdown
+#define WIN_POWER &ht_win_power 0 0
+
+ZMK_BEHAVIOR(ht_win_power, hold_tap,
+    tapping-term-ms = <300>;
+    bindings = <&mc_win_shutdown>, <&td_win_power>;
+)
+ZMK_BEHAVIOR(td_win_power, tap_dance,
+    tapping-term-ms = <300>;
+    bindings = <&none>, <&mc_win_sleep>, <&mc_win_restart>;
+)
+
+ZMK_BEHAVIOR(mc_win_sleep, macro,
+    wait-ms = <WIN_WAIT_MS>;
+    tap-ms = <5>;
+    bindings = <&kp LG(X) LANG_TAP(U) LANG_TAP(S)>;
+)
+ZMK_BEHAVIOR(mc_win_shutdown, macro,
+    wait-ms = <WIN_WAIT_MS>;
+    tap-ms = <5>;
+    bindings = <&kp LG(X) LANG_TAP(U) LANG_TAP(U)>;
+)
+ZMK_BEHAVIOR(mc_win_restart, macro,
+    wait-ms = <WIN_WAIT_MS>;
+    tap-ms = <5>;
+    bindings = <&kp LG(X) LANG_TAP(U) LANG_TAP(R)>;
+)

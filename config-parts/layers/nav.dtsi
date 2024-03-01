@@ -1,14 +1,18 @@
-#define ZOOM_IN  &kp LC(EQUAL)
-#define ZOOM_OUT &kp LC(MINUS)
+#define ZOOM_IN   &hml LCTRL LC(EQUAL)
+#define ZOOM_OUT  &kp LC(MINUS)
 
-#define NAV_LEFT  &mt_nav HOME     LEFT
-#define NAV_RIGHT &mt_nav END      RIGHT
-#define NAV_UP    &mt_nav LC(HOME) UP
-#define NAV_DOWN  &mt_nav LC(END)  DOWN
+#define NAV_LEFT  &mt HOME     LEFT
+#define NAV_RIGHT &mt END      RIGHT
+#define NAV_UP    &mt LC(HOME) UP
+#define NAV_DOWN  &mt LC(END)  DOWN
 
-#define PREV &hml LALT LS(TAB)
+#define TAB_PREV  &hml LALT LS(TAB)
+#define TAB_NEXT  &hml_swapper LCTRL 0
 
-// PowerToys
+#define DSK_PREV  &hmr RSHFT LG(LC(LEFT))
+#define DSK_NEXT  &hmr LALT LG(LC(RIGHT))
+
+
 #define PT_RUN       &kp MAKE_WIN_MEH(O)
 #define PT_COL_PICK  &kp MAKE_WIN_MEH(C)
 #define PT_PIN       &kp MAKE_WIN_MEH(T)
@@ -18,26 +22,19 @@
 
 ZMK_LAYER(nav,
 // ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-     ___             ___             ZOOM_OUT        ZOOM_IN         PT_RULLER       PT_PIN              ___             ___             ___             PT_RUN          ___             ___
+     ___             ___             ZOOM_OUT        ZOOM_IN         PT_RULLER       PT_PIN              ___             &kp BSPC        &mc_del_word    PT_RUN          ___             ___
 // ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-     ___             &kp LGUI        PREV            &kp LCTRL       &swapper        PT_ZONES            NAV_LEFT        NAV_DOWN        NAV_UP          NAV_RIGHT       &kp PG_UP       ___
+     ___             &kp LGUI        TAB_PREV        TAB_NEXT        PT_ZONES        ___                 NAV_LEFT        NAV_DOWN        NAV_UP          NAV_RIGHT       ___             ___
 // ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-     ___             ___             PT_EXTRACTOR    PT_COL_PICK     ___             ___                 &kp INS         ___             ___             ___             &kp PG_DN       ___
+     ___             ___             DSK_PREV        DSK_NEXT        ___             ___                 ___             &kp INS         &kp PG_DN       &kp PG_UP       ___             ___
 // ╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
                                                      ___             ___             ___                 ___             ___             ___ 
 //                                                 ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
 )
 
-ZMK_BEHAVIOR(mt_nav, hold_tap,
-    bindings = <&kp>, <&kp>;
-    flavor = "tap-preferred";
-    tapping-term-ms = <220>;
-    quick-tap-ms = <220>;
-    hold-trigger-key-positions = <0>;
-)
-
-// Alt+Tab swapper
-ZMK_BEHAVIOR(swapper, tri_state,
+ZMK_BEHAVIOR(ts_swapper, tri_state,
     bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
     ignored-key-positions = <LM3>;
 )
+
+HOME_ROW_MOD(hml_swapper, &kp, &ts_swapper, KEYS_R KEYS_T)
