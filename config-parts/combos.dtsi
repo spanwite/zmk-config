@@ -43,5 +43,5 @@ COMBO(logic_or,         RB2 RB3,      &mc_logic_or,          LOWER RAISE SYMBOLS
 COMBO(triple_dot,       RB1 RB2,      &mc_triple_dot,        LOWER RAISE SYMBOLS)
 COMBO(logic_and,        RM2 RM3,      &mc_logic_and,         LOWER RAISE SYMBOLS)
 COMBO(nullish,          RM1 RM3,      &mc_nullish,           LOWER RAISE SYMBOLS)
-COMBO(strict_eqls,      RM1 RM2,      &th_strict_eqls 0 0,   LOWER RAISE SYMBOLS)
-COMBO(js_arrow_fn,      RT1 RT2,      &th_js_arrow_fn 0 0,   LOWER RAISE SYMBOLS)
+COMBO(js_eqls,          RM1 RM2,      &th_js_eqls 0 0,       LOWER RAISE SYMBOLS)
+COMBO(js_fn,            RT1 RT2,      &th_js_fn 0 0,         LOWER RAISE SYMBOLS)

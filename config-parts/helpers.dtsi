@@ -4,7 +4,15 @@
         bindings = <BINDING1>, <BINDING2>; \
     )
 
+#define HOME_ROW_MOD(NAME, HOLD, TAP, TRIGGER_POS) \
+    ZMK_BEHAVIOR(NAME, hold_tap, \
+        flavor = "balanced"; \
+        tapping-term-ms = <280>; \
+        quick-tap-ms = <QUICK_TAP_TERM>; \
+        require-prior-idle-ms = <150>; \
+        bindings = <HOLD>, <TAP>; \
+        hold-trigger-key-positions = <TRIGGER_POS>; \
+        hold-trigger-on-release; \
+    )
 
-
-#define MAKE_WIN_MEH(KEY) LG(LC(LS(KEY)))
-#define MAKE_HYPER(KEY) LC(LS(LA(KEY)))
+#define WIN_MEH(KEY) LG(LC(LS(KEY)))

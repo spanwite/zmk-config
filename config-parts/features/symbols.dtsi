@@ -32,69 +32,58 @@
         ; \
     )
     
-// () => {} todo: fix
-TAPHOLD_SYMBOL(th_js_arrow_fn, &mc_js_arrow, &mc_js_arrow_full)
-MACRO_SYMBOL(mc_js_arrow, &kp END &kp SPACE &kp EQUAL &kp GT &kp SPACE)
-MACRO_SYMBOL(mc_js_arrow_full, &kp END &kp SPACE &kp EQUAL &kp GT &kp SPACE &kp LBRC &kp ENTER)
+TAPHOLD_SYMBOL(th_js_fn,    &mc_eql_grt, &mc_js_fn)
+MACRO_SYMBOL(mc_eql_grt,    &kp END &kp SPACE &kp EQUAL &kp GT &kp SPACE)
+MACRO_SYMBOL(mc_js_fn,      &kp END &kp SPACE &kp EQUAL &kp GT &kp SPACE &kp LBRC &kp ENTER)
 
-// tap: &&
-SYMBOL(mc_logic_and, &mc_amps &mc_amps)
-ALT_SYMBOL(mc_greater,  &kp KP_N6 &kp KP_N2)
-ALT_SYMBOL(mc_amps,     &kp KP_N3 &kp KP_N8)
+SYMBOL(mc_logic_and,        &mc_amps &mc_amps)
+ALT_SYMBOL(mc_amps,         &kp KP_N3 &kp KP_N8)
 
-// tap: ||
-SYMBOL(mc_logic_or, &mc_pipe &mc_pipe)
-ALT_SYMBOL(mc_pipe, &kp KP_N1 &kp KP_N2 &kp KP_N4)
-ALT_SYMBOL(mc_less,     &kp KP_N6 &kp KP_N0)
+SYMBOL(mc_logic_or,         &mc_pipe &mc_pipe)
+ALT_SYMBOL(mc_pipe,         &kp KP_N1 &kp KP_N2 &kp KP_N4)
 
-// tap: === | hold: !==
-TAPHOLD_SYMBOL(th_strict_eqls, &mc_strict_eql, &mc_strict_ineql)
-SYMBOL(mc_strict_eql, &kp EQUAL &kp EQUAL &kp EQUAL)
-SYMBOL(mc_strict_ineql, &kp EXCL &kp EQUAL &kp EQUAL)
+TAPHOLD_SYMBOL(th_js_eqls,  &mc_js_eql, &mc_js_ineql)
+SYMBOL(mc_js_eql,           &kp EQUAL &kp EQUAL &kp EQUAL)
+SYMBOL(mc_js_ineql,         &kp EXCL &kp EQUAL &kp EQUAL)
 
-// tap: { | hold: end -> space -> { -> enter
-TAPHOLD_SYMBOL(th_lbrc, &mc_lbrc, &mc_end_lbrc)
-MACRO_SYMBOL(mc_end_lbrc, &kp END &kp SPACE &kp LBRC &kp ENTER)
-ALT_SYMBOL(mc_lbrc,     &kp KP_N1 &kp KP_N2 &kp KP_N3)
+TAPHOLD_SYMBOL(th_lbrc,     &mc_lbrc, &mc_end_lbrc)
+MACRO_SYMBOL(mc_end_lbrc,   &kp END &kp SPACE &kp LBRC &kp ENTER)
+ALT_SYMBOL(mc_lbrc,         &kp KP_N1 &kp KP_N2 &kp KP_N3)
 
-// tap: ( | hold: end -> space -> ( -> enter
-TAPHOLD_SYMBOL(th_lpar, &mc_lpar, &mc_end_lpar)
-MACRO_SYMBOL(mc_end_lpar, &kp END &kp SPACE &mc_lpar &kp ENTER)
+TAPHOLD_SYMBOL(th_lpar,     &mc_lpar, &mc_end_lpar)
+MACRO_SYMBOL(mc_end_lpar,   &kp END &kp SPACE &mc_lpar &kp ENTER)
 
-// } [ ] ( )
-ALT_SYMBOL(mc_rbrc,     &kp KP_N1 &kp KP_N2 &kp KP_N5)
-ALT_SYMBOL(mc_lbkt,     &kp KP_N9 &kp KP_N1)
-ALT_SYMBOL(mc_rbkt,     &kp KP_N9 &kp KP_N3)
+TAPHOLD_SYMBOL(th_rpar,     &mc_rpar, &mc_pars)
+MACRO_SYMBOL(mc_pars,       &kp LPAR &kp RPAR &kp LEFT)
+SYMBOL(mc_rpar,             &kp RPAR)
 
-TAPHOLD_SYMBOL(th_rpar, &mc_rpar, &mc_pars)
-MACRO_SYMBOL(mc_pars, &kp LPAR &kp RPAR &kp LEFT)
-SYMBOL(mc_rpar, &kp RPAR)
+ALT_SYMBOL(mc_rbrc,         &kp KP_N1 &kp KP_N2 &kp KP_N5)
+ALT_SYMBOL(mc_lbkt,         &kp KP_N9 &kp KP_N1)
+ALT_SYMBOL(mc_rbkt,         &kp KP_N9 &kp KP_N3)
+SYMBOL(mc_lpar,             &kp LPAR)
 
-SYMBOL(mc_lpar, &kp LPAR)
+SYMBOL(mc_end_dot,          &mc_dot &kp SPACE &sk LSHIFT)
+ALT_SYMBOL(mc_dot,          &kp KP_N4 &kp KP_N6)
 
-// . ! ?
-SYMBOL(mc_end_dot, &mc_dot &kp SPACE &sk LSHIFT)
-ALT_SYMBOL(mc_dot,      &kp KP_N4 &kp KP_N6)
+SYMBOL(mc_end_excl,         &kp EXCL &kp SPACE &sk LSHIFT)
 
-SYMBOL(mc_end_excl, &kp EXCL &kp SPACE &sk LSHIFT)
+SYMBOL(mc_nullish,          &mc_qst &mc_qst)
+SYMBOL(mc_end_qst,          &mc_qst &kp SPACE &sk LSHIFT)
+ALT_SYMBOL(mc_qst,          &kp KP_N6 &kp KP_N3)
 
-SYMBOL(mc_nullish, &mc_qst &mc_qst)
-SYMBOL(mc_end_qst, &mc_qst &kp SPACE &sk LSHIFT)
-ALT_SYMBOL(mc_qst, &kp KP_N6 &kp KP_N3)
+SYMBOL(mc_triple_dot,       &mc_dot &mc_dot &mc_dot)
 
-SYMBOL(mc_triple_dot, &mc_dot &mc_dot &mc_dot)
+ALT_SYMBOL(mc_comma,        &kp KP_N4 &kp KP_N4)
+ALT_SYMBOL(mc_colon,        &kp KP_N5 &kp KP_N8)
+ALT_SYMBOL(mc_caret,        &kp KP_N9 &kp KP_N4)
+ALT_SYMBOL(mc_sqt,          &kp KP_N3 &kp KP_N9)
+ALT_SYMBOL(mc_greater,      &kp KP_N6 &kp KP_N2)
+ALT_SYMBOL(mc_less,         &kp KP_N6 &kp KP_N0)
 
-// other
-ALT_SYMBOL(mc_comma,    &kp KP_N4 &kp KP_N4)
-ALT_SYMBOL(mc_colon,    &kp KP_N5 &kp KP_N8)
-ALT_SYMBOL(mc_caret,    &kp KP_N9 &kp KP_N4)
-ALT_SYMBOL(mc_sqt,      &kp KP_N3 &kp KP_N9)
+ALT_SYMBOL(mc_dqt,          &kp KP_N3 &kp KP_N4)
+MACRO_SYMBOL(mc_dqts,       &mc_dqt &mc_dqt &kp LEFT)
+TAPHOLD_SYMBOL(th_dqt,      &mc_dqt, &mc_dqts)
 
-ALT_SYMBOL(mc_dqt,      &kp KP_N3 &kp KP_N4)
-MACRO_SYMBOL(mc_dqts,    &mc_dqt &mc_dqt &kp LEFT)
-TAPHOLD_SYMBOL(th_dqt,  &mc_dqt, &mc_dqts)
-
-// email
-ALT_SYMBOL(mc_at_sign,  &kp KP_N6 &kp KP_N4)
-MACRO_SYMBOL(mc_email, &kp N &kp N3 &kp R &kp Q &kp N1 &kp N3 &kp N3 &kp N7 &kp AT_SIGN &kp Y &kp A &kp DOT &kp R &kp U)
-TAPHOLD_SYMBOL(th_at_sign, &mc_at_sign, &mc_email)
+ALT_SYMBOL(mc_at_sign,      &kp KP_N6 &kp KP_N4)
+MACRO_SYMBOL(mc_email,      &kp N &kp N3 &kp R &kp Q &kp N1 &kp N3 &kp N3 &kp N7 &kp AT_SIGN &kp Y &kp A &kp DOT &kp R &kp U)
+TAPHOLD_SYMBOL(th_at_sign,  &mc_at_sign, &mc_email)
