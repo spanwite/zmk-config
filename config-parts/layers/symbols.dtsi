@@ -10,6 +10,6 @@ ZMK_LAYER(symbols,
 //                                                          ╰──────────────────┴──────────────────┴──────────────────╯   ╰──────────────────┴──────────────────┴──────────────────╯
 )
 
-SIMPLE_MORPH(mm_excl, SFT, &kp EXCL, &mc_end_excl)
-SIMPLE_MORPH(mm_qst, SFT, &mc_qst, &mc_end_qst)
-SIMPLE_MORPH(mm_at_email, SFT, &mc_at_sign, &mc_email)
+MORPH_BOTH(mm_excl, SFT, &kp EXCL, &mc_end_excl)
+MORPH_BOTH(mm_qst, SFT, &mc_qst, &mc_end_qst)
+MORPH_BOTH(mm_at_email, SFT, &mc_at_sign, &mc_email)

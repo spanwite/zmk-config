@@ -12,12 +12,20 @@
 #include "../config-parts/common/behaviors.dtsi"
 
 #include "../config-parts/features/symbols.dtsi"
+#include "../config-parts/features/smart_case.dtsi"
 #include "../config-parts/features/shortcuts.dtsi"
 #include "../config-parts/features/thumbs.dtsi"
 #include "../config-parts/features/win_power.dtsi"
 
 #include "../config-parts/layers/alpha.dtsi"
+
+#include "../config-parts/layers/smart_case/camel_case.dtsi"
+#include "../config-parts/layers/smart_case/case_shifted.dtsi"
+#include "../config-parts/layers/smart_case/snake_case.dtsi"
+#include "../config-parts/layers/smart_case/kebab_case.dtsi"
+#include "../config-parts/layers/smart_case/case_spacing.dtsi"
 #include "../config-parts/layers/caps_word.dtsi"
+
 #include "../config-parts/layers/lower.dtsi"
 #include "../config-parts/layers/raise.dtsi"
 #include "../config-parts/layers/symbols.dtsi"

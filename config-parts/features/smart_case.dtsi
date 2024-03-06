@@ -1,0 +1,23 @@
+MACRO_10_MS(mc_camel_spc,   &sl CASE_SHIFTED)
+MACRO_10_MS(mc_kebab_spc,   &kp MINUS &sl CASE_SPACING)
+MACRO_10_MS(mc_snake_spc,   &kp UNDERSCORE &sl CASE_SPACING)
+MACRO_10_MS(mc_shifted_spc, &kp SPACE &to ALPHA)
+MACRO_10_MS(mc_spacing_spc, &kp BACKSPACE &kp SPACE &to ALPHA)
+
+MACRO_10_MS(mc_to_pascalcase, &to CAMEL_CASE &sl CASE_SHIFTED)
+
+LAYERTAP_KEY(lt_camel_spc,   &mc_camel_spc)
+LAYERTAP_KEY(lt_kebab_spc,   &mc_kebab_spc)
+LAYERTAP_KEY(lt_snake_spc,   &mc_snake_spc)
+LAYERTAP_KEY(lt_spacing_spc, &mc_spacing_spc)
+LAYERTAP_KEY(lt_shifted_spc, &mc_shifted_spc)
+
+MORPH_SINGLE(sc_caps_word,  LSFT, &sk LSHIFT,       &my_caps_word)
+MORPH_SINGLE(sc_caps_lock,  RSFT, &sc_caps_word,    &to CAPS_WORD)
+MORPH_SINGLE(sc_camelcase,  LCTL, &sc_caps_lock,    &to CAMEL_CASE)
+MORPH_SINGLE(sc_pascalcase, RCTL, &sc_camelcase,    &mc_to_pascalcase)
+MORPH_SINGLE(sc_snakecase,  LALT, &sc_pascalcase,   &to SNAKE_CASE)
+MORPH_SINGLE(sc_kebabcase,  RALT, &sc_snakecase,    &to KEBAB_CASE)
+
+LAYERTAP_KEY(lt_case, &sc_kebabcase)
+

@@ -1,13 +1,20 @@
 #define ALPHA 0
-#define CAPS_WORD 1
-#define LOWER 2
-#define RAISE 3
-#define SYMBOLS 4
-#define NUMPAD 5
-#define NAV 6
-#define MEDIA 7
-#define GAME_FPS 8
-#define SYSTEM 9
+
+#define CAMEL_CASE 1
+#define CASE_SHIFTED 2
+#define SNAKE_CASE 3
+#define KEBAB_CASE 4
+#define CASE_SPACING 5
+#define CAPS_WORD 6
+
+#define LOWER 7
+#define RAISE 8
+#define SYMBOLS 9
+#define NUMPAD 10
+#define NAV 11
+#define MEDIA 12
+#define GAME_FPS 13
+#define SYSTEM 14
 
 #define ___ &trans
 #define XXX &none
