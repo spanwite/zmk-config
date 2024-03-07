@@ -26,12 +26,13 @@
 #include "../config-parts/layers/smart_case/case_spacing.dtsi"
 #include "../config-parts/layers/caps_word.dtsi"
 
-#include "../config-parts/layers/lower.dtsi"
-#include "../config-parts/layers/raise.dtsi"
-#include "../config-parts/layers/symbols.dtsi"
-#include "../config-parts/layers/numpad.dtsi"
 #include "../config-parts/layers/nav.dtsi"
-#include "../config-parts/layers/media.dtsi"
+#include "../config-parts/layers/symbols.dtsi"
+#include "../config-parts/layers/numbers.dtsi"
+#include "../config-parts/layers/numpad.dtsi"
+#include "../config-parts/layers/shortcuts.dtsi"
+#include "../config-parts/layers/powertoys.dtsi"
+#include "../config-parts/layers/fn.dtsi"
 #include "../config-parts/layers/game_fps.dtsi"
 #include "../config-parts/layers/system.dtsi"
 

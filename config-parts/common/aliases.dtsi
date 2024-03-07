@@ -7,17 +7,19 @@
 #define CASE_SPACING 5
 #define CAPS_WORD 6
 
-#define LOWER 7
-#define RAISE 8
-#define SYMBOLS 9
+#define NAV 7
+#define SYMBOLS 8
+#define NUMBERS 9
 #define NUMPAD 10
-#define NAV 11
-#define MEDIA 12
-#define GAME_FPS 13
-#define SYSTEM 14
+#define SHORTCUTS 11
+#define POWERTOYS 12
+#define FN 13
+#define GAME_FPS 14
+#define SYSTEM 15
 
 #define ___ &trans
 #define XXX &none
 
-#define CHANGE_LANG &kp LC(LSHIFT)
-#define CLOSE_TABS &kp LC(LA(F1))
+#define CHANGE_LANG &kp LC(LSHFT)
+#define CLOSE_OTHER_TABS &kp LC(LA(F1))
+#define CLOSE_RIGHT_TABS &kp LC(LA(F2))

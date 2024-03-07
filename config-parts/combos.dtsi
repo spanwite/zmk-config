@@ -16,32 +16,23 @@
     ZMK_COMBO(NAME, BINDINGS, KEYS, LAYERS, COMBO_TERM)
 
 
-COMBO(esc,              LT2 LT1,      &kp ESC,               ALPHA NUMPAD CAPS_WORD)
+COMBO(delete,           LT2 LT1,      &kp DELETE,            ALPHA NUMPAD CAPS_WORD)
 COMBO(cut,              LT3 LT2,      &kp LC(X),             ALPHA NUMPAD CAPS_WORD)
 
-COMBO(enter,            LM2 LM1,      &kp ENTER,             ALPHA NUMPAD CAPS_WORD)
-COMBO(paste,            LM3 LM2,      &th_paste 0 0,         ALPHA NUMPAD CAPS_WORD)
+COMBO(paste,            LM3 LM2,      &ht_paste 0 0,         ALPHA NUMPAD CAPS_WORD)
 COMBO(smart_numpad,     LM3 LM1,      &num_word,             ALPHA NUMPAD)
 
-COMBO(copy,             LB3 LB2,      &th_copy 0 0,          ALPHA NUMPAD CAPS_WORD)
-COMBO(l_change_lang,    LB2 LB1,      CHANGE_LANG,           ALPHA NUMPAD CAPS_WORD)
-
-COMBO(l_delete,         LT3 LT2 LT1,  &kp DELETE,            ALPHA NUMPAD CAPS_WORD)
-COMBO(l_bspc,           LM3 LM2 LM1,  &th_bspc 0 0,          ALPHA NUMPAD CAPS_WORD)
-COMBO(l_tab,            LB3 LB2 LB1,  &th_tab 0 0,           ALPHA NUMPAD CAPS_WORD)
+COMBO(copy,             LB3 LB2,      &ht_copy 0 0,          ALPHA NUMPAD CAPS_WORD)
+COMBO(sl_powertoys,     LB2 LB1,      &sl POWERTOYS,         ALPHA NUMPAD CAPS_WORD)
 
 COMBO(undo,             LM2 LB3,      &kp LC(Z),             ALPHA NUMPAD CAPS_WORD)
 COMBO(redo,             LM3 LB2,      &kp LC(LS(Z)),         ALPHA NUMPAD CAPS_WORD)
                     
 COMBO(change_lang,      LM1 RM1,      CHANGE_LANG,           ALPHA NUMPAD CAPS_WORD)
-COMBO(my_caps_word,     LM2 RM2,      &my_caps_word,         ALPHA NUMPAD)
 
-COMBO(tab,              RM1 RM2,      &kp TAB,               ALPHA NUMPAD CAPS_WORD)
-COMBO(bspc,             RM2 RM3,      &kp BSPC,              ALPHA NUMPAD CAPS_WORD)
-
-COMBO(logic_or,         RB2 RB3,      &mc_logic_or,          LOWER RAISE SYMBOLS)
-COMBO(triple_dot,       RB1 RB2,      &mc_triple_dot,        LOWER RAISE SYMBOLS)
-COMBO(logic_and,        RM2 RM3,      &mc_logic_and,         LOWER RAISE SYMBOLS)
-COMBO(nullish,          RM1 RM3,      &mc_nullish,           LOWER RAISE SYMBOLS)
-COMBO(js_eqls,          RM1 RM2,      &th_js_eqls 0 0,       LOWER RAISE SYMBOLS)
-COMBO(js_fn,            RT1 RT2,      &th_js_fn 0 0,         LOWER RAISE SYMBOLS)
+COMBO(logic_or,         RB2 RB3,      &mc_logic_or,          NAV SYMBOLS)
+COMBO(triple_dot,       RB1 RB2,      &mc_triple_dot,        NAV SYMBOLS)
+COMBO(logic_and,        RM2 RM3,      &mc_logic_and,         NAV SYMBOLS)
+COMBO(nullish,          RM1 RM3,      &mc_nullish,           NAV SYMBOLS)
+COMBO(js_eqls,          RM1 RM2,      &ht_js_eqls 0 0,       NAV SYMBOLS)
+COMBO(js_fn,            RT1 RT2,      &ht_js_fn 0 0,         NAV SYMBOLS)
