@@ -57,6 +57,7 @@ ALT_SYMBOL(mc_colon,        &kp KP_N5 &kp KP_N8)
 ALT_SYMBOL(mc_caret,        &kp KP_N9 &kp KP_N4)
 ALT_SYMBOL(mc_sqt,          &kp KP_N3 &kp KP_N9)
 ALT_SYMBOL(mc_less,         &kp KP_N6 &kp KP_N0)
+ALT_SYMBOL(mc_tilda,        &kp KP_N1 &kp KP_N2 &kp KP_N6)
 
 ALT_SYMBOL(mc_dqt,          &kp KP_N3 &kp KP_N4)
 MACRO_10_MS(mc_dqts,        &mc_dqt &mc_dqt &kp LEFT)
