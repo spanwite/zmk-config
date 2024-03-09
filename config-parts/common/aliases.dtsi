@@ -20,15 +20,17 @@
 #define ___ &trans
 #define XXX &none
 
-#define MAKE_MEH(KEY)     LC(LS(LA(KEY)))   
-#define MAKE_HYPER(KEY)   LC(LS(LA(LG(KEY))))   
+#define MAKE_MEH(KEY)      LC(LS(LA(KEY)))
+#define MAKE_SEMI_MEH(KEY) LS(LA(KEY))
+#define MAKE_HYPER(KEY)    LC(LS(LA(LG(KEY))))   
 
 #define CHANGE_LANG       &kp LC(LSHFT)
 
-#define CLOSE_OTHER_TABS  &kp MAKE_MEH(F1)
-#define CLOSE_RIGHT_TABS  &kp MAKE_MEH(F2)
-#define TOGGLE_RECORD     &kp MAKE_MEH(F3)
-#define TOGGLE_OVERLAY    &kp MAKE_MEH(F4)
+#define CLOSE_OTHER_TABS  &kp MAKE_SEMI_MEH(F1)
+#define CLOSE_RIGHT_TABS  &kp MAKE_SEMI_MEH(F2)
+
+#define TOGGLE_RECORD     &kp MAKE_MEH(F1)
+#define TOGGLE_OVERLAY    &kp MAKE_MEH(F2)
 
 #define PT_RUN            &kp MAKE_HYPER(F1)
 #define PT_COL_PICK       &kp MAKE_HYPER(F2)
