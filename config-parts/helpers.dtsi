@@ -57,5 +57,3 @@
         quick-tap-ms = <QUICK_TAP_TERM>; \
         bindings = <&mo>, <TAP>; \
     )
-
-#define WIN_MEH(KEY) LG(LC(LS(KEY)))

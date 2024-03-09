@@ -6,6 +6,10 @@ MACRO_10_MS(mc_paste,         &kp LC(V))
 MACRO_10_MS(mc_sel_paste,     &kp LC(A) &kp LC(V))
 HOLDTAP_KEY(ht_paste,         &mc_sel_paste, &mc_paste)
 
+MACRO_10_MS(mc_cut,           &kp LC(X))
+MACRO_10_MS(mc_sel_cut,       &kp LC(A) &kp LC(X))
+HOLDTAP_KEY(ht_cut,           &mc_sel_cut, &mc_cut)
+
 MACRO_10_MS(mc_bspc,          &kp BSPC)
 MACRO_10_MS(mc_del_word,      &kp LC(BSPC))
 HOLDTAP_KEY(ht_bspc,          &mc_del_word, &mc_bspc)

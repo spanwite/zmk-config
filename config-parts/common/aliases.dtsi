@@ -7,10 +7,10 @@
 #define CASE_SPACING 5
 #define CAPS_WORD 6
 
-#define NAV 7
-#define SYMBOLS 8
-#define NUMBERS 9
-#define NUMPAD 10
+#define SYMBOLS 7
+#define NUMBERS 8
+#define NUMPAD 9
+#define NAV 10
 #define SHORTCUTS 11
 #define POWERTOYS 12
 #define FN 13
@@ -20,6 +20,20 @@
 #define ___ &trans
 #define XXX &none
 
-#define CHANGE_LANG &kp LC(LSHFT)
-#define CLOSE_OTHER_TABS &kp LC(LA(F1))
-#define CLOSE_RIGHT_TABS &kp LC(LA(F2))
+#define MAKE_MEH(KEY)     LC(LS(LA(KEY)))   
+#define MAKE_HYPER(KEY)   LC(LS(LA(LG(KEY))))   
+
+#define CHANGE_LANG       &kp LC(LSHFT)
+
+#define CLOSE_OTHER_TABS  &kp MAKE_MEH(F1)
+#define CLOSE_RIGHT_TABS  &kp MAKE_MEH(F2)
+#define TOGGLE_RECORD     &kp MAKE_MEH(F3)
+#define TOGGLE_OVERLAY    &kp MAKE_MEH(F4)
+
+#define PT_RUN            &kp MAKE_HYPER(F1)
+#define PT_COL_PICK       &kp MAKE_HYPER(F2)
+#define PT_PIN            &kp MAKE_HYPER(F3)
+#define PT_RULER          &kp MAKE_HYPER(F4)
+#define PT_FANCY_ZONES    &kp MAKE_HYPER(F5)
+#define PT_EXTRACTOR      &kp MAKE_HYPER(F6)
+#define PT_MIC            &kp MAKE_HYPER(F7)
