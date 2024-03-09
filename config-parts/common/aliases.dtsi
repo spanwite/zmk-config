@@ -7,10 +7,10 @@
 #define CASE_SPACING 5
 #define CAPS_WORD 6
 
-#define SYMBOLS 7
-#define NUMBERS 8
-#define NUMPAD 9
-#define NAV 10
+#define SYMBOLS 10
+#define NUMBERS 7
+#define NUMPAD 8
+#define NAV 9
 #define SHORTCUTS 11
 #define POWERTOYS 12
 #define FN 13
