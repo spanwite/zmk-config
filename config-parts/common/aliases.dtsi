@@ -7,15 +7,20 @@
 #define CASE_SPACING 5
 #define CAPS_WORD 6
 
-#define SYMBOLS 10
-#define NUMBERS 7
-#define NUMPAD 8
-#define NAV 9
-#define SHORTCUTS 11
-#define POWERTOYS 12
-#define FN 13
-#define GAME_FPS 14
-#define SYSTEM 15
+#define NUM_DOT 7
+#define NUM_CONTINUE 8
+#define NUM_LEAVE 9
+#define NUM_MINUS 10
+
+#define NUMBERS 11
+#define NUMPAD 12
+#define NAV 13
+#define SYMBOLS 14
+#define SHORTCUTS 15
+#define POWERTOYS 16
+#define FN 17
+#define GAME_FPS 18
+#define SYSTEM 19
 
 #define ___ &trans
 #define XXX &none
