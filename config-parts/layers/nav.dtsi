@@ -17,5 +17,5 @@ ZMK_LAYER(nav,
 
 ZMK_BEHAVIOR(ts_swapper, tri_state,
     bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
-    ignored-key-positions = <LB3>;
+    ignored-key-positions = <LT3>;
 )

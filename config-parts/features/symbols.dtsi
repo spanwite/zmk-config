@@ -43,8 +43,11 @@ MACRO_0_MS(mc_lpar,         &kp LPAR)
 MACRO_0_MS(mc_end_dot,      &mc_dot &kp SPACE &sk LSHIFT)
 ALT_SYMBOL(mc_dot,          &kp KP_N4 &kp KP_N6)
 
+MACRO_0_MS(mc_excl,         &kp EXCL)
 MACRO_0_MS(mc_end_excl,     &kp EXCL &kp SPACE &sk LSHIFT)
+HOLDTAP_KEY(th_excl,        &mc_end_excl, &mc_excl)
 
+HOLDTAP_KEY(th_qst,         &mc_end_qst, &mc_qst)
 MACRO_0_MS(mc_nullish,      &mc_qst &mc_qst)
 MACRO_0_MS(mc_end_qst,      &mc_qst &kp SPACE &sk LSHIFT)
 ALT_SYMBOL(mc_qst,          &kp KP_N6 &kp KP_N3)
@@ -66,6 +69,8 @@ HOLDTAP_KEY(ht_dqt,         &mc_dqts, &mc_dqt)
 ALT_SYMBOL(mc_at_sign,      &kp KP_N6 &kp KP_N4)
 MACRO_10_MS(mc_email,       &kp N &kp N3 &kp R &kp Q &kp N1 &kp N3 &kp N3 &kp N7 &kp AT_SIGN &kp Y &kp A &kp DOT &kp R &kp U)
 HOLDTAP_KEY(ht_at_sign,     &mc_email, &mc_at_sign)
+
+MACRO_0_MS(mc_up_dir,       &kp UNDER &kp UNDER &kp UNDER)
 
 ZMK_BEHAVIOR(mc_spc_comma, macro, 
      wait-ms = <0>; 

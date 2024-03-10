@@ -15,7 +15,6 @@
 #include "../config-parts/features/smart_case.dtsi"
 #include "../config-parts/features/shortcuts.dtsi"
 #include "../config-parts/features/thumbs.dtsi"
-#include "../config-parts/features/float_word.dtsi"
 #include "../config-parts/features/win_power.dtsi"
 
 #include "../config-parts/layers/alpha.dtsi"
@@ -26,11 +25,6 @@
 #include "../config-parts/layers/smart_case/kebab_case.dtsi"
 #include "../config-parts/layers/smart_case/case_spacing.dtsi"
 #include "../config-parts/layers/caps_word.dtsi"
-
-#include "../config-parts/layers/float_word/num_dot.dtsi"
-#include "../config-parts/layers/float_word/num_continue.dtsi"
-#include "../config-parts/layers/float_word/num_leave.dtsi"
-#include "../config-parts/layers/float_word/num_minus.dtsi"
 
 #include "../config-parts/layers/numbers/numbers.dtsi"
 #include "../config-parts/layers/numbers/numpad.dtsi"

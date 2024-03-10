@@ -1,5 +1,0 @@
-MACRO_10_MS(mc_num_spc, &kp SPACE &to ALPHA)
-MACRO_10_MS(mc_dot_choice, &mc_dot &tog NUM_CONTINUE &sl NUM_LEAVE)
-MACRO_10_MS(mc_num_bspc, &kp BSPC &kp SPACE &to ALPHA)
-
-MACRO_10_MS(mc_float_word, &tog NUM_DOT &sl NUM_MINUS)

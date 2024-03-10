@@ -6,11 +6,10 @@
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20
 
 &num_word {
-    layers = <NUMPAD>;
+    layers = <NUMBERS>;
     continue-list = <
         PLUS MINUS STAR KP_DIVIDE EQUAL PERCENT LPAR RPAR
         BACKSPACE DELETE
-        MOVE_UP MOVE_DOWN MOVE_LEFT MOVE_RIGHT SCRL_UP SCRL_DOWN SCRL_LEFT SCRL_RIGHT MB4 MB5 LCLK RCLK
         KP_N0 KP_N1 KP_N2 KP_N3 KP_N4 KP_N5 KP_N6 KP_N7 KP_N8 KP_N9
     >;
     ignore-modifiers;

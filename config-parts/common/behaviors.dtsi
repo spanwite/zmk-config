@@ -3,9 +3,8 @@ HOME_ROW_MOD(hmr, &kp, &kp, KEYS_L KEYS_T)
 
 ZMK_BEHAVIOR(my_caps_word, caps_word,
     layers = <CAPS_WORD>;
-    continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SQT GRAVE LBKT RBKT DOT COMMA LEFT DOWN UP RIGHT>;
+    continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SQT GRAVE LBKT RBKT DOT COMMA LEFT DOWN UP RIGHT LSHFT>;
     ignore-alphas;
-    ignore-modifiers;
 )
 
 /*

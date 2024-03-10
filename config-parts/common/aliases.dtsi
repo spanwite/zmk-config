@@ -7,11 +7,6 @@
 #define CASE_SPACING 5
 #define CAPS_WORD 6
 
-#define NUM_DOT 7
-#define NUM_CONTINUE 8
-#define NUM_LEAVE 9
-#define NUM_MINUS 10
-
 #define NUMBERS 11
 #define NUMPAD 12
 #define NAV 13
