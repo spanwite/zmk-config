@@ -32,8 +32,8 @@
 #include "../config-parts/layers/float_word/num_leave.dtsi"
 #include "../config-parts/layers/float_word/num_minus.dtsi"
 
-#include "../config-parts/layers/numbers.dtsi"
-#include "../config-parts/layers/numpad.dtsi"
+#include "../config-parts/layers/numbers/numbers.dtsi"
+#include "../config-parts/layers/numbers/numpad.dtsi"
 #include "../config-parts/layers/nav.dtsi"
 #include "../config-parts/layers/symbols.dtsi"
 #include "../config-parts/layers/shortcuts.dtsi"
