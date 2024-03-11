@@ -1,21 +1,22 @@
-#define ALPHA 0
+#define ALPHA         0
 
-#define CAMEL_CASE 1
-#define CASE_SHIFTED 2
-#define SNAKE_CASE 3
-#define KEBAB_CASE 4
-#define CASE_SPACING 5
-#define CAPS_WORD 6
+#define CAMEL_CASE    1
+#define CASE_SHIFTED  2
+#define SNAKE_CASE    3
+#define KEBAB_CASE    4
+#define CASE_SPACING  5
+#define CAPS_WORD     6
 
-#define NUMBERS 7
-#define NUMPAD 8
-#define NAV 9
-#define SYMBOLS 10
-#define SHORTCUTS 11
-#define POWERTOYS 12
-#define FN 13
-#define GAME_FPS 14
-#define SYSTEM 15
+#define NUMBERS       7
+#define FLOAT_WORD    8
+#define MOUSE         9
+#define NAV           10
+#define SYMBOLS       11
+#define SHORTCUTS     12
+#define POWERTOYS     13
+#define FN            14
+#define GAME_FPS      15
+#define SYSTEM        16
 
 #define ___ &trans
 #define XXX &none
