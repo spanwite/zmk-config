@@ -71,7 +71,6 @@ MACRO_10_MS(mc_email,       &kp N &kp N3 &kp R &kp Q &kp N1 &kp N3 &kp N3 &kp N7
 HOLDTAP_KEY(ht_at_sign,     &mc_email, &mc_at_sign)
 
 MACRO_0_MS(mc_up_dir,       &kp DOT &kp DOT &kp SLASH)
-MACRO_10_MS(mc_test_up_dir, &mc_dot &mc_dot &kp SLASH)
 
 ZMK_BEHAVIOR(mc_spc_comma, macro, 
      wait-ms = <0>; 

@@ -17,10 +17,10 @@
 
 COMBO(select_all,       LT3 LT2,      &kp LC(A),             ALPHA CAPS_WORD)
 
-COMBO(cut,              LM3 LM1,      &ht_cut 0 0,           ALPHA MOUSE NUM_WORD HAND_NUM CAPS_WORD)
-COMBO(paste,            LM3 LM2,      &ht_paste 0 0,         ALPHA MOUSE NUM_WORD HAND_NUM CAPS_WORD)
-COMBO(copy,             LM2 LM1,      &ht_copy 0 0,          ALPHA MOUSE NUM_WORD HAND_NUM CAPS_WORD)
-COMBO(win_paste,        LM3 LM2 LM1,  &kp LG(V),             ALPHA MOUSE NUM_WORD HAND_NUM CAPS_WORD)
+COMBO(cut,              LM3 LM1,      &ht_cut 0 0,           ALPHA MOUSE NUM_WORD CAPS_WORD)
+COMBO(paste,            LM3 LM2,      &ht_paste 0 0,         ALPHA MOUSE NUM_WORD CAPS_WORD)
+COMBO(copy,             LM2 LM1,      &ht_copy 0 0,          ALPHA MOUSE NUM_WORD CAPS_WORD)
+COMBO(win_paste,        LM3 LM2 LM1,  &kp LG(V),             ALPHA MOUSE NUM_WORD CAPS_WORD)
 
 COMBO(hand_num,         LB3 LB2,      &hand_num,             ALPHA)
 COMBO(sl_powertoys,     LB2 LB1,      &sl POWERTOYS,         ALPHA CAPS_WORD)
@@ -30,13 +30,9 @@ COMBO(redo,             LM3 LB2,      &kp LC(LS(Z)),         ALPHA MOUSE NUM_WOR
                     
 COMBO(change_language,  LM1 RM1,      CHANGE_LANG,           ALPHA CAPS_WORD)
 
-COMBO(hand_minus,       LM3 LM2,      &kp MINUS,             HAND_NUM HAND_SYM)
-COMBO(hand_dot,         LM1 LM2,      &mc_dot,               HAND_NUM HAND_SYM)
-
 COMBO(screenshot,       LM3 LM2,      &kp LS(LG(S)),         NAV)
-COMBO(r_hand_num,       LM1 LM2,      &hand_num,             NAV)
-COMBO(toggle_record,    LB3 LB2,      TOGGLE_RECORD,         NAV)
-COMBO(toggle_overlay,   LB2 LB1,      TOGGLE_OVERLAY,        NAV)
+COMBO(toggle_record,    LM1 LM2,      TOGGLE_RECORD,         NAV) 
+COMBO(toggle_overlay,   LB3 LB2,      TOGGLE_OVERLAY,        NAV)
 
 COMBO(logic_or,         RB2 RB3,      &mc_logic_or,          NAV SYMBOLS)
 COMBO(triple_dot,       RB1 RB2,      &mc_triple_dot,        NAV SYMBOLS)
