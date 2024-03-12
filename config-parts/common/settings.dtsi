@@ -2,9 +2,6 @@
 #define TAPPING_TERM 220
 #define PRIOR_IDLE_TERM 150 
 
-#define HM_TAPPING_TERM 280 // 175
-#define HM_FLAVOR "balanced"
-
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 3000 
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20
 
@@ -23,8 +20,8 @@
 };
 
 &lt {
-    tapping-term-ms = <HM_TAPPING_TERM>;
-    quick-tap-ms = <QUICK_TAP_TERM>;
+    tapping-term-ms = <TAPPING_TERM>;
+    quick-tap-ms = <TAPPING_TERM>;
     flavor = "balanced";
 };
 

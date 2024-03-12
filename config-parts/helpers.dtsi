@@ -1,22 +1,11 @@
-#define HOMEMOD_LEFT(NAME, HOLD, TAP) \
+#define HOME_ROW_MOD(NAME, HOLD, TAP, TRIGGER_POS) \
     ZMK_BEHAVIOR(NAME, hold_tap, \
-        flavor = HM_FLAVOR; \
-        tapping-term-ms = <HM_TAPPING_TERM>; \
+        flavor = "balanced"; \
+        tapping-term-ms = <280>; \
         quick-tap-ms = <QUICK_TAP_TERM>; \
         require-prior-idle-ms = <PRIOR_IDLE_TERM>; \
         bindings = <HOLD>, <TAP>; \
-        hold-trigger-key-positions = <KEYS_R KEYS_T>; \
-        hold-trigger-on-release; \
-    )
-
-#define HOMEMOD_RIGHT(NAME, HOLD, TAP) \
-    ZMK_BEHAVIOR(NAME, hold_tap, \
-        flavor = HM_FLAVOR; \
-        tapping-term-ms = <HM_TAPPING_TERM>; \
-        quick-tap-ms = <QUICK_TAP_TERM>; \
-        require-prior-idle-ms = <PRIOR_IDLE_TERM>; \
-        bindings = <HOLD>, <TAP>; \
-        hold-trigger-key-positions = <KEYS_L KEYS_T>; \
+        hold-trigger-key-positions = <TRIGGER_POS>; \
         hold-trigger-on-release; \
     )
 

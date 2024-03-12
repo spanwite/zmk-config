@@ -15,7 +15,7 @@ ZMK_LAYER(nav,
 //                                                          ╰──────────────────┴──────────────────┴──────────────────╯   ╰──────────────────┴──────────────────┴──────────────────╯
 )
 
-HOMEMOD_LEFT(hml_num, &kp, &hand_num)
+HOME_ROW_MOD(hml_num, &kp, &hand_num, KEYS_R KEYS_T)
 
 ZMK_BEHAVIOR(ts_swapper, tri_state,
     bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;

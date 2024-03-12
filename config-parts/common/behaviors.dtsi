@@ -1,5 +1,5 @@
-HOMEMOD_LEFT(hml, &kp, &kp)
-HOMEMOD_RIGHT(hmr, &kp, &kp)
+HOME_ROW_MOD(hml, &kp, &kp, KEYS_R KEYS_T)
+HOME_ROW_MOD(hmr, &kp, &kp, KEYS_L KEYS_T)
 
 ZMK_BEHAVIOR(my_caps_word, caps_word,
     layers = <CAPS_WORD>;

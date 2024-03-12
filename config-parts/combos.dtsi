@@ -30,7 +30,7 @@ COMBO(redo,             LM3 LB2,      &kp LC(LS(Z)),         ALPHA MOUSE NUM_WOR
 COMBO(change_language,  LM1 RM1,      CHANGE_LANG,           ALPHA CAPS_WORD)
 
 COMBO(screenshot,       LM3 LM2,      &kp LS(LG(S)),         NAV)
-COMBO(toggle_record,    LM1 LM2,      TOGGLE_RECORD,         NAV) 
+COMBO(toggle_record,    LT3 LT2,      TOGGLE_RECORD,         NAV) 
 COMBO(toggle_overlay,   LB3 LB2,      TOGGLE_OVERLAY,        NAV)
 
 COMBO(logic_or,         RB2 RB3,      &mc_logic_or,          NAV SYMBOLS)
