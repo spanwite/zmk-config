@@ -26,8 +26,9 @@
 #include "../config-parts/layers/smart_case/case_spacing.dtsi"
 #include "../config-parts/layers/caps_word.dtsi"
 
-#include "../config-parts/layers/numbers.dtsi"
-#include "../config-parts/layers/float_word.dtsi"
+#include "../config-parts/layers/num_word.dtsi"
+#include "../config-parts/layers/hand_num.dtsi"
+#include "../config-parts/layers/hand_sym.dtsi"
 #include "../config-parts/layers/mouse.dtsi"
 #include "../config-parts/layers/nav.dtsi"
 #include "../config-parts/layers/symbols.dtsi"
