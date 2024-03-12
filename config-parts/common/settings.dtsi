@@ -2,7 +2,7 @@
 #define TAPPING_TERM 220
 #define PRIOR_IDLE_TERM 150 
 
-#define HM_TAPPING_TERM 175 // 280
+#define HM_TAPPING_TERM 280 // 175
 #define HM_FLAVOR "balanced"
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 3000 
