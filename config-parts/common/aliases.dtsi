@@ -1,30 +1,23 @@
 #define ALPHA         0
-
-#define CAMEL_CASE    1
-#define CASE_SHIFTED  2
-#define SNAKE_CASE    3
-#define KEBAB_CASE    4
-#define CASE_SPACING  5
-#define CAPS_WORD     6
-
-#define NUM_WORD      7
-#define HAND_NUM      8
-#define HAND_SYM      9
-#define MOUSE         10
-#define NAV           11
-#define SYMBOLS       12
-#define SHORTCUTS     13
-#define POWERTOYS     14
-#define FN            15
-#define GAME_FPS      16
-#define SYSTEM        17
+#define CAPS_WORD     1
+#define NUM_WORD      2
+#define HAND_NUM      3
+#define HAND_SYM      4
+#define MOUSE         5
+#define NAV           6
+#define SYMBOLS       7
+#define SHORTCUTS     8
+#define POWERTOYS     9
+#define FN            10
+#define GAME_FPS      11
+#define SYSTEM        12
 
 #define ___ &trans
 #define XXX &none
 
 #define MAKE_MEH(KEY)      LC(LS(LA(KEY)))
 #define MAKE_SEMI_MEH(KEY) LS(LA(KEY))
-#define MAKE_HYPER(KEY)    LC(LS(LA(LG(KEY))))   
+#define MAKE_HYPER(KEY)    LC(LS(LA(LG(KEY))))
 
 #define CHANGE_LANG       &kp LC(LSHFT)
 
