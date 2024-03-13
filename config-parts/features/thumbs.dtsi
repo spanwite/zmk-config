@@ -1,6 +1,7 @@
-LAYERTAP_KEY(lt_spc, &mm_spc_triple_under)
-MORPH_SINGLE(mm_spc_dot, LSFT, &kp SPACE,     &mc_end_dot)
-MORPH_SINGLE(mm_spc_triple_under, LALT, &mm_spc_dot,   &mc_triple_under)
+LAYERTAP_KEY(lt_spc, &mm_spc_comma)
+MORPH_BOTH(mm_spc_dot, SFT, &kp SPACE, &mc_end_dot)
+MORPH_SINGLE(mm_spc_triple_under, LALT, &mm_spc_dot, &mc_triple_under)
+MORPH_SINGLE(mm_spc_comma, RCTL, &mm_spc_triple_under, &mc_spc_comma)
 
 LAYERTAP_KEY(lt_shft, &mm_caps_lock)
 MORPH_SINGLE(mm_caps_word, LSFT, &sk LSHIFT,    &my_caps_word)

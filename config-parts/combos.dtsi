@@ -16,6 +16,7 @@
     ZMK_COMBO(NAME, BINDINGS, KEYS, LAYERS, COMBO_TERM)
 
 COMBO(select_all,       LT3 LT2,      &kp LC(A),             ALPHA CAPS_WORD)
+COMBO(mouse_word,       LT1 LT3,      &mouse_word,           ALPHA CAPS_WORD)
 
 COMBO(cut,              LM3 LM1,      &ht_cut 0 0,           ALPHA MOUSE NUM_WORD CAPS_WORD)
 COMBO(paste,            LM3 LM2,      &ht_paste 0 0,         ALPHA MOUSE NUM_WORD CAPS_WORD)
@@ -35,6 +36,3 @@ COMBO(logic_and,        LM2 LM3,      &mc_logic_and,         SYMBOLS)
 COMBO(nullish,          LM1 LM3,      &mc_nullish,           SYMBOLS)
 COMBO(js_eqls,          LM1 LM2,      &ht_js_eqls 0 0,       SYMBOLS)
 COMBO(js_fn,            LT2 LT3,      &mc_js_fn,             SYMBOLS)
-
-COMBO(comma_spc,        RM2 RM3,      &mc_spc_comma,         ALPHA CAPS_WORD)
-COMBO(mouse_word,       LT1 LT3,      &mouse_word,           ALPHA CAPS_WORD)

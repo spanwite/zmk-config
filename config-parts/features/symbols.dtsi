@@ -1,7 +1,7 @@
 #define ALT_SYMBOL(NAME, KP_KEYS) \
     ZMK_BEHAVIOR(NAME, macro, \
-        wait-ms = <0>; \
-        tap-ms = <5>; \
+        wait-ms = <10>; \
+        tap-ms = <10>; \
         bindings \
         = <&macro_press   &kp LALT> \
         , <&macro_tap     KP_KEYS> \
@@ -26,9 +26,9 @@ DOUBLE_SYMBOL(ht_eql,       &mc_eql)
 DOUBLE_SYMBOL(ht_amps,      &mc_amps)
 DOUBLE_SYMBOL(ht_pipe,      &mc_pipe)
 
-MACRO_10_MS(mc_logic_or,    &kp SPACE &mc_pipe &mc_pipe &kp SPACE)
-MACRO_0_MS(mc_logic_and,    &kp SPACE &mc_amps &mc_amps &kp SPACE)
-MACRO_0_MS(mc_nullish,      &kp SPACE &mc_qst &mc_qst &kp SPACE)
+MACRO_10_MS(mc_logic_or,    &kp SPACE &kp PIPE &kp PIPE &kp SPACE)
+MACRO_10_MS(mc_logic_and,    &kp SPACE &kp AMPS &kp AMPS &kp SPACE)
+MACRO_10_MS(mc_nullish,      &kp SPACE &mc_qst &mc_qst &kp SPACE)
 
 HOLDTAP_KEY(ht_js_eqls,     &mc_js_ineql, &mc_js_eql)
 MACRO_10_MS(mc_js_eql,      &kp SPACE &kp EQUAL &kp EQUAL &kp EQUAL &kp SPACE)
