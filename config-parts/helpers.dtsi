@@ -40,10 +40,9 @@
 
 #define HOLDTAP_KEY(NAME, HOLD, TAP) \
     ZMK_BEHAVIOR(NAME, hold_tap, \
-        tapping-term-ms = <TAPPING_TERM_MEDIUM>; \
+        tapping-term-ms = <TAPPING_TERM_FAST>; \
         flavor = "tap-preferred"; \
         quick-tap-ms = <QUICK_TAP_TERM>; \
-        require-prior-idle-ms = <PRIOR_IDLE_TERM>; \
         bindings = <HOLD>, <TAP>; \
     )
 
@@ -53,7 +52,6 @@
         flavor = "balanced"; \
         quick-tap-ms = <QUICK_TAP_TERM>; \
         bindings = <&mo>, <TAP>; \
-        require-prior-idle-ms = <PRIOR_IDLE_TERM>; \
     )
 
 #define MACRO_0_MS(NAME, BINDINGS) \
