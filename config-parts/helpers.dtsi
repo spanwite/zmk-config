@@ -1,11 +1,22 @@
-#define HOME_ROW_MOD(NAME, HOLD, TAP, TRIGGER_POS) \
+#define HOMEMOD_LEFT(NAME, HOLD, TAP) \
     ZMK_BEHAVIOR(NAME, hold_tap, \
         flavor = "balanced"; \
-        tapping-term-ms = <280>; \
+        tapping-term-ms = <TAPPING_TERM_FAST>; \
         quick-tap-ms = <QUICK_TAP_TERM>; \
         require-prior-idle-ms = <PRIOR_IDLE_TERM>; \
         bindings = <HOLD>, <TAP>; \
-        hold-trigger-key-positions = <TRIGGER_POS>; \
+        hold-trigger-key-positions = <KEYS_R KEYS_T>; \
+        hold-trigger-on-release; \
+    )
+
+#define HOMEMOD_RIGHT(NAME, HOLD, TAP) \
+    ZMK_BEHAVIOR(NAME, hold_tap, \
+        flavor = "balanced"; \
+        tapping-term-ms = <TAPPING_TERM_FAST>; \
+        quick-tap-ms = <QUICK_TAP_TERM>; \
+        require-prior-idle-ms = <PRIOR_IDLE_TERM>; \
+        bindings = <HOLD>, <TAP>; \
+        hold-trigger-key-positions = <KEYS_L KEYS_T>; \
         hold-trigger-on-release; \
     )
 
@@ -29,11 +40,20 @@
 
 #define HOLDTAP_KEY(NAME, HOLD, TAP) \
     ZMK_BEHAVIOR(NAME, hold_tap, \
-        tapping-term-ms = <175>; \
+        tapping-term-ms = <TAPPING_TERM_MEDIUM>; \
         flavor = "tap-preferred"; \
         quick-tap-ms = <QUICK_TAP_TERM>; \
         require-prior-idle-ms = <PRIOR_IDLE_TERM>; \
         bindings = <HOLD>, <TAP>; \
+    )
+
+#define LAYERTAP_KEY(NAME, TAP) \
+    ZMK_BEHAVIOR(NAME, hold_tap, \
+        tapping-term-ms = <TAPPING_TERM_FAST>; \
+        flavor = "balanced"; \
+        quick-tap-ms = <QUICK_TAP_TERM>; \
+        bindings = <&mo>, <TAP>; \
+        require-prior-idle-ms = <PRIOR_IDLE_TERM>; \
     )
 
 #define MACRO_0_MS(NAME, BINDINGS) \
@@ -48,12 +68,4 @@
         wait-ms = <10>; \
         tap-ms = <10>; \
         bindings = <&macro_tap BINDINGS>; \
-    )
-
-#define LAYERTAP_KEY(NAME, TAP) \
-    ZMK_BEHAVIOR(NAME, hold_tap, \
-        tapping-term-ms = <TAPPING_TERM>; \
-        flavor = "balanced"; \
-        quick-tap-ms = <QUICK_TAP_TERM>; \
-        bindings = <&mo>, <TAP>; \
     )

@@ -8,61 +8,43 @@
         , <&macro_release &kp LALT> \
         ; \
     )
+
+#define DOUBLE_SYMBOL(NAME, BINDING) \
+    HOLDTAP_KEY(NAME, &double_symbol_ ## NAME, &single_symbol_ ## NAME) \
+    MACRO_0_MS(double_symbol_ ## NAME, BINDING BINDING) \
+    MACRO_0_MS(single_symbol_ ## NAME, BINDING) 
     
 HOLDTAP_KEY(ht_grt_arrow,   &mc_eql_arrow, &mc_greater)
 MACRO_10_MS(mc_eql_arrow,   &kp END &kp SPACE &kp EQUAL &kp GT &kp SPACE)
 MACRO_10_MS(mc_js_fn,       &kp END &kp SPACE &kp EQUAL &kp GT &kp SPACE &kp LBRC &kp ENTER)
-ALT_SYMBOL(mc_greater,      &kp KP_N6 &kp KP_N2)
 
-MACRO_0_MS(mc_logic_and,    &mc_amps &mc_amps)
-ALT_SYMBOL(mc_amps,         &kp KP_N3 &kp KP_N8)
+DOUBLE_SYMBOL(ht_minus,     &mc_minus)
+DOUBLE_SYMBOL(ht_plus,      &mc_plus)
+DOUBLE_SYMBOL(ht_star,      &mc_star)
+DOUBLE_SYMBOL(ht_fslh,      &mc_fslh)
+DOUBLE_SYMBOL(ht_eql,       &mc_eql)
+DOUBLE_SYMBOL(ht_amps,      &mc_amps)
+DOUBLE_SYMBOL(ht_pipe,      &mc_pipe)
 
-MACRO_0_MS(mc_logic_or,     &mc_pipe &mc_pipe)
-ALT_SYMBOL(mc_pipe,         &kp KP_N1 &kp KP_N2 &kp KP_N4)
+MACRO_10_MS(mc_logic_or,    &kp SPACE &mc_pipe &mc_pipe &kp SPACE)
+MACRO_0_MS(mc_logic_and,    &kp SPACE &mc_amps &mc_amps &kp SPACE)
+MACRO_0_MS(mc_nullish,      &kp SPACE &mc_qst &mc_qst &kp SPACE)
 
 HOLDTAP_KEY(ht_js_eqls,     &mc_js_ineql, &mc_js_eql)
-MACRO_0_MS(mc_js_eql,       &kp EQUAL &kp EQUAL &kp EQUAL)
-MACRO_0_MS(mc_js_ineql,     &kp EXCL &kp EQUAL &kp EQUAL)
+MACRO_10_MS(mc_js_eql,      &kp SPACE &kp EQUAL &kp EQUAL &kp EQUAL &kp SPACE)
+MACRO_10_MS(mc_js_ineql,    &kp SPACE &kp EXCL &kp EQUAL &kp EQUAL &kp SPACE)
 
 HOLDTAP_KEY(ht_lbrc,        &mc_end_lbrc, &mc_lbrc)
 MACRO_10_MS(mc_end_lbrc,    &kp END &kp SPACE &kp LBRC &kp ENTER)
-ALT_SYMBOL(mc_lbrc,         &kp KP_N1 &kp KP_N2 &kp KP_N3)
 
 HOLDTAP_KEY(ht_lpar,        &mc_end_lpar, &mc_lpar)
 MACRO_10_MS(mc_end_lpar,    &kp END &kp SPACE &mc_lpar &kp ENTER)
 
 HOLDTAP_KEY(ht_rpar,        &mc_pars, &mc_rpar)
 MACRO_10_MS(mc_pars,        &kp LPAR &kp RPAR &kp LEFT)
-MACRO_0_MS(mc_rpar,         &kp RPAR)
-
-ALT_SYMBOL(mc_rbrc,         &kp KP_N1 &kp KP_N2 &kp KP_N5)
-ALT_SYMBOL(mc_lbkt,         &kp KP_N9 &kp KP_N1)
-ALT_SYMBOL(mc_rbkt,         &kp KP_N9 &kp KP_N3)
-MACRO_0_MS(mc_lpar,         &kp LPAR)
 
 MACRO_0_MS(mc_end_dot,      &mc_dot &kp SPACE &sk LSHIFT)
-ALT_SYMBOL(mc_dot,          &kp KP_N4 &kp KP_N6)
 
-MACRO_0_MS(mc_excl,         &kp EXCL)
-MACRO_0_MS(mc_end_excl,     &kp EXCL &kp SPACE &sk LSHIFT)
-HOLDTAP_KEY(th_excl,        &mc_end_excl, &mc_excl)
-
-HOLDTAP_KEY(th_qst,         &mc_end_qst, &mc_qst)
-MACRO_0_MS(mc_nullish,      &mc_qst &mc_qst)
-MACRO_0_MS(mc_end_qst,      &mc_qst &kp SPACE &sk LSHIFT)
-ALT_SYMBOL(mc_qst,          &kp KP_N6 &kp KP_N3)
-
-MACRO_0_MS(mc_triple_dot,   &mc_dot &mc_dot &mc_dot)
-MACRO_0_MS(mc_triple_under, &kp UNDER &kp UNDER &kp UNDER)
-
-ALT_SYMBOL(mc_comma,        &kp KP_N4 &kp KP_N4)
-ALT_SYMBOL(mc_colon,        &kp KP_N5 &kp KP_N8)
-ALT_SYMBOL(mc_caret,        &kp KP_N9 &kp KP_N4)
-ALT_SYMBOL(mc_sqt,          &kp KP_N3 &kp KP_N9)
-ALT_SYMBOL(mc_less,         &kp KP_N6 &kp KP_N0)
-ALT_SYMBOL(mc_tilda,        &kp KP_N1 &kp KP_N2 &kp KP_N6)
-
-ALT_SYMBOL(mc_dqt,          &kp KP_N3 &kp KP_N4)
 MACRO_10_MS(mc_dqts,        &mc_dqt &mc_dqt &kp LEFT)
 HOLDTAP_KEY(ht_dqt,         &mc_dqts, &mc_dqt)
 
@@ -71,6 +53,43 @@ MACRO_10_MS(mc_email,       &kp N &kp N3 &kp R &kp Q &kp N1 &kp N3 &kp N3 &kp N7
 HOLDTAP_KEY(ht_at_sign,     &mc_email, &mc_at_sign)
 
 MACRO_0_MS(mc_up_dir,       &kp DOT &kp DOT &kp SLASH)
+MACRO_10_MS(mc_up_dir_test, &mc_dot &mc_dot &kp SLASH)
+
+MACRO_0_MS(mc_end_excl,     &kp EXCL &kp SPACE &sk LSHIFT)
+HOLDTAP_KEY(ht_excl,        &mc_end_excl, &mc_excl)
+
+HOLDTAP_KEY(ht_qst,         &mc_end_qst, &mc_qst)
+MACRO_0_MS(mc_end_qst,      &mc_qst &kp SPACE &sk LSHIFT)
+
+MACRO_0_MS(mc_triple_dot,   &mc_dot &mc_dot &mc_dot)
+MACRO_0_MS(mc_triple_under, &kp UNDER &kp UNDER &kp UNDER)
+
+ALT_SYMBOL(mc_comma,        &kp KP_N4 &kp KP_N4)
+ALT_SYMBOL(mc_colon,        &kp KP_N5 &kp KP_N8)
+ALT_SYMBOL(mc_caret,        &kp KP_N9 &kp KP_N4)
+ALT_SYMBOL(mc_lbrc,         &kp KP_N1 &kp KP_N2 &kp KP_N3)
+ALT_SYMBOL(mc_qst,          &kp KP_N6 &kp KP_N3)
+ALT_SYMBOL(mc_pipe,         &kp KP_N1 &kp KP_N2 &kp KP_N4)
+ALT_SYMBOL(mc_sqt,          &kp KP_N3 &kp KP_N9)
+ALT_SYMBOL(mc_rbrc,         &kp KP_N1 &kp KP_N2 &kp KP_N5)
+ALT_SYMBOL(mc_lbkt,         &kp KP_N9 &kp KP_N1)
+ALT_SYMBOL(mc_rbkt,         &kp KP_N9 &kp KP_N3)
+ALT_SYMBOL(mc_less,         &kp KP_N6 &kp KP_N0)
+ALT_SYMBOL(mc_dot,          &kp KP_N4 &kp KP_N6)
+ALT_SYMBOL(mc_tilda,        &kp KP_N1 &kp KP_N2 &kp KP_N6)
+ALT_SYMBOL(mc_amps,         &kp KP_N3 &kp KP_N8)
+ALT_SYMBOL(mc_greater,      &kp KP_N6 &kp KP_N2)
+ALT_SYMBOL(mc_dqt,          &kp KP_N3 &kp KP_N4)
+
+MACRO_0_MS(mc_rpar,         &kp RPAR)
+MACRO_0_MS(mc_lpar,         &kp LPAR)
+
+MACRO_0_MS(mc_minus,        &kp MINUS)
+MACRO_0_MS(mc_plus,         &kp PLUS)
+MACRO_0_MS(mc_star,         &kp STAR)
+MACRO_0_MS(mc_fslh,         &kp KP_DIVIDE)
+MACRO_0_MS(mc_eql,          &kp EQUAL)
+MACRO_0_MS(mc_excl,         &kp EXCL)
 
 ZMK_BEHAVIOR(mc_spc_comma, macro, 
      wait-ms = <0>; 

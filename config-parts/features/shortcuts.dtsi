@@ -1,27 +1,11 @@
-MACRO_10_MS(mc_copy,          &kp LC(C))
-MACRO_10_MS(mc_sel_copy,      &kp LC(A) &kp LC(C))
+MACRO_0_MS(mc_copy,           &kp LC(C))
+MACRO_0_MS(mc_sel_copy,       &kp LC(A) &kp LC(C))
 HOLDTAP_KEY(ht_copy,          &mc_sel_copy, &mc_copy)
 
-MACRO_10_MS(mc_paste,         &kp LC(V))
-MACRO_10_MS(mc_sel_paste,     &kp LC(A) &kp LC(V))
+MACRO_0_MS(mc_paste,          &kp LC(V))
+MACRO_0_MS(mc_sel_paste,      &kp LC(A) &kp LC(V))
 HOLDTAP_KEY(ht_paste,         &mc_sel_paste, &mc_paste)
 
-MACRO_10_MS(mc_cut,           &kp LC(X))
-MACRO_10_MS(mc_sel_cut,       &kp LC(A) &kp LC(X))
+MACRO_0_MS(mc_cut,            &kp LC(X))
+MACRO_0_MS(mc_sel_cut,        &kp LC(A) &kp LC(X))
 HOLDTAP_KEY(ht_cut,           &mc_sel_cut, &mc_cut)
-
-MACRO_10_MS(mc_bspc,          &kp BSPC)
-MACRO_10_MS(mc_del_word,      &kp LC(BSPC))
-HOLDTAP_KEY(ht_bspc,          &mc_del_word, &mc_bspc)
-
-MACRO_10_MS(mc_tab,           &kp TAB)
-MACRO_10_MS(mc_shft_tab,      &kp LS(TAB))
-HOLDTAP_KEY(ht_tab,           &mc_shft_tab, &mc_tab)
-
-MACRO_0_MS(mc_new_tab,        &kp LC(T))
-MACRO_0_MS(mc_new_close_tab,  &kp LC(T) CLOSE_OTHER_TABS)
-HOLDTAP_KEY(ht_new_tab,       &mc_new_close_tab, &mc_new_tab)
-
-MACRO_0_MS(mc_close_others,   CLOSE_OTHER_TABS)
-MACRO_0_MS(mc_close_right,    CLOSE_RIGHT_TABS)
-HOLDTAP_KEY(ht_close_tab,     &mc_close_right, &mc_close_others)

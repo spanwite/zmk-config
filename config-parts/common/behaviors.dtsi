@@ -1,5 +1,5 @@
-HOME_ROW_MOD(hml, &kp, &kp, KEYS_R KEYS_T)
-HOME_ROW_MOD(hmr, &kp, &kp, KEYS_L KEYS_T)
+HOMEMOD_LEFT(hml, &kp, &kp)
+HOMEMOD_RIGHT(hmr, &kp, &kp)
 
 ZMK_BEHAVIOR(my_caps_word, caps_word,
     layers = <CAPS_WORD>;
@@ -11,4 +11,11 @@ ZMK_BEHAVIOR(my_caps_word, caps_word,
         LSHFT
     >;
     ignore-alphas;
+)
+
+ZMK_BEHAVIOR(mt_alpha, hold_tap,
+    flavor = "tap-preferred";
+    quick-tap-ms = <QUICK_TAP_TERM>;
+    tapping-term-ms = <TAPPING_TERM_SLOW>;
+    bindings = <&kp>, <&kp>;
 )

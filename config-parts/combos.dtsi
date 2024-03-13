@@ -29,16 +29,12 @@ COMBO(redo,             LM3 LB2,      &kp LC(LS(Z)),         ALPHA MOUSE NUM_WOR
                     
 COMBO(change_language,  LM1 RM1,      CHANGE_LANG,           ALPHA CAPS_WORD)
 
-COMBO(screenshot,       LM3 LM2,      &kp LS(LG(S)),         NAV)
-COMBO(toggle_record,    LT3 LT2,      TOGGLE_RECORD,         NAV) 
-COMBO(toggle_overlay,   LB3 LB2,      TOGGLE_OVERLAY,        NAV)
-
-COMBO(logic_or,         RB2 RB3,      &mc_logic_or,          NAV SYMBOLS)
-COMBO(triple_dot,       RB1 RB2,      &mc_triple_dot,        NAV SYMBOLS)
-COMBO(logic_and,        RM2 RM3,      &mc_logic_and,         NAV SYMBOLS)
-COMBO(nullish,          RM1 RM3,      &mc_nullish,           NAV SYMBOLS)
-COMBO(js_eqls,          RM1 RM2,      &ht_js_eqls 0 0,       NAV SYMBOLS)
-COMBO(js_fn,            RT2 RT3,      &mc_js_fn,             NAV SYMBOLS)
+COMBO(logic_or,         LB2 LB3,      &mc_logic_or,          SYMBOLS)
+COMBO(triple_dot,       LB1 LB2,      &mc_triple_dot,        SYMBOLS)
+COMBO(logic_and,        LM2 LM3,      &mc_logic_and,         SYMBOLS)
+COMBO(nullish,          LM1 LM3,      &mc_nullish,           SYMBOLS)
+COMBO(js_eqls,          LM1 LM2,      &ht_js_eqls 0 0,       SYMBOLS)
+COMBO(js_fn,            LT2 LT3,      &mc_js_fn,             SYMBOLS)
 
 COMBO(comma_spc,        RM2 RM3,      &mc_spc_comma,         ALPHA CAPS_WORD)
-COMBO(mouse_word,       RM1 RM3,      &mouse_word,           ALPHA CAPS_WORD)
+COMBO(mouse_word,       LT1 LT3,      &mouse_word,           ALPHA CAPS_WORD)

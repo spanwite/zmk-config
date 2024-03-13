@@ -1,27 +1,20 @@
-#define QUICK_TAP_TERM 220
-#define TAPPING_TERM 220
-#define PRIOR_IDLE_TERM 150 
+#define QUICK_TAP_TERM       220
 
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 3000 
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 20
+#define TAPPING_TERM_SLOW    300
+#define TAPPING_TERM_MEDIUM  220
+#define TAPPING_TERM_FAST    175
 
-&num_word {
-    layers = <NUM_WORD>;
-    continue-list = <
-        BACKSPACE DELETE
-    >;
-    ignore-modifiers;
-};
+#define PRIOR_IDLE_TERM      150
 
 &mt {
     flavor = "tap-preferred";
-    tapping-term-ms = <TAPPING_TERM>;
+    tapping-term-ms = <TAPPING_TERM_MEDIUM>;
     quick-tap-ms = <QUICK_TAP_TERM>;
 };
 
 &lt {
-    tapping-term-ms = <TAPPING_TERM>;
-    quick-tap-ms = <TAPPING_TERM>;
+    tapping-term-ms = <TAPPING_TERM_FAST>;
+    quick-tap-ms = <QUICK_TAP_TERM>;
     flavor = "balanced";
 };
 
@@ -34,6 +27,18 @@
     release-after-ms = <1000>;
     quick-release;
 };
+
+&num_word {
+    layers = <NUM_WORD>;
+    continue-list = <
+        BACKSPACE DELETE
+    >;
+    ignore-modifiers;
+};
+
+// Mouse
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 3000 
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 20
 
 &mmv {
     acceleration-exponent = <1>;
