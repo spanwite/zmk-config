@@ -1,16 +1,15 @@
 #define ALPHA         0
 #define CAPS_WORD     1
 #define NUM_WORD      2
-#define HAND_NUM      3
-#define HAND_SYM      4
-#define MOUSE         5
-#define NAV           6
-#define SYMBOLS       7
-#define SHORTCUTS     8
-#define POWERTOYS     9
-#define FN            10
-#define GAME_FPS      11
-#define SYSTEM        12
+#define NUMBERS       3
+#define MOUSE         4
+#define NAV           5
+#define SYMBOLS       6
+#define SHORTCUTS     7
+#define POWERTOYS     8
+#define FN            9
+#define GAME_FPS      10
+#define SYSTEM        11
 
 #define ___ &trans
 #define XXX &none
