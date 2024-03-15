@@ -11,5 +11,6 @@ ZMK_LAYER(alpha,
 )
 
 ZMK_BEHAVIOR(td_profiles, tap_dance,
-    bindings = <&none>, <&tog MEDIA>, <&tog GAME_FPS>;
+    tapping-term-ms = <400>;
+    bindings = <&to MEDIA>, <&to GAME_FPS>;
 )

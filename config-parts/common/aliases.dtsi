@@ -24,15 +24,8 @@
 #define TOGGLE_RECORD     &kp MAKE_MEH(F1)
 #define TOGGLE_OVERLAY    &kp MAKE_MEH(F2)
 
-#define M_PP              &kp MAKE_MEH(F3)
-#define M_REWIND          &kp MAKE_MEH(F4)
-#define M_ADVANCE         &kp MAKE_MEH(F5)
-#define M_SPEED_UP        &kp MAKE_MEH(F6)
-#define M_SLOW_DOWN       &kp MAKE_MEH(F7)
-#define M_NEXT            &kp MAKE_MEH(F8)
-#define M_PREV            &kp MAKE_MEH(F9)
-#define M_VOL_UP          &kp MAKE_MEH(F11)
-#define M_VOL_DN          &kp MAKE_MEH(F12)
+#define M_SPEED_UP        &kp MAKE_MEH(F3)
+#define M_SLOW_DOWN       &kp MAKE_MEH(F4)
 
 #define PT_RUN            &kp MAKE_HYPER(F1)
 #define PT_COL_PICK       &kp MAKE_HYPER(F2)
