@@ -35,3 +35,5 @@ COMBO(logic_and,        LM2 LM3,      &mc_logic_and,         SYMBOLS)
 COMBO(nullish,          LM1 LM3,      &mc_nullish,           SYMBOLS)
 COMBO(js_eqls,          LM1 LM2,      &ht_js_eqls 0 0,       SYMBOLS)
 COMBO(js_fn,            LT2 LT3,      &mc_js_fn,             SYMBOLS)
+
+COMBO(tab,              RM2 RM3,      &kp TAB,               ALPHA MOUSE NUM_WORD NUMBERS CAPS_WORD)
