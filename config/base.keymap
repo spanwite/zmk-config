@@ -27,6 +27,7 @@
 #include "../config-parts/layers/powertoys.dtsi"
 #include "../config-parts/layers/fn.dtsi"
 #include "../config-parts/layers/game_fps.dtsi"
+#include "../config-parts/layers/media.dtsi"
 #include "../config-parts/layers/system.dtsi"
 
 #include "../config-parts/combos.dtsi"

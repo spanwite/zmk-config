@@ -1,8 +1,8 @@
 LAYERTAP_KEY(lt_spc, &mm_spc_triple_under)
 MORPH_SINGLE(mm_spc_under, RSFT, &kp SPACE, &kp UNDER)
 MORPH_SINGLE(mm_spc_minus, RCTL, &mm_spc_under, &kp MINUS)
-MORPH_SINGLE(mm_spc_end_dot, LSFT, &mm_spc_minus, &mc_end_dot)
-MORPH_SINGLE(mm_spc_triple_under, LALT, &mm_spc_end_dot, &mc_triple_under)
+MORPH_SINGLE(mm_spc_ht_dot, LSFT, &mm_spc_minus, &ht_dot 0 0)
+MORPH_SINGLE(mm_spc_triple_under, LALT, &mm_spc_ht_dot, &mc_triple_under)
 
 LAYERTAP_KEY(lt_shft, &mm_shft_caps_lock)
 MORPH_SINGLE(mm_shft_caps_word, LSFT, &sk LSHIFT, &my_caps_word)
@@ -10,4 +10,9 @@ MORPH_SINGLE(mm_shft_caps_lock, LCTL, &mm_shft_caps_word, &to CAPS_WORD)
 
 LAYERTAP_KEY(lt_repeat, &key_repeat)
 LAYERTAP_KEY(lt_to,     &to)
-LAYERTAP_KEY(lt_num,    &num_word)
+
+ZMK_BEHAVIOR(td_num, tap_dance,
+    tapping-term-ms = <TAPPING_TERM_SLOW>;
+    bindings = <&num_word>, <&num_expr>;
+)
+LAYERTAP_KEY(lt_num, &td_num)
