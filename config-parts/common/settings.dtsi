@@ -1,6 +1,6 @@
 #define QUICK_TAP_TERM       220
 
-#define TAPPING_TERM_SLOW    300
+#define TAPPING_TERM_SLOW    280
 #define TAPPING_TERM_MEDIUM  220
 #define TAPPING_TERM_FAST    175
 

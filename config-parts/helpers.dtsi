@@ -1,7 +1,7 @@
 #define HOMEMOD_LEFT(NAME, HOLD, TAP) \
     ZMK_BEHAVIOR(NAME, hold_tap, \
         flavor = "balanced"; \
-        tapping-term-ms = <TAPPING_TERM_FAST>; \
+        tapping-term-ms = <TAPPING_TERM_SLOW>; \
         quick-tap-ms = <QUICK_TAP_TERM>; \
         require-prior-idle-ms = <PRIOR_IDLE_TERM>; \
         bindings = <HOLD>, <TAP>; \
@@ -12,7 +12,7 @@
 #define HOMEMOD_RIGHT(NAME, HOLD, TAP) \
     ZMK_BEHAVIOR(NAME, hold_tap, \
         flavor = "balanced"; \
-        tapping-term-ms = <TAPPING_TERM_FAST>; \
+        tapping-term-ms = <TAPPING_TERM_SLOW>; \
         quick-tap-ms = <QUICK_TAP_TERM>; \
         require-prior-idle-ms = <PRIOR_IDLE_TERM>; \
         bindings = <HOLD>, <TAP>; \
