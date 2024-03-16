@@ -15,19 +15,19 @@
 #define COMBO(NAME, KEYS, BINDINGS, LAYERS) \
     ZMK_COMBO(NAME, BINDINGS, KEYS, LAYERS, COMBO_TERM)
 
-COMBO(select_all,       LT3 LT2,      &kp LC(A),             ALPHA CAPS_WORD)
-COMBO(mouse_word,       LT1 LT3,      &mouse_word,           ALPHA CAPS_WORD)
+COMBO(select_all,       LT3 LT2,      &kp LC(A),             ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
+COMBO(mouse_word,       LT1 LT3,      &mouse_word,           ALPHA NUMPAD NUM_ROW CAPS_WORD)
 
-COMBO(cut,              LM3 LM1,      &ht_cut 0 0,           ALPHA MOUSE NUM_WORD NUMBERS CAPS_WORD)
-COMBO(paste,            LM3 LM2,      &ht_paste 0 0,         ALPHA MOUSE NUM_WORD NUMBERS CAPS_WORD)
-COMBO(copy,             LM2 LM1,      &ht_copy 0 0,          ALPHA MOUSE NUM_WORD NUMBERS CAPS_WORD)
-COMBO(win_paste,        LM3 LM2 LM1,  &kp LG(V),             ALPHA MOUSE NUM_WORD NUMBERS CAPS_WORD)
+COMBO(cut,              LM3 LM1,      &ht_cut 0 0,           ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
+COMBO(paste,            LM3 LM2,      &ht_paste 0 0,         ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
+COMBO(copy,             LM2 LM1,      &ht_copy 0 0,          ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
+COMBO(win_paste,        LM3 LM2 LM1,  &kp LG(V),             ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
 
-COMBO(undo,             LM2 LB3,      &kp LC(Z),             ALPHA MOUSE NUM_WORD NUMBERS CAPS_WORD)
-COMBO(redo,             LM3 LB2,      &kp LC(LS(Z)),         ALPHA MOUSE NUM_WORD NUMBERS CAPS_WORD)
+COMBO(undo,             LM2 LB3,      &kp LC(Z),             ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
+COMBO(redo,             LM3 LB2,      &kp LC(LS(Z)),         ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
                     
-COMBO(change_language,  LM1 RM1,      CHANGE_LANG,           ALPHA CAPS_WORD)
-COMBO(caps_word_morph,  LM2 RM2,      &mm_caps_word,         ALPHA CAPS_WORD)
+COMBO(change_language,  LM1 RM1,      CHANGE_LANG,           ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
+COMBO(caps_word_morph,  LM2 RM2,      &mm_caps_word,         ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
 
 COMBO(logic_or,         LB2 LB3,      &mc_logic_or,          SYMBOLS)
 COMBO(triple_dot,       LB1 LB2,      &mc_triple_dot,        SYMBOLS)
@@ -36,4 +36,6 @@ COMBO(nullish,          LM1 LM3,      &mc_nullish,           SYMBOLS)
 COMBO(js_eqls,          LM1 LM2,      &ht_js_eqls 0 0,       SYMBOLS)
 COMBO(js_fn,            LT2 LT3,      &mc_js_fn,             SYMBOLS)
 
-COMBO(tab,              RM2 RM3,      &kp TAB,               ALPHA MOUSE NUM_WORD NUMBERS CAPS_WORD)
+COMBO(sqt,              RM2 RM3,      &kp SQT,               ALPHA NUMPAD NUM_ROW)
+COMBO(sqt,              RM2 RM3,      &kp LS(SQT),           CAPS_WORD)
+COMBO(tab,              RM1 RM2,      &kp TAB,               ALPHA NUMPAD NUM_ROW CAPS_WORD)

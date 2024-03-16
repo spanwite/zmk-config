@@ -1,7 +1,7 @@
 #define ALPHA         0
 #define CAPS_WORD     1
-#define NUM_WORD      2
-#define NUMBERS       3
+#define NUMPAD        2
+#define NUM_ROW       3
 #define MOUSE         4
 #define NAV           5
 #define SYMBOLS       6

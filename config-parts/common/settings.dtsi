@@ -29,9 +29,9 @@
 };
 
 &num_word {
-    layers = <NUM_WORD>;
+    layers = <NUMPAD>;
     continue-list = <
-        BACKSPACE DELETE
+        BACKSPACE DELETE MINUS
     >;
     ignore-modifiers;
 };

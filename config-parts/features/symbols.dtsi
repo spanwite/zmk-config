@@ -82,6 +82,7 @@ ALT_SYMBOL(mc_tilda,        &kp KP_N1 &kp KP_N2 &kp KP_N6)
 ALT_SYMBOL(mc_amps,         &kp KP_N3 &kp KP_N8)
 ALT_SYMBOL(mc_greater,      &kp KP_N6 &kp KP_N2)
 ALT_SYMBOL(mc_dqt,          &kp KP_N3 &kp KP_N4)
+ALT_SYMBOL(mc_spc,          &kp KP_N3 &kp KP_N2)
 
 MACRO_0_MS(mc_rpar,         &kp RPAR)
 MACRO_0_MS(mc_lpar,         &kp LPAR)
