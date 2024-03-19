@@ -15,7 +15,7 @@
 #define COMBO(NAME, KEYS, BINDINGS, LAYERS) \
     ZMK_COMBO(NAME, BINDINGS, KEYS, LAYERS, COMBO_TERM)
 
-COMBO(select_all,       LT3 LT2,      &kp LC(A),             ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
+COMBO(grave,            LT3 LT2,      &kp GRAVE,             ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
 COMBO(mouse_word,       LT1 LT3,      &mouse_word,           ALPHA NUMPAD NUM_ROW CAPS_WORD)
 
 COMBO(cut,              LM3 LM1,      &ht_cut 0 0,           ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
@@ -38,7 +38,10 @@ COMBO(nullish,          LM1 LM3,      &mc_nullish,           SYMBOLS)
 COMBO(js_eqls,          LM1 LM2,      &ht_js_eqls 0 0,       SYMBOLS)
 COMBO(js_fn,            LT2 LT3,      &mc_js_fn,             SYMBOLS)
 
+COMBO(rbkt,             RT2 RT3,      &kp RBKT,              ALPHA NUMPAD NUM_ROW CAPS_WORD)
+COMBO(caps_rbkt,        RT2 RT3,      &kp LS(RBKT),          CAPS_WORD)
 COMBO(sqt,              RM2 RM3,      &kp SQT,               ALPHA NUMPAD NUM_ROW)
 COMBO(caps_sqt,         RM2 RM3,      &kp LS(SQT),           CAPS_WORD)
 COMBO(tab,              RM1 RM2,      &kp TAB,               ALPHA NUMPAD NUM_ROW CAPS_WORD)
 COMBO(num_word_spc,     RM1 RM3,      &num_row_word_spc,     ALPHA NUMPAD NUM_ROW CAPS_WORD)
+COMBO(win_emoji,        RB2 RB3,      &ht_win_emoji 0 0,     ALPHA NUMPAD NUM_ROW CAPS_WORD)
