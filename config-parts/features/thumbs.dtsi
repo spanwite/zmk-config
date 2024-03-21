@@ -8,7 +8,7 @@ LAYERTAP_KEY(lt_shft, &mm_shft_caps_lock)
 MORPH_SINGLE(mm_shft_caps_word, LSFT, &sk LSHIFT, &my_caps_word)
 MORPH_SINGLE(mm_shft_caps_lock, LCTL, &mm_shft_caps_word, &to CAPS_WORD)
 
-LAYERTAP_KEY(lt_repeat, &key_repeat)
-LAYERTAP_KEY(lt_to,     &to)
+LAYERTAP_KEY(lt_sl, &sl)
+LAYERTAP_KEY(lt_to, &to)
 
 LAYERTAP_KEY(lt_num, &num_row_word)

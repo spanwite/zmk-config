@@ -21,9 +21,12 @@
 
 #define CHANGE_LANG       &kp LC(LSHFT)
 
+#define CLOSE_OTHERS      MAKE_SEMI_MEH(F1)
+#define CLOSE_RIGHT       MAKE_SEMI_MEH(F2)
+#define NEW_TAB           MAKE_SEMI_MEH(F2)
+
 #define TOGGLE_RECORD     MAKE_MEH(F1)
 #define TOGGLE_OVERLAY    MAKE_MEH(F2)
-
 #define M_SPEED_UP        MAKE_MEH(F3)
 #define M_SLOW_DOWN       MAKE_MEH(F4)
 
