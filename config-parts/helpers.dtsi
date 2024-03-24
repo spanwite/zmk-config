@@ -67,3 +67,10 @@
         tap-ms = <10>; \
         bindings = <&macro_tap BINDINGS>; \
     )
+
+#define MACRO_100_MS(NAME, BINDINGS) \
+    ZMK_BEHAVIOR(NAME, macro, \
+        wait-ms = <100>; \
+        tap-ms = <100>; \
+        bindings = <&macro_tap BINDINGS>; \
+    )

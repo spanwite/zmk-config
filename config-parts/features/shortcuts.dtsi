@@ -16,6 +16,6 @@ MACRO_0_MS(mc_win_emoji,         &kp LG(DOT))
 MACRO_10_MS(mc_emoji_lng,        &kp ESC CHANGE_LANG &kp LG(DOT))
 MORPH_SINGLE(mm_win_emoji, LSFT, &mc_win_emoji, &mc_emoji_lng)
 
-MACRO_0_MS(mc_change_lang,       &kp LG(DOT))
-MACRO_10_MS(mc_hard_change_lang, &kp ESC CHANGE_LANG &kp LG(DOT))
+MACRO_0_MS(mc_change_lang,         CHANGE_LANG)
+MACRO_10_MS(mc_hard_change_lang,   &kp LC(BSPC) CHANGE_LANG)
 MORPH_SINGLE(mm_change_lang, LSFT, &mc_change_lang, &mc_hard_change_lang)
