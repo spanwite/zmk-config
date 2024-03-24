@@ -28,8 +28,8 @@ COMBO(numpad,           LB3 LB2,      &num_word,             ALPHA MOUSE NUMPAD 
 COMBO(undo,             LM2 LB3,      &kp LC(Z),             ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
 COMBO(redo,             LM3 LB2,      &kp LC(LS(Z)),         ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
                     
-COMBO(change_language,  LM1 RM1,      CHANGE_LANG,           ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
-COMBO(caps_word_morph,  LM2 RM2,      &mm_caps_word,         ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
+COMBO(change_language,  LM1 RM1,      &mm_change_lang,       ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
+COMBO(esc,              LM2 RM2,      &kp ESC,               ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
 
 COMBO(logic_or,         LB2 LB3,      &mc_logic_or,          SYMBOLS)
 COMBO(triple_dot,       LB1 LB2,      &mc_triple_dot,        SYMBOLS)
@@ -38,10 +38,15 @@ COMBO(nullish,          LM1 LM3,      &mc_nullish,           SYMBOLS)
 COMBO(js_eqls,          LM1 LM2,      &ht_js_eqls 0 0,       SYMBOLS)
 COMBO(js_fn,            LT2 LT3,      &mc_js_fn,             SYMBOLS)
 
-COMBO(rbkt,             RT2 RT3,      &kp RBKT,              ALPHA NUMPAD NUM_ROW CAPS_WORD)
+COMBO(lbkt,             RT1 RT2,      &kp LBKT,              ALPHA NUMPAD NUM_ROW)
+COMBO(caps_lbkt,        RT1 RT2,      &kp LS(LBKT),          CAPS_WORD)
+COMBO(rbkt,             RT2 RT3,      &kp RBKT,              ALPHA NUMPAD NUM_ROW)
 COMBO(caps_rbkt,        RT2 RT3,      &kp LS(RBKT),          CAPS_WORD)
+
 COMBO(sqt,              RM2 RM3,      &kp SQT,               ALPHA NUMPAD NUM_ROW)
 COMBO(caps_sqt,         RM2 RM3,      &kp LS(SQT),           CAPS_WORD)
-COMBO(tab,              RM1 RM2,      &kp TAB,               ALPHA NUMPAD NUM_ROW CAPS_WORD)
-COMBO(num_word_spc,     RM1 RM3,      &num_row_word_spc,     ALPHA NUMPAD NUM_ROW CAPS_WORD)
-COMBO(win_emoji,        RB2 RB3,      &ht_win_emoji 0 0,     ALPHA NUMPAD NUM_ROW CAPS_WORD)
+COMBO(colon,            RM1 RM2,      &mc_colon,             ALPHA NUMPAD NUM_ROW CAPS_WORD)
+COMBO(dqt,              RM1 RM3,      &mc_dqt,               ALPHA NUMPAD NUM_ROW CAPS_WORD)
+COMBO(num_word_spc,     RM1 RM0,      &num_row_word_spc,     ALPHA NUMPAD NUM_ROW CAPS_WORD)
+
+COMBO(win_emoji,        RB2 RB3,      &mm_win_emoji,         ALPHA NUMPAD NUM_ROW CAPS_WORD)
