@@ -2,7 +2,7 @@
     ZMK_BEHAVIOR(NAME, hold_tap, \
         flavor = "balanced"; \
         tapping-term-ms = <TAPPING_TERM_MEDIUM>; \
-        quick-tap-ms = <QUICK_TAP_TERM>; \
+        quick-tap-ms = <QUICK_TAP_TERM_SLOW>; \
         require-prior-idle-ms = <PRIOR_IDLE_TERM>; \
         bindings = <HOLD>, <TAP>; \
         hold-trigger-key-positions = <KEYS_R KEYS_T>; \
@@ -13,7 +13,7 @@
     ZMK_BEHAVIOR(NAME, hold_tap, \
         flavor = "balanced"; \
         tapping-term-ms = <TAPPING_TERM_MEDIUM>; \
-        quick-tap-ms = <QUICK_TAP_TERM>; \
+        quick-tap-ms = <QUICK_TAP_TERM_SLOW>; \
         require-prior-idle-ms = <PRIOR_IDLE_TERM>; \
         bindings = <HOLD>, <TAP>; \
         hold-trigger-key-positions = <KEYS_L KEYS_T>; \
@@ -42,7 +42,7 @@
     ZMK_BEHAVIOR(NAME, hold_tap, \
         tapping-term-ms = <TAPPING_TERM_FAST>; \
         flavor = "tap-preferred"; \
-        quick-tap-ms = <QUICK_TAP_TERM>; \
+        quick-tap-ms = <QUICK_TAP_TERM_FAST>; \
         bindings = <HOLD>, <TAP>; \
     )
 
@@ -50,7 +50,7 @@
     ZMK_BEHAVIOR(NAME, hold_tap, \
         tapping-term-ms = <TAPPING_TERM_FAST>; \
         flavor = "balanced"; \
-        quick-tap-ms = <QUICK_TAP_TERM>; \
+        quick-tap-ms = <QUICK_TAP_TERM_SLOW>; \
         bindings = <&mo>, <TAP>; \
     )
 

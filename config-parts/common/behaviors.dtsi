@@ -15,7 +15,7 @@ ZMK_BEHAVIOR(my_caps_word, caps_word,
 
 ZMK_BEHAVIOR(mt_alpha, hold_tap,
     flavor = "tap-preferred";
-    quick-tap-ms = <QUICK_TAP_TERM>;
+    quick-tap-ms = <QUICK_TAP_TERM_SLOW>;
     tapping-term-ms = <TAPPING_TERM_SLOW>;
     bindings = <&kp>, <&kp>;
 )

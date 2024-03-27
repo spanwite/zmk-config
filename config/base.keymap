@@ -24,7 +24,6 @@
 #include "../config-parts/layers/nav.dtsi"
 #include "../config-parts/layers/symbols.dtsi"
 #include "../config-parts/layers/shortcuts.dtsi"
-#include "../config-parts/layers/sticky_shortcuts.dtsi"
 #include "../config-parts/layers/fn.dtsi"
 #include "../config-parts/layers/game_fps.dtsi"
 #include "../config-parts/layers/media.dtsi"

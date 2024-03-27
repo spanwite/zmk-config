@@ -1,4 +1,5 @@
-#define QUICK_TAP_TERM       220
+#define QUICK_TAP_TERM_SLOW  220
+#define QUICK_TAP_TERM_FAST  175
 
 #define TAPPING_TERM_SLOW    280
 #define TAPPING_TERM_MEDIUM  220
@@ -9,12 +10,12 @@
 &mt {
     flavor = "tap-preferred";
     tapping-term-ms = <TAPPING_TERM_FAST>;
-    quick-tap-ms = <QUICK_TAP_TERM>;
+    quick-tap-ms = <QUICK_TAP_TERM_FAST>;
 };
 
 &lt {
     tapping-term-ms = <TAPPING_TERM_FAST>;
-    quick-tap-ms = <QUICK_TAP_TERM>;
+    quick-tap-ms = <QUICK_TAP_TERM_SLOW>;
     flavor = "balanced";
 };
 

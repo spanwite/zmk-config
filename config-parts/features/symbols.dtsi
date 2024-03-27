@@ -18,6 +18,9 @@ HOLDTAP_KEY(ht_grt_arrow,   &mc_eql_arrow, &mc_greater)
 MACRO_10_MS(mc_eql_arrow,   &kp END &kp SPACE &kp EQUAL &kp GT &kp SPACE)
 MACRO_10_MS(mc_js_fn,       &kp END &kp SPACE &kp EQUAL &kp GT &kp SPACE &kp LBRC &kp ENTER)
 
+HOLDTAP_KEY(ht_minus_dash,  &mc_em_dash, &mc_minus)
+MACRO_10_MS(mc_em_dash,     &kp SPC &kp MINUS &kp MINUS &kp SPC)
+
 DOUBLE_SYMBOL(ht_minus,     &mc_minus)
 DOUBLE_SYMBOL(ht_plus,      &mc_plus)
 DOUBLE_SYMBOL(ht_star,      &mc_star)
