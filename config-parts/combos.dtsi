@@ -21,7 +21,7 @@ COMBO(mouse_word,       LT1 LT3,      &mouse_word,           ALPHA       NUMPAD 
 COMBO(paste,            LM3 LM2,      &ht_paste 0 0,         ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
 COMBO(win_paste,        LM3 LM2 LM1,  &kp LG(V),             ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
 COMBO(minus_dash,       LM2 LM1,      &ht_minus_dash 0 0,    ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
-COMBO(esc,              LM3 LM1,      &kp ESC,               ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
+COMBO(l_change_language,LM3 LM1,      &mm_change_lang,       ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
 
 COMBO(copy,             LB3 LB2,      &ht_copy 0 0,          ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
 COMBO(cut,              LB3 LB1,      &ht_cut 0 0,           ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
@@ -32,6 +32,7 @@ COMBO(undo,             LM2 LB3,      &kp LC(Z),             ALPHA MOUSE NUMPAD 
 COMBO(redo,             LM3 LB2,      &kp LC(LS(Z)),         ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
                     
 COMBO(change_language,  LM1 RM1,      &mm_change_lang,       ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
+COMBO(esc,              LM2 RM2,      &kp ESC,               ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
 
 COMBO(logic_or,         LB2 LB3,      &mc_logic_or,          SYMBOLS)
 COMBO(triple_dot,       LB1 LB2,      &mc_triple_dot,        SYMBOLS)
