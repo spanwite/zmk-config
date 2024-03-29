@@ -1,6 +1,6 @@
 ZMK_LAYER(num_row,
 // ╭──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────╮   ╭──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────╮
-     ___                ___                &kp STAR           &kp MINUS          &kp PERCENT        ___                    ___                &kp EQUAL          &kp PLUS           &kp KP_DIVIDE      ___                ___
+     ___                ___                &ht_plus 0 0       &mc_tilda          &kp PERCENT        ___                    ___                &kp HASH           &ht_fslh 0 0       &ht_star 0 0       ___                ___
 // ├──────────────────├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
      ___                &hml LGUI N6       &hml LALT N4       &hml LCTRL N0      &hml LSHFT N2      &kp HASH               &mc_tilda          &hmr RSHFT N3      &hmr RCTRL N1      &hmr RALT N5       &hmr RGUI N7       ___
 // ├──────────────────├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
@@ -17,17 +17,6 @@ ZMK_BEHAVIOR(num_row_word, caps_word,
     continue-list = <
         PLUS MINUS STAR KP_DIVIDE EQUAL PERCENT LPAR RPAR HASH
         BACKSPACE DELETE
-        KP_N0 KP_N1 KP_N2 KP_N3 KP_N4 KP_N5 KP_N6 KP_N7 KP_N8 KP_N9
-    >;
-    ignore-numbers;
-    ignore-modifiers;
-)
-
-ZMK_BEHAVIOR(num_row_word_spc, caps_word,
-    layers = <NUM_ROW>;
-    continue-list = <
-        PLUS MINUS STAR KP_DIVIDE EQUAL PERCENT LPAR RPAR HASH
-        BACKSPACE DELETE SPACE
         KP_N0 KP_N1 KP_N2 KP_N3 KP_N4 KP_N5 KP_N6 KP_N7 KP_N8 KP_N9
     >;
     ignore-numbers;

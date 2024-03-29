@@ -18,6 +18,11 @@
 COMBO(grave,            LT3 LT2,      &kp GRAVE,             ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
 COMBO(mouse_word,       LT1 LT3,      &mouse_word,           ALPHA       NUMPAD NUM_ROW CAPS_WORD)
 
+COMBO(close_win,        LT1 LT3,      &kp LA(F4),            NAV)
+COMBO(minimize_win,     LT2 LT3,      &kp LG(D),             NAV)
+COMBO(fancy_zones,      LT1 LT2 LT3,  PT_FANCY_ZONES,        NAV)
+COMBO(pin_win,          LT1 LT2,      PT_PIN,                NAV)
+
 COMBO(paste,            LM3 LM2,      &ht_paste 0 0,         ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
 COMBO(win_paste,        LM3 LM2 LM1,  &kp LG(V),             ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
 COMBO(minus_dash,       LM2 LM1,      &ht_minus_dash 0 0,    ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
@@ -50,5 +55,4 @@ COMBO(sqt,              RM2 RM3,      &kp SQT,               ALPHA NUMPAD NUM_RO
 COMBO(caps_sqt,         RM2 RM3,      &kp LS(SQT),           CAPS_WORD)
 COMBO(colon,            RM1 RM2,      &mc_colon,             ALPHA NUMPAD NUM_ROW CAPS_WORD)
 COMBO(dqt,              RM1 RM3,      &mc_dqt,               ALPHA NUMPAD NUM_ROW CAPS_WORD)
-COMBO(num_word_spc,     RM1 RM0,      &num_row_word_spc,     ALPHA NUMPAD NUM_ROW CAPS_WORD)
 

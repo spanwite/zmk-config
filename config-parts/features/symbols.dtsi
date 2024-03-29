@@ -18,8 +18,10 @@ HOLDTAP_KEY(ht_grt_arrow,   &mc_eql_arrow, &mc_greater)
 MACRO_10_MS(mc_eql_arrow,   &kp END &kp SPACE &kp EQUAL &kp GT &kp SPACE)
 MACRO_10_MS(mc_js_fn,       &kp END &kp SPACE &kp EQUAL &kp GT &kp SPACE &kp LBRC &kp ENTER)
 
-HOLDTAP_KEY(ht_minus_dash,  &mc_em_dash, &mc_minus)
+MACRO_0_MS(mc_dbl_minus,    &kp MINUS &kp MINUS)
+MORPH_SINGLE(mm_dbl_minus, LSFT, &kp MINUS, &mc_dbl_minus)
 MACRO_10_MS(mc_em_dash,     &kp SPC &kp MINUS &kp MINUS &kp SPC)
+HOLDTAP_KEY(ht_minus_dash,  &mc_em_dash, &mm_dbl_minus)
 
 DOUBLE_SYMBOL(ht_minus,     &mc_minus)
 DOUBLE_SYMBOL(ht_plus,      &mc_plus)
@@ -56,7 +58,7 @@ MACRO_10_MS(mc_dqts,        &mc_dqt &mc_dqt &kp LEFT)
 HOLDTAP_KEY(ht_dqt,         &mc_dqts, &mc_dqt)
 
 ALT_SYMBOL(mc_at_sign,      &kp KP_N6 &kp KP_N4)
-MACRO_0_MS(mc_email,       &kp N &kp N3 &kp R &kp Q &kp N1 &kp N3 &kp N3 &kp N7 &kp AT_SIGN &kp Y &kp A &kp DOT &kp R &kp U)
+MACRO_10_MS(mc_email,       &kp N &kp N3 &kp R &kp Q &kp N1 &kp N3 &kp N3 &kp N7 &kp AT_SIGN &kp Y &kp A &kp DOT &kp R &kp U)
 HOLDTAP_KEY(ht_at_sign,     &mc_email, &mc_at_sign)
 
 MACRO_0_MS(mc_up_dir,       &kp DOT &kp DOT &kp SLASH)
