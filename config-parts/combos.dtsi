@@ -15,7 +15,6 @@
 #define COMBO(NAME, KEYS, BINDING, LAYERS) \
     ZMK_COMBO(NAME, BINDING, KEYS, LAYERS, COMBO_TERM)
 
-
 #define TOGGLE_LAYERS ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD
 
 /* Left hand BASE combos */
@@ -32,8 +31,8 @@ COMBO(numpad,           LB1 LB2,      &num_word,             TOGGLE_LAYERS)
 COMBO(win_emoji,        LB1 LB2 LB3,  &ht_win_emoji 0 0,     TOGGLE_LAYERS)
 
 /* Left hand CROSS-ROW combos */
-COMBO(undo,             LB3 LM1,      &kp LC(Z),             TOGGLE_LAYERS)
-COMBO(redo,             LM3 LB2,      &kp LC(LS(Z)),         TOGGLE_LAYERS)
+COMBO(undo,             LB3 LM2,      &kp LC(Z),             TOGGLE_LAYERS)
+COMBO(redo,             LB3 LM1,      &kp LC(LS(Z)),         TOGGLE_LAYERS)
 
 /* Left hand NAV combos */
 COMBO(close_win,        LT1 LT3,      &kp LA(F4),            NAV)
@@ -52,7 +51,7 @@ COMBO(js_fn,            LT2 LT3,      &mc_js_fn,             SYMBOLS)
 /* Left hand VERTICAL combos */
 COMBO(screenshot,       LT3 LM3,      &kp LG(LS(S)),         TOGGLE_LAYERS)
 COMBO(toggle_record,    LT2 LM2,      TOGGLE_RECORD,         TOGGLE_LAYERS)
-COMBO(TOGGLE_OVERLAY,   LT1 LM1,      TOGGLE_OVERLAY,        TOGGLE_LAYERS)
+COMBO(toggle_overlay,   LT1 LM1,      TOGGLE_OVERLAY,        TOGGLE_LAYERS)
 
 /* Right hand BASE combos */
 COMBO(lbkt,             RT1 RT2,      &kp LBKT,              ALPHA MOUSE NUMPAD NUM_ROW)
