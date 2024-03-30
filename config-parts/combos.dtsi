@@ -41,12 +41,17 @@ COMBO(fancy_zones,      LT1 LT2 LT3,  PT_FANCY_ZONES,        NAV)
 COMBO(pin_win,          LT1 LT2,      PT_PIN,                NAV)
 
 /* Left hand SYMBOLS combos */
-COMBO(logic_or,         LB2 LB3,      &mc_lgc_or,          SYMBOLS)
+COMBO(logic_or,         LB2 LB3,      &mc_lgc_or,            SYMBOLS)
 COMBO(triple_dot,       LB1 LB2,      &mc_triple_dot,        SYMBOLS)
-COMBO(logic_and,        LM2 LM3,      &mc_lgc_and,         SYMBOLS)
+COMBO(logic_and,        LM2 LM3,      &mc_lgc_and,           SYMBOLS)
 COMBO(nullish,          LM1 LM3,      &mc_nullish,           SYMBOLS)
 COMBO(js_eqls,          LM1 LM2,      &ht_js_eqls 0 0,       SYMBOLS)
 COMBO(js_fn,            LT2 LT3,      &mc_js_fn,             SYMBOLS)
+
+/* Left hand GAME_FPS combos */
+COMBO(fps_t,            LT1 LT2,      &kp T,                 GAME_FPS)
+COMBO(fps_g,            LM1 LM2,      &kp G,                 GAME_FPS)
+COMBO(fps_numpad,       LM2 LM3,      &sl NUMPAD,            GAME_FPS)
 
 /* Left hand VERTICAL combos */
 COMBO(screenshot,       LT3 LM3,      &kp LG(LS(S)),         TOGGLE_LAYERS)
