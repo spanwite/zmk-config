@@ -6,10 +6,10 @@
 #define NAV           5
 #define SYMBOLS       6
 #define SHORTCUTS     7
-#define FN            9
-#define GAME_FPS      10
-#define MEDIA         11
-#define SYSTEM        12
+#define FN            8
+#define GAME_FPS      9
+#define MEDIA         10
+#define SYSTEM        11
 
 #define ___ &trans
 #define XXX &none

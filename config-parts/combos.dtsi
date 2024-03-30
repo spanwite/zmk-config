@@ -15,13 +15,9 @@
 #define COMBO(NAME, KEYS, BINDINGS, LAYERS) \
     ZMK_COMBO(NAME, BINDINGS, KEYS, LAYERS, COMBO_TERM)
 
+/* Left hand BASE combos */
 COMBO(grave,            LT3 LT2,      &kp GRAVE,             ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
 COMBO(mouse_word,       LT1 LT3,      &mouse_word,           ALPHA       NUMPAD NUM_ROW CAPS_WORD)
-
-COMBO(close_win,        LT1 LT3,      &kp LA(F4),            NAV)
-COMBO(minimize_win,     LT2 LT3,      &kp LG(D),             NAV)
-COMBO(fancy_zones,      LT1 LT2 LT3,  PT_FANCY_ZONES,        NAV)
-COMBO(pin_win,          LT1 LT2,      PT_PIN,                NAV)
 
 COMBO(paste,            LM3 LM2,      &ht_paste 0 0,         ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
 COMBO(win_paste,        LM3 LM2 LM1,  &kp LG(V),             ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
@@ -35,10 +31,14 @@ COMBO(win_emoji,        LB1 LB2 LB3,  &ht_win_emoji 0 0,     ALPHA MOUSE NUMPAD 
 
 COMBO(undo,             LM2 LB3,      &kp LC(Z),             ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
 COMBO(redo,             LM3 LB2,      &kp LC(LS(Z)),         ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
-                    
-COMBO(change_language,  LM1 RM1,      &mm_change_lang,       ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
-COMBO(esc,              LM2 RM2,      &kp ESC,               ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
 
+/* Left hand NAV combos */
+COMBO(close_win,        LT1 LT3,      &kp LA(F4),            NAV)
+COMBO(minimize_win,     LT2 LT3,      &kp LG(D),             NAV)
+COMBO(fancy_zones,      LT1 LT2 LT3,  PT_FANCY_ZONES,        NAV)
+COMBO(pin_win,          LT1 LT2,      PT_PIN,                NAV)
+
+/* Left hand SYMBOLS combos */
 COMBO(logic_or,         LB2 LB3,      &mc_logic_or,          SYMBOLS)
 COMBO(triple_dot,       LB1 LB2,      &mc_triple_dot,        SYMBOLS)
 COMBO(logic_and,        LM2 LM3,      &mc_logic_and,         SYMBOLS)
@@ -46,6 +46,10 @@ COMBO(nullish,          LM1 LM3,      &mc_nullish,           SYMBOLS)
 COMBO(js_eqls,          LM1 LM2,      &ht_js_eqls 0 0,       SYMBOLS)
 COMBO(js_fn,            LT2 LT3,      &mc_js_fn,             SYMBOLS)
 
+/* Left hand VERTICAL combos */
+COMBO(arrow_r,          )
+
+/* Right hand BASE combos */
 COMBO(lbkt,             RT1 RT2,      &kp LBKT,              ALPHA NUMPAD NUM_ROW)
 COMBO(caps_lbkt,        RT1 RT2,      &kp LS(LBKT),          CAPS_WORD)
 COMBO(rbkt,             RT2 RT3,      &kp RBKT,              ALPHA NUMPAD NUM_ROW)
@@ -56,3 +60,6 @@ COMBO(caps_sqt,         RM2 RM3,      &kp LS(SQT),           CAPS_WORD)
 COMBO(colon,            RM1 RM2,      &mc_colon,             ALPHA NUMPAD NUM_ROW CAPS_WORD)
 COMBO(dqt,              RM1 RM3,      &mc_dqt,               ALPHA NUMPAD NUM_ROW CAPS_WORD)
 
+/* Cross-hand combos */                    
+COMBO(change_language,  LM1 RM1,      &mm_change_lang,       ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
+COMBO(esc,              LM2 RM2,      &kp ESC,               ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
