@@ -12,25 +12,28 @@
 
 #define COMBO_TERM 40
 
-#define COMBO(NAME, KEYS, BINDINGS, LAYERS) \
-    ZMK_COMBO(NAME, BINDINGS, KEYS, LAYERS, COMBO_TERM)
+#define COMBO(NAME, KEYS, BINDING, LAYERS) \
+    ZMK_COMBO(NAME, BINDING, KEYS, LAYERS, COMBO_TERM)
+
+
+#define TOGGLE_LAYERS ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD
 
 /* Left hand BASE combos */
-COMBO(grave,            LT3 LT2,      &kp GRAVE,             ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
-COMBO(mouse_word,       LT1 LT3,      &mouse_word,           ALPHA       NUMPAD NUM_ROW CAPS_WORD)
+COMBO(grave,            LT3 LT2,      &kp GRAVE,             TOGGLE_LAYERS)
+COMBO(mouse_word,       LT1 LT3,      &mouse_word,           TOGGLE_LAYERS)
 
-COMBO(paste,            LM3 LM2,      &ht_paste 0 0,         ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
-COMBO(win_paste,        LM3 LM2 LM1,  &kp LG(V),             ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
-COMBO(minus_dash,       LM2 LM1,      &ht_minus_dash 0 0,    ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
-COMBO(l_change_language,LM3 LM1,      &mm_change_lang,       ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
+COMBO(paste,            LM3 LM2,      &ht_paste 0 0,         TOGGLE_LAYERS)
+COMBO(cut,              LB3 LB1,      &ht_cut 0 0,           TOGGLE_LAYERS)
+COMBO(copy,             LM2 LM1,      &ht_copy 0 0,          TOGGLE_LAYERS)
+COMBO(win_paste,        LM3 LM2 LM1,  &kp LG(V),             TOGGLE_LAYERS)
 
-COMBO(copy,             LB3 LB2,      &ht_copy 0 0,          ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
-COMBO(cut,              LB3 LB1,      &ht_cut 0 0,           ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
-COMBO(numpad,           LB1 LB2,      &num_word,             ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
-COMBO(win_emoji,        LB1 LB2 LB3,  &ht_win_emoji 0 0,     ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
+COMBO(l_change_language,LB3 LB1,      &mm_change_lang,       TOGGLE_LAYERS)
+COMBO(numpad,           LB1 LB2,      &num_word,             TOGGLE_LAYERS)
+COMBO(win_emoji,        LB1 LB2 LB3,  &ht_win_emoji 0 0,     TOGGLE_LAYERS)
 
-COMBO(undo,             LM2 LB3,      &kp LC(Z),             ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
-COMBO(redo,             LM3 LB2,      &kp LC(LS(Z)),         ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
+/* Left hand CROSS-ROW combos */
+COMBO(undo,             LB3 LM1,      &kp LC(Z),             TOGGLE_LAYERS)
+COMBO(redo,             LM3 LB2,      &kp LC(LS(Z)),         TOGGLE_LAYERS)
 
 /* Left hand NAV combos */
 COMBO(close_win,        LT1 LT3,      &kp LA(F4),            NAV)
@@ -47,19 +50,21 @@ COMBO(js_eqls,          LM1 LM2,      &ht_js_eqls 0 0,       SYMBOLS)
 COMBO(js_fn,            LT2 LT3,      &mc_js_fn,             SYMBOLS)
 
 /* Left hand VERTICAL combos */
-COMBO(arrow_r,          )
+COMBO(screenshot,       LT3 LM3,      &kp LG(LS(S)),         TOGGLE_LAYERS)
+COMBO(toggle_record,    LT2 LM2,      TOGGLE_RECORD,         TOGGLE_LAYERS)
+COMBO(TOGGLE_OVERLAY,   LT1 LM1,      TOGGLE_OVERLAY,        TOGGLE_LAYERS)
 
 /* Right hand BASE combos */
-COMBO(lbkt,             RT1 RT2,      &kp LBKT,              ALPHA NUMPAD NUM_ROW)
+COMBO(lbkt,             RT1 RT2,      &kp LBKT,              ALPHA MOUSE NUMPAD NUM_ROW)
 COMBO(caps_lbkt,        RT1 RT2,      &kp LS(LBKT),          CAPS_WORD)
-COMBO(rbkt,             RT2 RT3,      &kp RBKT,              ALPHA NUMPAD NUM_ROW)
+COMBO(rbkt,             RT2 RT3,      &kp RBKT,              ALPHA MOUSE NUMPAD NUM_ROW)
 COMBO(caps_rbkt,        RT2 RT3,      &kp LS(RBKT),          CAPS_WORD)
 
-COMBO(sqt,              RM2 RM3,      &kp SQT,               ALPHA NUMPAD NUM_ROW)
+COMBO(sqt,              RM2 RM3,      &kp SQT,               ALPHA MOUSE NUMPAD NUM_ROW)
 COMBO(caps_sqt,         RM2 RM3,      &kp LS(SQT),           CAPS_WORD)
-COMBO(colon,            RM1 RM2,      &mc_colon,             ALPHA NUMPAD NUM_ROW CAPS_WORD)
-COMBO(dqt,              RM1 RM3,      &mc_dqt,               ALPHA NUMPAD NUM_ROW CAPS_WORD)
+COMBO(minus_dash,       RM1 RM2,      &ht_minus_dash 0 0,    TOGGLE_LAYERS)
+COMBO(dqt,              RM1 RM3,      &mc_dqt,               TOGGLE_LAYERS)
 
 /* Cross-hand combos */                    
-COMBO(change_language,  LM1 RM1,      &mm_change_lang,       ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
-COMBO(esc,              LM2 RM2,      &kp ESC,               ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD)
+COMBO(change_language,  LM1 RM1,      &mm_change_lang,       TOGGLE_LAYERS)
+COMBO(esc,              LM2 RM2,      &kp ESC,               TOGGLE_LAYERS)
