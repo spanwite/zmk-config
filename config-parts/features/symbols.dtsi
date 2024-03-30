@@ -38,10 +38,10 @@ MACRO_10_MS(mc_eql_arrow,   &kp END &kp SPACE &kp EQUAL &kp GT &kp SPACE)
 MACRO_10_MS(mc_js_fn,       &kp END &kp SPACE &kp EQUAL &kp GT &kp SPACE &kp LBRC &kp ENTER)
 
 /* Logical operators */
-HOLDTAP_KEY(ht_lgc_pipe,    &mc_logic_or, &mc_pipe)
+HOLDTAP_KEY(ht_lgc_pipe,    &mc_lgc_or, &mc_pipe)
 MACRO_10_MS(mc_lgc_or,      &kp SPACE &kp PIPE &kp PIPE &kp SPACE)
 
-HOLDTAP_KEY(ht_lgc_amps,    &mc_logic_and, &mc_amps)
+HOLDTAP_KEY(ht_lgc_amps,    &mc_lgc_and, &mc_amps)
 MACRO_10_MS(mc_lgc_and,     &kp SPACE &kp AMPS &kp AMPS &kp SPACE)
 
 MACRO_10_MS(mc_nullish,     &kp SPACE &kp QUESTION &kp QUESTION &kp SPACE)
