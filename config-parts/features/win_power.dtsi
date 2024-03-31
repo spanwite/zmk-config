@@ -7,11 +7,11 @@
 
 ZMK_BEHAVIOR(ht_win_power, hold_tap,
     tapping-term-ms = <300>;
-    bindings = <&mc_win_shutdown>, <&td_win_power>;
+    bindings = <&mc_win_restart>, <&td_win_power>;
 )
 ZMK_BEHAVIOR(td_win_power, tap_dance,
     tapping-term-ms = <300>;
-    bindings = <&none>, <&mc_win_sleep>, <&mc_win_restart>;
+    bindings = <&mc_win_sleep>, <&mc_win_shutdown>;
 )
 
 ZMK_BEHAVIOR(mc_win_sleep, macro,
