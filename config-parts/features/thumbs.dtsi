@@ -9,5 +9,6 @@ MORPH_SINGLE(mm_shft_caps_lock, LCTL, &mm_shft_caps_word, &to CAPS_WORD)
 
 LAYERTAP_KEY(lt_caps, &mm_caps_word)
 LAYERTAP_KEY(lt_to, &to)
+LAYERTAP_KEY(lt_sl, &sl)
 
 LAYERTAP_KEY(lt_num, &num_row_word)
