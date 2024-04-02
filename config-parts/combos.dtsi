@@ -66,6 +66,7 @@ COMBO(equal,            RT2 RT3,      &kp EQUAL,             TOGGLE_LAYERS)
 
 COMBO(minus_dash,       RM2 RM3,      &ht_minus_dash 0 0,    TOGGLE_LAYERS)
 COMBO(colon,            RM1 RM2,      &mc_colon,             TOGGLE_LAYERS)
+COMBO(dqt,              RM1 RM3,      &mc_dqt,               TOGGLE_LAYERS)
 
 /* Cross-hand combos */                    
 COMBO(change_language,  LM1 RM1,      &mm_change_lang,       TOGGLE_LAYERS)
