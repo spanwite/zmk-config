@@ -18,7 +18,8 @@
 #define TOGGLE_LAYERS ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD
 
 /* Left hand BASE combos */
-COMBO(grave,            LT3 LT2,      &ht_grave 0 0,         TOGGLE_LAYERS)
+COMBO(grave,            LT3 LT2,      &ht_grave 0 0,         ALPHA MOUSE NUMPAD NUM_ROW)
+COMBO(caps_grave,       LT3 LT2,      &kp LS(GRAVE),         CAPS_WORD)
 COMBO(mouse_word,       LT1 LT3,      &mouse_word,           TOGGLE_LAYERS)
 
 COMBO(paste,            LM3 LM2,      &ht_paste 0 0,         TOGGLE_LAYERS)
