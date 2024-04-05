@@ -18,7 +18,7 @@
 #define TOGGLE_LAYERS ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD
 
 /* Left hand BASE combos */
-COMBO(grave,            LT3 LT2,      &kp GRAVE,             TOGGLE_LAYERS)
+COMBO(grave,            LT3 LT2,      &ht_grave 0 0,         TOGGLE_LAYERS)
 COMBO(mouse_word,       LT1 LT3,      &mouse_word,           TOGGLE_LAYERS)
 
 COMBO(paste,            LM3 LM2,      &ht_paste 0 0,         TOGGLE_LAYERS)
@@ -27,8 +27,8 @@ COMBO(copy,             LM2 LM1,      &ht_copy 0 0,          TOGGLE_LAYERS)
 COMBO(win_paste,        LM3 LM2 LM1,  &kp LG(V),             TOGGLE_LAYERS)
 
 COMBO(l_change_language,LB3 LB1,      &mm_change_lang,       TOGGLE_LAYERS)
-COMBO(numpad,           LB2 LB3,      &num_word,             TOGGLE_LAYERS)
-COMBO(win_emoji,        LB1 LB2 LB3,  &ht_win_emoji 0 0,     TOGGLE_LAYERS)
+COMBO(numpad,           LB1 LB2,      &num_word,             TOGGLE_LAYERS)
+COMBO(save,             LB2 LB3,      &kp LC(S),             TOGGLE_LAYERS)
 
 /* Left hand CROSS-ROW combos */
 COMBO(undo,             LB3 LM2,      &kp LC(Z),             TOGGLE_LAYERS)
@@ -59,10 +59,10 @@ COMBO(toggle_record,    LT2 LM2,      TOGGLE_RECORD,         TOGGLE_LAYERS)
 COMBO(toggle_overlay,   LT1 LM1,      TOGGLE_OVERLAY,        TOGGLE_LAYERS)
 
 /* Right hand BASE combos */
-COMBO(rbkt,             RT1 RT2,      &kp RBKT,              ALPHA MOUSE NUMPAD NUM_ROW)
-COMBO(caps_rbkt,        RT1 RT2,      &kp LS(RBKT),          CAPS_WORD)
+COMBO(rbkt,             RT2 RT3,      &kp RBKT,              ALPHA MOUSE NUMPAD NUM_ROW)
+COMBO(caps_rbkt,        RT2 RT3,      &kp LS(RBKT),          CAPS_WORD)
 
-COMBO(equal,            RT2 RT3,      &kp EQUAL,             TOGGLE_LAYERS)
+COMBO(equal,            RT1 RT2,      &kp EQUAL,             TOGGLE_LAYERS)
 
 COMBO(minus_dash,       RM2 RM3,      &ht_minus_dash 0 0,    TOGGLE_LAYERS)
 COMBO(colon,            RM1 RM2,      &mc_colon,             TOGGLE_LAYERS)

@@ -23,6 +23,9 @@ DOUBLE_SYMBOL(ht_dbl_star,  &mc_star)
 DOUBLE_SYMBOL(ht_dbl_fslh,  &mc_fslh)
 DOUBLE_SYMBOL(ht_dbl_bslh,  &mc_bslh)
 
+MACRO_0_MS(mc_triple_grave, &kp GRAVE &kp GRAVE &kp GRAVE)
+HOLDTAP_KEY(ht_grave,       &mc_triple_grave, &mc_grave)
+
 /* Brackets */
 HOLDTAP_KEY(ht_lbrc,        &mc_end_lbrc, &mc_lbrc)
 MACRO_10_MS(mc_end_lbrc,    &kp END &kp SPACE &kp LBRC &kp ENTER)
@@ -110,3 +113,4 @@ MACRO_0_MS(mc_fslh,         &kp KP_DIVIDE)
 MACRO_0_MS(mc_bslh,         &kp BSLH)
 MACRO_0_MS(mc_eql,          &kp EQUAL)
 MACRO_0_MS(mc_excl,         &kp EXCL)
+MACRO_0_MS(mc_grave,        &kp GRAVE)

@@ -31,4 +31,4 @@
 #define PT_RULER          MAKE_HYPER(F4)
 #define PT_FANCY_ZONES    MAKE_HYPER(F5)
 #define PT_EXTRACTOR      MAKE_HYPER(F6)
-#define PT_MIC            MAKE_HYPER(F7)
+#define PT_MIC            MAKE_HYPER(F8)
