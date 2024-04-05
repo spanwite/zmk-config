@@ -35,7 +35,6 @@ COMBO(undo,             LB3 LM2,      &kp LC(Z),             TOGGLE_LAYERS)
 COMBO(redo,             LB3 LM1,      &kp LC(LS(Z)),         TOGGLE_LAYERS)
 
 /* Left hand NAV combos */
-COMBO(close_win,        LT1 LT3,      &kp LA(F4),            NAV)
 COMBO(minimize_win,     LT2 LT3,      &kp LG(D),             NAV)
 COMBO(fancy_zones,      LT1 LT2 LT3,  PT_FANCY_ZONES,        NAV)
 COMBO(pin_win,          LT1 LT2,      PT_PIN,                NAV)
