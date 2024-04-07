@@ -42,12 +42,14 @@ COMBO(fancy_zones,      LT1 LT2 LT3,  PT_FANCY_ZONES,        NAV)
 COMBO(pin_win,          LT1 LT2,      PT_PIN,                NAV)
 
 /* Left hand SYMBOLS combos */
+/*
 COMBO(logic_or,         LB2 LB3,      &mc_lgc_or,            SYMBOLS)
 COMBO(triple_dot,       LB1 LB2,      &mc_triple_dot,        SYMBOLS)
 COMBO(logic_and,        LM2 LM3,      &mc_lgc_and,           SYMBOLS)
 COMBO(nullish,          LM1 LM3,      &mc_nullish,           SYMBOLS)
 COMBO(js_eqls,          LM1 LM2,      &ht_js_eqls 0 0,       SYMBOLS)
 COMBO(js_fn,            LT2 LT3,      &mc_js_fn,             SYMBOLS)
+*/
 
 /* Left hand GAME_FPS combos */
 COMBO(fps_t,            LT1 LT2,      &kp T,                 GAME_FPS)
@@ -63,11 +65,8 @@ COMBO(toggle_overlay,   LT1 LM1,      TOGGLE_OVERLAY,        TOGGLE_LAYERS)
 COMBO(rbkt,             RT2 RT3,      &kp RBKT,              ALPHA MOUSE NUMPAD NUM_ROW)
 COMBO(caps_rbkt,        RT2 RT3,      &kp LS(RBKT),          CAPS_WORD)
 
-COMBO(equal,            RT1 RT2,      &kp EQUAL,             TOGGLE_LAYERS)
-
-COMBO(minus_dash,       RM2 RM3,      &ht_minus_dash 0 0,    TOGGLE_LAYERS)
-COMBO(colon,            RM1 RM2,      &mc_colon,             TOGGLE_LAYERS)
-COMBO(dqt,              RM1 RM3,      &mc_dqt,               TOGGLE_LAYERS)
+COMBO(minus_dash,       RM1 RM2,      &ht_minus_dash 0 0,    TOGGLE_LAYERS)
+COMBO(dqt,              RM2 RM3,      &mc_dqt,               TOGGLE_LAYERS)
 
 /* Cross-hand combos */                    
 COMBO(change_language,  LM1 RM1,      CHANGE_LANG,           TOGGLE_LAYERS)
