@@ -29,8 +29,7 @@ COMBO(win_paste,        LM3 LM2 LM1,  &kp LG(V),             TOGGLE_LAYERS)
 COMBO(l_change_language,LM4 LM1,      CHANGE_LANG,           TOGGLE_LAYERS)
 
 COMBO(win_emoji,        LB3 LB1,      &ht_win_emoji 0 0,     TOGGLE_LAYERS)
-COMBO(numpad,           LB1 LB2,      &num_word,             TOGGLE_LAYERS)
-COMBO(l_esc,            LB2 LB3,      &kp ESC,               TOGGLE_LAYERS)
+COMBO(numpad,           LB3 LB2,      &num_word,             TOGGLE_LAYERS)
 
 /* Left hand CROSS-ROW combos */
 COMBO(undo,             LB3 LM2,      &kp LC(Z),             TOGGLE_LAYERS)
