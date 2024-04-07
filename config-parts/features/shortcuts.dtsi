@@ -15,7 +15,3 @@ MORPH_SINGLE(mm_caps_word, LSFT, &my_caps_word, &to CAPS_WORD)
 MACRO_0_MS(mc_win_emoji,      &kp LG(DOT))
 MACRO_100_MS(mc_emoji_lng,    &kp ESC CHANGE_LANG &kp LG(DOT))
 HOLDTAP_KEY(ht_win_emoji,     &mc_emoji_lng, &mc_win_emoji)
-
-MACRO_0_MS(mc_change_lang,         CHANGE_LANG)
-MACRO_100_MS(mc_hard_change_lang,  &kp LC(BSPC) CHANGE_LANG)
-MORPH_SINGLE(mm_change_lang, LSFT, &mc_change_lang, &mc_hard_change_lang)
