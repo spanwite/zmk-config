@@ -7,8 +7,8 @@
  ╰───────────╮ LH2 LH1 LH0 │ RH0 RH1 RH2 ╭───────────╯
              ╰─────────────┴─────────────╯             */
 
-#undef COMBO_HOOK
-#define COMBO_HOOK require-prior-idle-ms = <PRIOR_IDLE_TERM>;
+// #undef COMBO_HOOK
+// #define COMBO_HOOK require-prior-idle-ms = <PRIOR_IDLE_TERM>;
 
 #define COMBO_TERM 40
 
@@ -70,10 +70,6 @@ COMBO(caps_rbkt,        RT2 RT3,      &kp LS(RBKT),          CAPS_WORD)
 COMBO(minus_dash,       RM1 RM2,      &ht_minus_dash 0 0,    TOGGLE_LAYERS)
 COMBO(dqt,              RM2 RM3,      &mc_dqt,               TOGGLE_LAYERS)
 
-COMBO(r_comma,          RB1 RB2,      &mc_spc_comma,         TOGGLE_LAYERS)
-COMBO(r_dot,            RB2 RB3,      &mc_end_dot,           TOGGLE_LAYERS)
-
 /* Cross-hand combos */                    
 COMBO(change_language,  LM1 RM1,      CHANGE_LANG,           TOGGLE_LAYERS)
 COMBO(esc,              LM2 RM2,      &kp ESC,               TOGGLE_LAYERS)
-COMBO(comma,            LH1 RH1,      &mc_spc_comma,         TOGGLE_LAYERS)
