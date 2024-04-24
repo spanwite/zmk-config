@@ -74,6 +74,5 @@ COMBO(caps_rbkt,        RT2 RT3,      &kp LS(RBKT),          CAPS_WORD)
 COMBO(minus_dash,       RM1 RM2,      &ht_minus_dash 0 0,    TOGGLE_LAYERS)
 COMBO(dqt,              RM2 RM3,      &mc_dqt,               TOGGLE_LAYERS)
 
-/* Cross-hand combos */                    
-COMBO(change_language,  LM1 RM1,      CHANGE_LANG,           TOGGLE_LAYERS)
+/* Cross-hand combos */
 COMBO(esc,              LM2 RM2,      &kp ESC,               TOGGLE_LAYERS)
