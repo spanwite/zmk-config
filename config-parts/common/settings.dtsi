@@ -40,11 +40,11 @@
 };
 
 // Mouse
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 2000 
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 3000 
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20
 
 &mmv {
-    acceleration-exponent = <2>;
+    acceleration-exponent = <1>;
     time-to-max-speed-ms = <500>;
     delay-ms = <0>;
 };
