@@ -45,7 +45,7 @@ COMBO(paste,            LB1 LB2,      &ht_paste 0 0,         TOGGLE_LAYERS)
 COMBO(cut,              LB3 LB1,      &ht_cut 0 0,           TOGGLE_LAYERS)
 COMBO(win_paste,        LB3 LB2 LB1,  &kp LG(V),             TOGGLE_LAYERS)
 
-COMBO(mouse,            RB2 RB3,      &mouse_word,           TOGGLE_LAYERS)
+COMBO(mouse,            RB2 RB3,      &tog MOUSE,            TOGGLE_LAYERS)
 
 
 /* Vertical combos */
