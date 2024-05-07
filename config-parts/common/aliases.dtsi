@@ -5,11 +5,10 @@
 #define MOUSE         4
 #define NAV           5
 #define SYMBOLS       6
-#define SHORTCUTS     7
-#define FN            8
-#define GAME_FPS      9
-#define MEDIA         10
-#define SYSTEM        11
+#define MEDIA         7
+#define GAME_FPS      8
+#define VLC_PLAYER    9
+#define SYSTEM        10
 
 #define ___ &trans
 #define XXX &none

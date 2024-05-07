@@ -19,3 +19,4 @@ ZMK_BEHAVIOR(mt_alpha, hold_tap,
     tapping-term-ms = <TAPPING_TERM_SLOW>;
     bindings = <&kp>, <&kp>;
 )
+

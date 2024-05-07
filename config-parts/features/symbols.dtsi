@@ -14,7 +14,7 @@
     MACRO_0_MS(mc_dbl_ ## NAME, BINDING BINDING)
 
 HOLDTAP_KEY(ht_minus_dash,  &mc_em_dash, &mm_dbl_minus)
-MORPH_SINGLE(mm_dbl_minus, LSFT, &kp MINUS, &mc_dbl_minus)
+MORPH_SINGLE(mm_dbl_minus,  LSFT, &kp MINUS, &mc_dbl_minus)
 MACRO_0_MS(mc_dbl_minus,    &kp MINUS &kp MINUS)
 MACRO_10_MS(mc_em_dash,     &kp SPC &kp MINUS &kp MINUS &kp SPC)
 

@@ -17,6 +17,7 @@
 #include "../config-parts/features/shortcuts.dtsi"
 #include "../config-parts/features/thumbs.dtsi"
 #include "../config-parts/features/win_power.dtsi"
+#include "../config-parts/features/mouse.dtsi"
 
 #include "../config-parts/layers/alpha.dtsi"
 #include "../config-parts/layers/caps_word.dtsi"
@@ -25,10 +26,9 @@
 #include "../config-parts/layers/mouse.dtsi"
 #include "../config-parts/layers/nav.dtsi"
 #include "../config-parts/layers/symbols.dtsi"
-#include "../config-parts/layers/shortcuts.dtsi"
-#include "../config-parts/layers/fn.dtsi"
-#include "../config-parts/layers/game_fps.dtsi"
 #include "../config-parts/layers/media.dtsi"
+#include "../config-parts/layers/game_fps.dtsi"
+#include "../config-parts/layers/vlc_player.dtsi"
 #include "../config-parts/layers/system.dtsi"
 
 #include "../config-parts/combos.dtsi"

@@ -4,13 +4,13 @@ ZMK_LAYER(alpha,
 // ├──────────────────├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
      CHANGE_LANG        &hml LGUI A        &hml LALT S        &hml LCTRL D       &hml LSHFT F       &kp G                  &kp H              &hmr RSHFT J       &hmr RCTRL K       &hmr RALT L        &hmr RGUI SEMI     &kp SQT 
 // ├──────────────────├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
-     &kp ESC            &kp Z              &kp X              &kp C              &kp V              &kp B                  &kp N              &kp M              &kp COMMA          &kp DOT            &kp SLASH          &td_profiles
+     XXX                &kp Z              &kp X              &kp C              &kp V              &kp B                  &kp N              &kp M              &kp COMMA          &kp DOT            &kp SLASH          &td_profiles
 // ╰──────────────────┴──────────────────┴──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────├──────────────────┼──────────────────┼──────────────────┴──────────────────┴──────────────────╯
-                                                              &lt_to SHORTCUTS 0 &lt_spc NAV 0      &lt_caps FN 0          &lt_num NUM_ROW 0  &lt_shft SYMBOLS 0 &lt_to SYSTEM 0                 
+                                                              &lt_to NUMPAD 0    &lt_spc NAV 0      &lt_caps MEDIA 0          &lt_num NUM_ROW 0  &lt_shft SYMBOLS 0 &lt_to SYSTEM 0                 
 //                                                          ╰──────────────────┴──────────────────┴──────────────────╯   ╰──────────────────┴──────────────────┴──────────────────╯
 )
 
 ZMK_BEHAVIOR(td_profiles, tap_dance,
     tapping-term-ms = <400>;
-    bindings = <&to MEDIA>, <&to GAME_FPS>;
+    bindings = <&to VLC_PLAYER>, <&to GAME_FPS>;
 )
