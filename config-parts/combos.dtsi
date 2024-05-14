@@ -10,13 +10,13 @@
 #undef COMBO_HOOK
 #define COMBO_HOOK require-prior-idle-ms = <PRIOR_IDLE_TERM>;
 
-#define COMBO_TERM 35
+#define COMBO_TERM 30
 
 #define COMBO(NAME, KEYS, BINDING, LAYERS) \
     ZMK_COMBO(NAME, BINDING, KEYS, LAYERS, COMBO_TERM)
 
 #define TOGGLE_LAYERS ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD
-#define ALL_LAYERS TOGGLE_LAYERS NAV MEDIA SYMBOLS
+#define ALL_LAYERS TOGGLE_LAYERS NAV SHORTCUTS SYMBOLS
 
 
 /* Top combos */
@@ -31,8 +31,8 @@ COMBO(caps_rbkt,        RT2 RT3,      &kp LS(RBKT),          CAPS_WORD)
 /* Home row combos */
 COMBO(bspc,             LM3 LM2,      &kp BSPC,              ALL_LAYERS)
 COMBO(enter,            LM2 LM1,      &kp ENTER,             ALL_LAYERS)
-COMBO(esc,              LM3 LM1,      &kp ESC,               ALL_LAYERS)
-COMBO(delete,           LM3 LM1 LM2,  &kp DEL,               ALL_LAYERS)
+COMBO(delete,           LM3 LM1,      &kp DEL,               ALL_LAYERS)
+COMBO(numpad,           LM3 LM2 LM1,  &num_word,             ALL_LAYERS)
 
 COMBO(minus_dash,       RM2 RM3,      &ht_minus_dash 0 0,    ALL_LAYERS)
 COMBO(tab,              RM2 RM1,      &kp TAB,               ALL_LAYERS)
@@ -45,16 +45,17 @@ COMBO(paste,            LB1 LB2,      &ht_paste 0 0,         TOGGLE_LAYERS)
 COMBO(cut,              LB3 LB1,      &ht_cut 0 0,           TOGGLE_LAYERS)
 COMBO(win_paste,        LB3 LB2 LB1,  &kp LG(V),             TOGGLE_LAYERS)
 
-COMBO(mouse,            RB2 RB3,      &tog MOUSE,            TOGGLE_LAYERS)
-
+COMBO(mouse,            RB3 RB2,      &mouse_word,           TOGGLE_LAYERS)
 
 /* Vertical combos */
 COMBO(screenshot,       LT3 LM3,      &kp LG(LS(S)),         TOGGLE_LAYERS)
 COMBO(toggle_record,    LT2 LM2,      TOGGLE_RECORD,         TOGGLE_LAYERS)
 COMBO(toggle_overlay,   LT1 LM1,      TOGGLE_OVERLAY,        TOGGLE_LAYERS)
+COMBO(l_bootloader,     LT0 LM0,      &bootloader,           TOGGLE_LAYERS)
 
 COMBO(arrow_r,          RT1 RM1,      &mc_arr_r,             TOGGLE_LAYERS)
 COMBO(fat_arrow_r,      RT2 RM2,      &mc_fat_arr_r,         TOGGLE_LAYERS)
+COMBO(r_bootloader,     RT0 RM0,      &bootloader,           TOGGLE_LAYERS)
 
 
 /* Diagonal combos */
@@ -63,6 +64,10 @@ COMBO(ctrl_q,           LT2 LM3,      &kp LC(Q),             TOGGLE_LAYERS)
 
 COMBO(undo,             LB3 LM2,      &kp LC(Z),             TOGGLE_LAYERS)
 COMBO(redo,             LB3 LM1,      &kp LC(LS(Z)),         TOGGLE_LAYERS)
+
+
+/* Both halves combos */
+COMBO(esc,              LM2 RM2,      &kp ESC,               TOGGLE_LAYERS)
 
 
 /* GAME_FPS combos */

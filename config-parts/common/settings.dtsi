@@ -33,23 +33,9 @@
     layers = <NUMPAD>;
     continue-list = <
         BACKSPACE DELETE
-        MINUS
+        MINUS EQUAL HASH PERCENT STAR 
         KP_N0 KP_N1 KP_N2 KP_N3 KP_N4 KP_N5 KP_N6 KP_N7 KP_N8 KP_N9
     >;
     ignore-modifiers;
 };
 
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 3000 
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 20
-
-&mmv {
-    acceleration-exponent = <1>;
-    time-to-max-speed-ms = <500>;
-    delay-ms = <0>;
-};
-
-&msc {
-    acceleration-exponent = <1>;
-    time-to-max-speed-ms = <40>;
-    delay-ms = <0>;
-};
