@@ -1,12 +1,12 @@
 ZMK_LAYER(alpha,
 // ╭──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────╮   ╭──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────╮
-     WIN_POWER          &mc_q              &mc_w              &mc_e              &mc_r              &mc_t                  &mc_y              &mc_u              &mc_i              &mc_o              &mc_p              &mc_a_lbkt
+     WIN_POWER          &kp Q              &kp W              &kp E              &kp R              &kp T                  &kp Y              &kp U              &kp I              &kp O              &kp P              &kp LBKT
 // ├──────────────────├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
-     CHANGE_LANG        &hml LGUI A        &hml LALT S        &hml LCTRL D       &hml LSHFT F       &mc_g                  &mc_h              &hmr RSHFT J       &hmr RCTRL K       &hmr RALT L        &hmr RGUI SEMI     &mc_a_sqt 
+     CHANGE_LANG        &hml LGUI A        &hml LALT S        &hml LCTRL D       &hml LSHFT F       &kp G                  &kp H              &hmr RSHFT J       &hmr RCTRL K       &hmr RALT L        &hmr RGUI SEMI     &kp SQT 
 // ├──────────────────├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
-     &kp ESC            &mc_z              &mc_x              &mc_c              &mc_v              &mc_b                  &mc_n              &mc_m              &mc_a_comma        &mc_a_dot          &kp SLASH          &td_profiles
+     &kp ESC            &kp Z              &kp X              &kp C              &kp V              &kp B                  &kp N              &kp M              &kp COMMA          &kp DOT            &kp SLASH          &td_profiles
 // ╰──────────────────┴──────────────────┴──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────├──────────────────┼──────────────────┼──────────────────┴──────────────────┴──────────────────╯
-                                                              &lt_to SHORTCUTS ALPHA &lt_spc NAV 0  &lt_caps FN 0       &lt_num_row NUM_ROW 0 &lt_shft SYMBOLS 0 &lt_to SYSTEM 0                 
+                                                              &lt_to SHORTCUTS ALPHA &lt_spc NAV 0  &lt_caps FN 0       &lt_num_row NUM_ROW 0 &lt_shft SYMBOLS 0 &lt_num_word NUMPAD 0                 
 //                                                          ╰──────────────────┴──────────────────┴──────────────────╯   ╰──────────────────┴──────────────────┴──────────────────╯
 )
 

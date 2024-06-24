@@ -12,3 +12,4 @@ LAYERTAP_KEY(lt_to, &to)
 LAYERTAP_KEY(lt_sl, &sl)
 
 LAYERTAP_KEY(lt_num_row, &num_row_word)
+LAYERTAP_KEY(lt_num_word, &num_word)

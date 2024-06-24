@@ -20,18 +20,19 @@
 
 
 /* Top combos */
-COMBO(grave,            LT3 LT2,      &ht_grave 0 0,         ALPHA MOUSE NUMPAD NUM_ROW)
-COMBO(caps_grave,       LT3 LT2,      &kp LS(GRAVE),         CAPS_WORD)
+COMBO(grave,            LT1 LT2,      &ht_grave 0 0,         ALPHA MOUSE NUMPAD NUM_ROW)
+COMBO(caps_grave,       LT1 LT2,      &kp LS(GRAVE),         CAPS_WORD)
 COMBO(win_emoji,        LT3 LT1,      &ht_win_emoji 0 0,     TOGGLE_LAYERS)
+COMBO(delete,           LT3 LT2,      &kp DEL,               ALL_LAYERS)
 
-COMBO(rbkt,             RT2 RT3,      &kp RBKT,              ALPHA MOUSE NUMPAD NUM_ROW)
-COMBO(caps_rbkt,        RT2 RT3,      &kp LS(RBKT),          CAPS_WORD)
+COMBO(colon,            RT2 RT3,      &mc_colon,             ALPHA MOUSE NUMPAD NUM_ROW)
+COMBO(equal,            RT2 RT1,      &kp EQL,               ALPHA MOUSE NUMPAD NUM_ROW)
 
 
 /* Home row combos */
 COMBO(bspc,             LM3 LM2,      &kp BSPC,              ALL_LAYERS)
 COMBO(enter,            LM2 LM1,      &kp ENTER,             ALL_LAYERS)
-COMBO(delete,           LM3 LM1,      &kp DEL,               ALL_LAYERS)
+COMBO(esc,              LM1 LM3,      &kp ESC,               TOGGLE_LAYERS)
 COMBO(numpad,           LM3 LM2 LM1,  &num_word,             ALL_LAYERS)
 
 COMBO(minus_dash,       RM2 RM3,      &ht_minus_dash 0 0,    ALL_LAYERS)
@@ -46,6 +47,8 @@ COMBO(cut,              LB3 LB1,      &ht_cut 0 0,           TOGGLE_LAYERS)
 COMBO(win_paste,        LB3 LB2 LB1,  &kp LG(V),             TOGGLE_LAYERS)
 
 COMBO(mouse,            RB3 RB2,      &mouse_word,           TOGGLE_LAYERS)
+COMBO(rbkt,             RB1 RB2,      &kp RBKT,              ALPHA MOUSE NUMPAD NUM_ROW)
+COMBO(caps_rbkt,        RB1 RB2,      &kp LS(RBKT),          CAPS_WORD)
 
 /* Vertical combos */
 COMBO(screenshot,       LT3 LM3,      &kp LG(LS(S)),         TOGGLE_LAYERS)
@@ -64,10 +67,6 @@ COMBO(ctrl_q,           LT2 LM3,      &kp LC(Q),             TOGGLE_LAYERS)
 
 COMBO(undo,             LB3 LM2,      &kp LC(Z),             TOGGLE_LAYERS)
 COMBO(redo,             LB3 LM1,      &kp LC(LS(Z)),         TOGGLE_LAYERS)
-
-
-/* Both halves combos */
-COMBO(esc,              LM2 RM2,      &kp ESC,               TOGGLE_LAYERS)
 
 
 /* GAME_FPS combos */
