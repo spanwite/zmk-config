@@ -24,6 +24,7 @@
 #define TOGGLE_OVERLAY    MAKE_MEH(F2)
 #define M_SPEED_UP        MAKE_MEH(F3)
 #define M_SLOW_DOWN       MAKE_MEH(F4)
+#define AMD_SCRNSHT       MAKE_SEMI_MEH(F5)
 
 #define PT_RUN            MAKE_HYPER(F1)
 #define PT_COL_PICK       MAKE_HYPER(F2)
