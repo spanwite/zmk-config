@@ -1,1 +1,2 @@
+#include "./symbols.behaviors.dtsi"
 #include "./symbols.layer.dtsi"

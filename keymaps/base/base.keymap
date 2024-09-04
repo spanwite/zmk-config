@@ -5,3 +5,5 @@
 #include "./common/common.module.dtsi"
 
 #include "./layers/layers.module.dtsi"
+
+#include "./combos/combos.module.dtsi"

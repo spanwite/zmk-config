@@ -1,5 +1,6 @@
 #include "./helpers/include.helpers.dtsi"
 
 #include "./common/aliases.dtsi"
-#include "./common/behaviors.dtsi"
+#include "./behaviors/common.behaviors.dtsi"
+#include "./behaviors/symbols.behaviors.dtsi"
 #include "./common.settings.dtsi"
