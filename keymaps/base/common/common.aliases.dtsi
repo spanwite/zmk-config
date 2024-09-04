@@ -1,0 +1,19 @@
+#define ___ &trans
+#define XXX &none
+
+#define MAKE_MEH(KEY)      &kp LC(LS(LA(KEY)))
+#define MAKE_SEMI_MEH(KEY) &kp LS(LA(KEY))
+#define MAKE_HYPER(KEY)    &kp LG(LC(LS(KEY)))
+
+#define TOGGLE_RECORD     MAKE_MEH(F1)
+#define TOGGLE_OVERLAY    MAKE_MEH(F2)
+#define M_SPEED_UP        MAKE_MEH(F3)
+#define M_SLOW_DOWN       MAKE_MEH(F4)
+
+#define PT_RUN            MAKE_HYPER(F1)
+#define PT_COL_PICK       MAKE_HYPER(F2)
+#define PT_PIN            MAKE_HYPER(F3)
+#define PT_RULER          MAKE_HYPER(F4)
+#define PT_FANCY_ZONES    MAKE_HYPER(F5)
+#define PT_EXTRACTOR      MAKE_HYPER(F6)
+#define PT_MIC            MAKE_HYPER(F7)

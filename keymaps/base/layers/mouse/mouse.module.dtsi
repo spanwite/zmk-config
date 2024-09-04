@@ -1,0 +1,5 @@
+#include <dt-bindings/zmk/mouse.h>
+
+#include "./mouse.behaviors.dtsi"
+#include "./mouse.settings.dtsi"
+#include "./mouse.layer.dtsi"

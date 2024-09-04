@@ -1,0 +1,7 @@
+#include "../../deps/zmk-helpers/helper.h"
+
+#include "./helpers/helpers.module.dtsi"
+
+#include "./common/common.module.dtsi"
+
+#include "./layers/layers.module.dtsi"
