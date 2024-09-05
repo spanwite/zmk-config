@@ -1,24 +1,33 @@
 /* Caps Word / Caps Lock */
-LAYERTAP_KEY(lt_caps, &mm_caps_word)
+LAYERTAP(lt_caps, &mm_caps_word)
 MORPH_SINGLE(mm_caps_word, LSFT, &my_caps_word, &to CAPS_WORD)
+ZMK_CAPS_WORD(my_caps_word,
+    layers = <CAPS_WORD>;
+    continue-list = <
+        UNDERSCORE MINUS
+        BACKSPACE DELETE
+        SQT GRAVE LBKT RBKT DOT COMMA 
+        LEFT DOWN UP RIGHT 
+        LSHFT RSHFT
+    >;
+    ignore-alphas;
+)
 
 /* Number Row */
-LAYERTAP_KEY(lt_num_row, &num_row_word)
-LAYERTAP_KEY(lt_num_word, &num_word)
-
-ZMK_BEHAVIOR(num_row_word, caps_word,
+LAYERTAP(lt_num_row, &num_row_word)
+LAYERTAP(lt_num_word, &num_word)
+ZMK_CAPS_WORD(num_row_word,
     layers = <NUM_ROW>;
     continue-list = <
         PLUS MINUS STAR KP_DIVIDE EQUAL PERCENT LPAR RPAR HASH
-        BACKSPACE DELETE
-        KP_N0 KP_N1 KP_N2 KP_N3 KP_N4 KP_N5 KP_N6 KP_N7 KP_N8 KP_N9
+        BACKSPACE DELETE KP_N0 KP_N1 KP_N2 KP_N3 KP_N4 KP_N5 KP_N6 KP_N7 KP_N8 KP_N9
     >;
     ignore-numbers;
     ignore-modifiers;
 )
 
 /* Single */
-LAYERTAP_KEY(lt_spc, &kp SPACE)
-LAYERTAP_KEY(lt_to, &to)
-LAYERTAP_KEY(lt_sl, &sl)
-LAYERTAP_KEY(lt_shft, &sk LSHIFT)
+LAYERTAP(lt_spc, &kp SPACE)
+LAYERTAP(lt_to, &to)
+LAYERTAP(lt_sl, &sl)
+LAYERTAP(lt_shft, &sk LSHIFT)

@@ -1,6 +1,11 @@
-#include "./helpers/include.helpers.dtsi"
+#include "common.aliases.dtsi"
+#include "common.settings.dtsi"
 
-#include "./common/aliases.dtsi"
-#include "./behaviors/common.behaviors.dtsi"
-#include "./behaviors/symbols.behaviors.dtsi"
-#include "./common.settings.dtsi"
+#include "helpers/hrm.helpers.dtsi"
+#include "./helpers/holdtap.helpers.dtsi"
+#include "./helpers/macro.helpers.dtsi"
+#include "./helpers/morph.helpers.dtsi"
+#include "./helpers/meh.helpers.dtsi"
+
+#include "behaviors/common.behaviors.dtsi"
+#include "behaviors/symbols.behaviors.dtsi"

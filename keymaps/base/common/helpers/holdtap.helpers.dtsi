@@ -13,3 +13,7 @@
         quick-tap-ms = <QUICK_TAP_TERM_SLOW>; \
         bindings = <&mo>, <TAP>; \
     )
+
+#define DOUBLE_SYMBOL(NAME, BINDING) \
+    HOLDTAP(NAME, &mc_dbl_ ## NAME, BINDING) \
+    MACRO_0_MS(mc_dbl_ ## NAME, BINDING BINDING)

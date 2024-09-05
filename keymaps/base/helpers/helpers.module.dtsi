@@ -1,4 +1,0 @@
-#include "./hrm.aliases.dtsi"
-#include "./holdtap.aliases.dtsi"
-#include "./macro.aliases.dtsi"
-#include "./morph.aliases.dtsi"

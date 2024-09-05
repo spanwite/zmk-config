@@ -1,0 +1,10 @@
+#define MUTE   &hmr RCTRL C_MUTE
+#define VOL_DN &hmr RSHFT C_VOL_DN
+#define VOL_UP &hmr RALT  C_VOL_UP
+
+#define PT_COL_PICK    HYPER_F1
+#define PT_RULER       HYPER_F2
+#define PT_EXTRACTOR   HYPER_F3
+#define PT_FANCY_ZONES HYPER_F4
+#define PT_PIN         HYPER_F5
+

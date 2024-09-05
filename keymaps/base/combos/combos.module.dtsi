@@ -1,3 +1,4 @@
 #include "./combos.aliases.dtsi"
 #include "./combos.settings.dtsi"
+#include "./combos.behaviors.dtsi"
 #include "./combos.dtsi"
