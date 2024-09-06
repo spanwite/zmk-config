@@ -1,0 +1,6 @@
+ALT_SYMBOL(mc_at_sign,      &kp KP_N6 &kp KP_N4)
+MACRO_10_MS(mc_email,       &kp N &kp N3 &kp R &kp Q &kp N1 &kp N3 &kp N3 &kp N7 &kp AT_SIGN &kp Y &kp A &kp DOT &kp R &kp U)
+HOLDTAP(ht_at_email,    &mc_email, &mc_at_sign)
+
+HOLDTAP(ht_grave,       &mc_tpl_grave, &mc_grave)
+HOLDTAP(ht_under,       &mc_tpl_under, &mc_under)

@@ -1,3 +1,0 @@
-#define MUTE   &hmr RCTRL C_MUTE
-#define VOL_DN &hmr RSHFT C_VOL_DN
-#define VOL_UP &hmr RALT  C_VOL_UP

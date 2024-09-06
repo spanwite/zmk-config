@@ -1,4 +1,0 @@
-#include "./alpha.aliases.dtsi"
-#include "./behaviors/alpha.behaviors.dtsi"
-#include "./behaviors/winpower.behaviors.dtsi"
-#include "./alpha.layer.dtsi"

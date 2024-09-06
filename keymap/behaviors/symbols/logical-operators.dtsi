@@ -1,0 +1,14 @@
+HOLDTAP(ht_lgc_pipe,    &mc_lgc_or, &mc_pipe)
+MACRO_10_MS(mc_lgc_or,      &kp SPACE &kp PIPE &kp PIPE &kp SPACE)
+
+HOLDTAP(ht_lgc_amps,    &mc_lgc_and, &mc_amps)
+MACRO_10_MS(mc_lgc_and,     &kp SPACE &kp AMPS &kp AMPS &kp SPACE)
+
+// MACRO_10_MS(mc_nullish,     &kp SPACE &kp QUESTION &kp QUESTION &kp SPACE)
+
+HOLDTAP(ht_lgc_eql,     &mc_lgc_eql, &mc_eql)
+MACRO_0_MS(mc_lgc_eql,      &kp SPC &kp EQUAL &kp EQUAL &kp SPC)
+
+// HOLDTAP(ht_js_eqls,     &mc_js_ineql, &mc_js_eql)
+// MACRO_10_MS(mc_js_eql,      &kp SPACE &kp EQUAL &kp EQUAL &kp EQUAL &kp SPACE)
+// MACRO_10_MS(mc_js_ineql,    &kp SPACE &kp EXCL &kp EQUAL &kp EQUAL &kp SPACE)

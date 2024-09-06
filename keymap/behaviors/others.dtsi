@@ -1,0 +1,7 @@
+ZMK_BEHAVIOR(ts_swapper, tri_state,
+    bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+    ignored-key-positions = <LT3>;
+)
+
+MAKE_HML(hml, &kp, &kp)
+MAKE_HMR(hmr, &kp, &kp)

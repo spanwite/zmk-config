@@ -1,0 +1,4 @@
+MACRO_0_MS(mc_arr_r,        &kp MINUS &kp GT)
+MACRO_0_MS(mc_arr_l,        &kp LT &kp MINUS)
+MACRO_0_MS(mc_fat_arr_r,    &kp EQUAL &kp GT)
+MACRO_0_MS(mc_fat_arr_l,    &kp LT &kp EQUAL)

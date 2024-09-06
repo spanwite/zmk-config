@@ -1,4 +1,0 @@
-ZMK_TRI_STATE(ts_swapper,
-    bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
-    ignored-key-positions = <LT3>;
-)

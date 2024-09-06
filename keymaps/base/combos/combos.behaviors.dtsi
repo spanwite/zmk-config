@@ -1,2 +1,0 @@
-MACRO_0_MS(mc_arr_r, &kp MINUS &kp GT)
-MACRO_0_MS(mc_arr_l, &kp LT &kp MINUS)
