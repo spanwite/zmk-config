@@ -10,3 +10,5 @@
 #include "./games/game-elden.dtsi"
 #include "vlc-player.dtsi"
 #include "system.dtsi"
+#include "lock.dtsi"
+#include "unlock.dtsi"

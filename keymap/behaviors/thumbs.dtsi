@@ -28,4 +28,5 @@ ZMK_AUTO_LAYER(num_row_word,
 LAYERTAP(lt_to, &to)
 LAYERTAP(lt_sl, &sl)
 LAYERTAP(lt_sk, &sk)
+LAYERTAP(lt_rpt, &key_repeat)
 LAYERTAP(lt_mc_spc, &mc_spc)

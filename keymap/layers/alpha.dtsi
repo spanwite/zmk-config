@@ -4,15 +4,8 @@ ZMK_LAYER(alpha,
 // ├──────────────────├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
      CHANGE_LANG        &hml LGUI A        &hml LALT S        &hml LCTRL D       &hml LSHFT F       &kp G                  &kp H              &hmr RSHFT J       &hmr RCTRL K       &hmr RALT L        &hmr RGUI SEMI     &kp SQT 
 // ├──────────────────├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
-     &td_profiles       &kp Z              &kp X              &kp C              &kp V              &kp B                  &kp N              &kp M              &kp COMMA          &kp DOT            &kp SLASH          XXX
+     &td_profiles       &kp Z              &kp X              &kp C              &kp V              &kp B                  &kp N              &kp M              &kp COMMA          &kp DOT            &kp SLASH          &to LOCK
 // ╰──────────────────┴──────────────────┴──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────├──────────────────┼──────────────────┼──────────────────┴──────────────────┴──────────────────╯
-                                                              &lt_to SHORTCUTS ALPHA &lt NAV SPC    &lt_caps FN 0       &lt_num_row NUM_ROW NUM_ROW &lt_sk SYMBOLS RSHFT &lt_num_word SYSTEM NUMPAD                 
+                                                              &lt_to SHORTCUTS ALPHA &lt NAV SPC &lt_caps FN 0      &lt_num_row NUM_ROW NUM_ROW  &lt_sk SYMBOLS LSHFT  &lt_num_word SYSTEM NUMPAD
 //                                                          ╰──────────────────┴──────────────────┴──────────────────╯   ╰──────────────────┴──────────────────┴──────────────────╯
 )
-
-ZMK_BEHAVIOR(td_profiles, tap_dance,
-    tapping-term-ms = <400>;
-    bindings = <&to GAME_ELDEN>, <&to VLC_PLAYER>;
-)
-
-// TODO: lock/unlock profiles

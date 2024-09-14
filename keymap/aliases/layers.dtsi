@@ -10,6 +10,8 @@
 #define GAME_ELDEN    9
 #define VLC_PLAYER    10
 #define SYSTEM        11
+#define LOCK          12
+#define UNLOCK        13
 
 #define HOLD_LAYERS   NAV SHORTCUTS SYMBOLS FN SYSTEM
 #define TOGGLE_LAYERS ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD

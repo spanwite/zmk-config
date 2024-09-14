@@ -31,11 +31,11 @@ MACRO_0_MS(mc_under,        &kp UNDER)
 // TODO: make alt symbol
 MACRO_10_MS(mc_em_dash,     &kp SPC &kp MINUS &kp MINUS &kp SPC)
 
-DOUBLE_SYMBOL(ht_dbl_plus,  &mc_plus)
-DOUBLE_SYMBOL(ht_dbl_star,  &mc_star)
-DOUBLE_SYMBOL(ht_dbl_fslh,  &mc_fslh)
-DOUBLE_SYMBOL(ht_dbl_bslh,  &mc_bslh)
-MACRO_0_MS(mc_dbl_minus,    &kp MINUS &kp MINUS)
+HT_DOUBLE(plus,  &mc_plus)
+HT_DOUBLE(star,  &mc_star)
+HT_DOUBLE(fslh,  &mc_fslh)
+HT_DOUBLE(bslh,  &mc_bslh)
+HT_DOUBLE(minus, &mc_minus)
 
 MACRO_0_MS(mc_up_dir,       &kp DOT &kp DOT &kp SLASH)
 MACRO_0_MS(mc_tpl_grave,    &kp GRAVE &kp GRAVE &kp GRAVE)

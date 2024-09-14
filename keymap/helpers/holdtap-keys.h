@@ -14,6 +14,6 @@
         bindings = <&mo>, <TAP>; \
     )
 
-#define DOUBLE_SYMBOL(NAME, BINDING) \
-    HOLDTAP(NAME, &mc_dbl_ ## NAME, BINDING) \
+#define HT_DOUBLE(NAME, BINDING) \
+    HOLDTAP(ht_dbl_ ## NAME, &mc_dbl_ ## NAME, BINDING) \
     MACRO_0_MS(mc_dbl_ ## NAME, BINDING BINDING)
