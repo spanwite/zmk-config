@@ -1,11 +1,12 @@
-#define MEH_F1 MAKE_MEH(F1)
-#define MEH_F2 MAKE_MEH(F2)
-#define MEH_F3 MAKE_MEH(F3)
 #define MEH_F4 MAKE_MEH(F4)
 #define MEH_F5 MAKE_MEH(F5)
 
-#define AMD_RECORD   MEH_F1
-#define AMD_OVERLAY  MEH_F2
-#define AMD_SCRNSHT  MEH_F3
+#define MEH_Q MAKE_MEH(Q)
+#define MEH_W MAKE_MEH(W)
+#define MEH_E MAKE_MEH(E)
+
+#define AMD_RECORD   MEH_Q
+#define AMD_OVERLAY  MEH_W
+#define AMD_SCRNSHT  MEH_E
 #define M_SPEED_UP   MEH_F4
 #define M_SLOW_DOWN  MEH_F5

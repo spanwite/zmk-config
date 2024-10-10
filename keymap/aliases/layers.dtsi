@@ -6,15 +6,22 @@
 #define NAV           5
 #define SYMBOLS       6
 #define SHORTCUTS     7
-#define FN            8
-#define GAME_ELDEN    9
-#define VLC_PLAYER    10
-#define SYSTEM        11
-#define LOCK          12
-#define UNLOCK        13
+#define VLC_PLAYER    8
+#define SYSTEM        9
+
+#define GAME_ELDEN    10
+#define GAME_GD       11
+#define GAME_DEFAULT  12
+#define GAME_NUMPAD   13
+
+#define FN            14
+
+#define LOCK          15
+#define UNLOCK        16
+
 
 #define HOLD_LAYERS   NAV SHORTCUTS SYMBOLS FN SYSTEM
 #define TOGGLE_LAYERS ALPHA MOUSE NUMPAD NUM_ROW CAPS_WORD
-#define GAME_LAYERS   GAME_ELDEN
+#define GAME_LAYERS   GAME_ELDEN GAME_DEFAULT GAME_GD
 
 #define ALL_LAYERS    HOLD_LAYERS TOGGLE_LAYERS

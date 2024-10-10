@@ -9,11 +9,12 @@
 
 /* Horizontal cobos (left half) */
 COMBO(delete,           LT3 LT2,      &kp DEL,               ALL_LAYERS)
-COMBO_FAST(grave,       LT2 LT1,      &ht_grave 0 0,         ALPHA SYMBOLS)
-COMBO_FAST(caps_grave,  LT2 LT1,      &kp LS(GRAVE),         CAPS_WORD)
+COMBO_FAST(equal,       LT2 LT1,      &kp EQL,               ALL_LAYERS)
+
+COMBO_SLOW(game_default,LM3 LT2 LM1,  &to GAME_DEFAULT,      ALL_LAYERS)
 
 COMBO(bspc,             LM3 LM2,      &kp BSPC,              ALL_LAYERS)
-COMBO(enter,            LM2 LM1,      &kp ENTER,             ALL_LAYERS)
+COMBO(enter,            LM2 LM1,      &kp ENTER,             ALL_LAYERS VLC_PLAYER)
 COMBO(escape,           LM1 LM3,      &kp ESC,               TOGGLE_LAYERS GAME_LAYERS)
 COMBO(bootloader,       LM0 LM1 LM2,  &bootloader,           TOGGLE_LAYERS)
 
@@ -23,6 +24,7 @@ COMBO(cut,              LB3 LB1,      &ht_cut 0 0,           TOGGLE_LAYERS)
 COMBO(win_paste,        LB3 LB2 LB1,  &kp LG(V),             TOGGLE_LAYERS)
 
 /* Horizontal combos (right half) */
+COMBO(colon,            RT1 RT2,      &mc_colon,             TOGGLE_LAYERS)
 COMBO(under,            RT2 RT3,      &kp UNDER,             TOGGLE_LAYERS)
 
 COMBO(minus_dash,       RM2 RM3,      &ht_minus_dash 0 0,    TOGGLE_LAYERS)
@@ -35,8 +37,9 @@ COMBO(caps_rbkt,        RB1 RB2,      &kp LS(RBKT),          CAPS_WORD)
 
 /* Vertical combos (left half) */
 COMBO_SLOW(screenshot,  LT3 LM3,      &kp LG(LS(S)),         TOGGLE_LAYERS)
-COMBO_SLOW(amd_record,  LT2 LM2,      AMD_RECORD,            TOGGLE_LAYERS)
-COMBO_SLOW(amd_overlay, LT1 LM1,      AMD_OVERLAY,           TOGGLE_LAYERS)
+COMBO_SLOW(amd_scrnsht, LT3 LM3,      AMD_SCRNSHT,           GAME_LAYERS)
+COMBO_SLOW(amd_record,  LT2 LM2,      AMD_RECORD,            TOGGLE_LAYERS GAME_LAYERS)
+COMBO_SLOW(amd_overlay, LT1 LM1,      AMD_OVERLAY,           TOGGLE_LAYERS GAME_LAYERS)
 
 
 /* Diagonal combos (left half) */

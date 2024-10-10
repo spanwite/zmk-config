@@ -5,8 +5,10 @@ ZMK_BEHAVIOR(ts_swapper, tri_state,
 
 ZMK_BEHAVIOR(td_profiles, tap_dance,
     tapping-term-ms = <400>;
-    bindings = <&to GAME_ELDEN>, <&to VLC_PLAYER>;
+    bindings = <&to GAME_DEFAULT>, <&to GAME_ELDEN>, <&to VLC_PLAYER>;
 )
 
 MAKE_HML(hml, &kp, &kp)
 MAKE_HMR(hmr, &kp, &kp)
+
+MACRO_0_MS(mc_repeat, &key_repeat)
