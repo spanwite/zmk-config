@@ -8,6 +8,13 @@ ZMK_BEHAVIOR(td_profiles, tap_dance,
     bindings = <&to GAME_DEFAULT>, <&to GAME_ELDEN>, <&to VLC_PLAYER>;
 )
 
+ZMK_AUTO_LAYER(nav_word,
+	continue-list = <
+		LEFT DOWN UP RIGHT HOME END PG_UP PG_DN INS TAB
+	>;
+	ignore-modifiers;
+)
+
 MAKE_HML(hml, &kp, &kp)
 MAKE_HMR(hmr, &kp, &kp)
 
