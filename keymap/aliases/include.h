@@ -1,6 +1,8 @@
-#include "./keys/basic.dtsi"
-#include "./keys/meh.dtsi"
-#include "./keys/hyper.dtsi"
+#include "./keys.h"
+#include "./layers.h"
 
-#include "./layers.dtsi"
-#include "./others.dtsi"
+#if __has_include("./personal.private.h") 
+	#include "./personal.private.h"
+#else
+	#include "./personal.public.h"
+#endif

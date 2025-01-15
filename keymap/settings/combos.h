@@ -1,6 +1,6 @@
-#undef COMBO_HOOK
-#define COMBO_HOOK require-prior-idle-ms = <PRIOR_IDLE_TERM>;
-
 #define COMBO_TERM_FAST 30
 #define COMBO_TERM 50
-#define COMBO_TERM_SLOW 70
+#define COMBO_TERM_SLOW 60
+
+#define COMBO_IDLE_FAST 50
+#define COMBO_IDLE_SLOW 150

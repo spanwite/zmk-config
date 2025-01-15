@@ -9,12 +9,13 @@
 
 // Game
 ZMK_LEADER_SEQUENCE(game_elden,   &to GAME_ELDEN,   LM0 LT2)
-ZMK_LEADER_SEQUENCE(game_gd,      &to GAME_GD,      LM0 LM0)
 
 // Layer
-ZMK_LEADER_SEQUENCE(layer_vlc,    &to VLC_PLAYER,   RM3 RM3)
+ZMK_LEADER_SEQUENCE(pot_player,   &to POT_PLAYER,   RM3 RM3)
 
 // System
-ZMK_LEADER_SEQUENCE(sys_sleep,    &mc_win_sleep,    LM3 LM3)
-ZMK_LEADER_SEQUENCE(sys_shutdown, &mc_win_shutdown, LM3 LM2)
-ZMK_LEADER_SEQUENCE(sys_restart,  &mc_win_restart,  LM3 LT1)
+ZMK_LEADER_SEQUENCE(win_sleep,    &mc_win_sleep,    LM3 LM3)
+ZMK_LEADER_SEQUENCE(win_shutdown, &mc_win_shutdown, LM3 LM2)
+ZMK_LEADER_SEQUENCE(win_restart,  &mc_win_restart,  LM3 LT1)
+
+ZMK_LEADER_SEQUENCE(win_pin_code, &mc_win_pin,      LM4 LT2 LM1)

@@ -1,3 +1,28 @@
+// Logical Operators
+HOLDTAP(ht_lgc_pipe,        &mc_lgc_or, &mc_pipe)
+MACRO_10_MS(mc_lgc_or,      &kp SPACE &kp PIPE &kp PIPE &kp SPACE)
+
+HOLDTAP(ht_lgc_amps,        &mc_lgc_and, &mc_amps)
+MACRO_10_MS(mc_lgc_and,     &kp SPACE &kp AMPS &kp AMPS &kp SPACE)
+
+// Punctuation
+MORPH_SINGLE(mm_spc_dot,    LSFT, &kp SPC, &mc_spc_dot)
+MACRO_0_MS(mc_spc_dot,      &mc_dot &kp SPACE &sk LSHIFT)
+
+MACRO_0_MS(mc_spc_comma,    &mc_comma &kp SPACE)
+
+MACRO_10_MS(mc_em_dash,     &kp SPC &kp MINUS &kp MINUS &kp SPC)
+HOLDTAP(ht_minus_dash,      &mc_em_dash, &mc_minus)
+
+// Email
+ALT_SYMBOL(mc_at_sign,      &kp KP_N6 &kp KP_N4)
+MACRO_10_MS(mc_email,       KP_MY_EMAIL)
+HOLDTAP(ht_at_email,        &mc_email, &mc_at_sign)
+
+// PIN
+MACRO_10_MS(mc_win_pin,     KP_MY_PIN)
+
+// Macro Symbols
 ALT_SYMBOL(mc_comma,        &kp KP_N4 &kp KP_N4)
 ALT_SYMBOL(mc_colon,        &kp KP_N5 &kp KP_N8)
 ALT_SYMBOL(mc_caret,        &kp KP_N9 &kp KP_N4)
@@ -16,27 +41,6 @@ ALT_SYMBOL(mc_greater,      &kp KP_N6 &kp KP_N2)
 ALT_SYMBOL(mc_dqt,          &kp KP_N3 &kp KP_N4)
 ALT_SYMBOL(mc_spc,          &kp KP_N3 &kp KP_N2)
 
-MACRO_0_MS(mc_rpar,         &kp RPAR)
-MACRO_0_MS(mc_lpar,         &kp LPAR)
 MACRO_0_MS(mc_minus,        &kp MINUS)
-MACRO_0_MS(mc_plus,         &kp PLUS)
-MACRO_0_MS(mc_star,         &kp STAR)
-MACRO_0_MS(mc_fslh,         &kp KP_DIVIDE)
-MACRO_0_MS(mc_bslh,         &kp BSLH)
-MACRO_0_MS(mc_eql,          &kp EQUAL)
-MACRO_0_MS(mc_excl,         &kp EXCL)
-MACRO_0_MS(mc_grave,        &kp GRAVE)
-MACRO_0_MS(mc_under,        &kp UNDER)
-
-// TODO: make alt symbol
-MACRO_10_MS(mc_em_dash,     &kp SPC &kp MINUS &kp MINUS &kp SPC)
-
-HT_DOUBLE(plus,  &mc_plus)
-HT_DOUBLE(star,  &mc_star)
-HT_DOUBLE(fslh,  &mc_fslh)
-HT_DOUBLE(bslh,  &mc_bslh)
-HT_DOUBLE(minus, &mc_minus)
 
 MACRO_0_MS(mc_up_dir,       &kp DOT &kp DOT &kp SLASH)
-MACRO_0_MS(mc_tpl_grave,    &kp GRAVE &kp GRAVE &kp GRAVE)
-MACRO_0_MS(mc_tpl_under,    &kp UNDER &kp UNDER &kp UNDER)

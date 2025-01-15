@@ -4,6 +4,7 @@
 
 #define WIN_POWER &ht_win_power 0 0
 
+/*
 ZMK_HOLD_TAP(ht_win_power,
     tapping-term-ms = <300>;
     bindings = <&mc_win_restart>, <&td_win_power>;
@@ -12,6 +13,7 @@ ZMK_TAP_DANCE(td_win_power,
     tapping-term-ms = <300>;
     bindings = <&mc_win_sleep>, <&mc_win_shutdown>;
 )
+*/
 
 ZMK_MACRO(mc_win_sleep,
     wait-ms = <WIN_WAIT_MS>;

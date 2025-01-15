@@ -5,3 +5,8 @@ ZMK_AUTO_LAYER(mouse_word,
     >;
     ignore-modifiers;
 )
+
+ZMK_BEHAVIOR(ts_swapper, tri_state,
+    bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+    ignored-key-positions = <LT3>;
+)
