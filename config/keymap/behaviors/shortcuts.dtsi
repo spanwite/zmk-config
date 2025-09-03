@@ -1,0 +1,11 @@
+MACRO_0_MS(mc_copy,           &kp LC(C))
+MACRO_0_MS(mc_sel_copy,       &kp LC(A) &kp LC(C))
+HOLDTAP(ht_copy,              &mc_sel_copy, &mc_copy)
+
+MACRO_0_MS(mc_paste,          &kp LC(V))
+MACRO_0_MS(mc_sel_paste,      &kp LC(A) &kp LC(V))
+HOLDTAP(ht_paste,             &mc_sel_paste, &mc_paste)
+
+MACRO_0_MS(mc_cut,            &kp LC(X))
+MACRO_0_MS(mc_sel_cut,        &kp LC(A) &kp LC(X))
+HOLDTAP(ht_cut,               &mc_sel_cut, &mc_cut)

@@ -1,0 +1,32 @@
+#define WIN_WAIT_MS 500
+
+#define LANG_TAP(KEY) &kp KEY KP_CHANGE_LANG &kp KEY
+
+#define WIN_POWER &ht_win_power 0 0
+
+/*
+ZMK_HOLD_TAP(ht_win_power,
+    tapping-term-ms = <300>;
+    bindings = <&mc_win_restart>, <&td_win_power>;
+)
+ZMK_TAP_DANCE(td_win_power,
+    tapping-term-ms = <300>;
+    bindings = <&mc_win_sleep>, <&mc_win_shutdown>;
+)
+*/
+
+ZMK_MACRO(mc_win_sleep,
+    wait-ms = <WIN_WAIT_MS>;
+    tap-ms = <5>;
+    bindings = <&kp LG(X) LANG_TAP(U) LANG_TAP(S)>;
+)
+ZMK_MACRO(mc_win_shutdown,
+    wait-ms = <WIN_WAIT_MS>;
+    tap-ms = <5>;
+    bindings = <&kp LG(X) LANG_TAP(U) LANG_TAP(U)>;
+)
+ZMK_MACRO(mc_win_restart,
+    wait-ms = <WIN_WAIT_MS>;
+    tap-ms = <5>;
+    bindings = <&kp LG(X) LANG_TAP(U) LANG_TAP(R)>;
+)

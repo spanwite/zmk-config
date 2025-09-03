@@ -1,0 +1,6 @@
+#define COMBO_TERM_FAST 30
+#define COMBO_TERM 45
+#define COMBO_TERM_SLOW 60
+
+#define COMBO_IDLE_FAST 50
+#define COMBO_IDLE_SLOW 100

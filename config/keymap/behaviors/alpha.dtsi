@@ -1,0 +1,38 @@
+/* Caps Word / Caps Lock */
+LAYERTAP(lt_caps, &mm_caps_word)
+MORPH_SINGLE(mm_caps_word, LSFT, &my_caps_word CAPS_WORD, &to CAPS_WORD)
+ZMK_AUTO_LAYER(my_caps_word,
+    continue-list = <
+        UNDERSCORE MINUS
+        BACKSPACE DELETE
+        SQT GRAVE LBKT RBKT DOT COMMA 
+        LEFT DOWN UP RIGHT 
+        LSHFT RSHFT
+    >;
+    ignore-alphas;
+)
+
+/* Number Row */
+LAYERTAP(lt_num_row, &num_row_word)
+LAYERTAP(lt_num_word, &num_word)
+ZMK_AUTO_LAYER(num_row_word,
+    continue-list = <
+        PLUS MINUS STAR KP_DIVIDE EQUAL PERCENT LPAR RPAR HASH
+        BACKSPACE DELETE KP_N0 KP_N1 KP_N2 KP_N3 KP_N4 KP_N5 KP_N6 KP_N7 KP_N8 KP_N9
+    >;
+    ignore-numbers;
+    ignore-modifiers;
+)
+
+/* Single */
+LAYERTAP(lt_to, &to)
+LAYERTAP(lt_sl, &sl)
+LAYERTAP(lt_sk, &sk)
+LAYERTAP(lt_rpt, &key_repeat)
+LAYERTAP(lt_ldr, &leader)
+LAYERTAP(lt_mc_spc, &mc_spc)
+LAYERTAP(lt_spc_dot, &mm_spc_dot)
+
+/*  Home row mods */
+MAKE_HML(hml, &kp, &kp)
+MAKE_HMR(hmr, &kp, &kp)

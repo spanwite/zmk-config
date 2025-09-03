@@ -1,0 +1,41 @@
+/* LEFT PIECE */
+/* horizontal combos */
+COMBO(delete,           LT3 LT2,      &kp DEL,               ALL_LAYERS)
+COMBO_FAST(equal,       LT2 LT1,      &kp EQL,               ALL_LAYERS)
+
+COMBO(enter,            LM2 LM1,      &kp ENTER,             ALL_LAYERS)
+COMBO(bspc,             LM3 LM2,      &kp BSPC,              ALL_LAYERS)
+COMBO(pin_code,         LM4 LM1,      &mc_my_pin,            ALL_LAYERS)
+
+COMBO(escape,           LM1 LM3,      &kp ESC,               TOGGLE_LAYERS)
+COMBO(bootloader,       LM0 LM1 LM2,  &bootloader,           TOGGLE_LAYERS)
+
+COMBO(copy,             LB3 LB2,      &ht_copy 0 0,          TOGGLE_LAYERS)
+COMBO(paste,            LB1 LB2,      &ht_paste 0 0,         TOGGLE_LAYERS)
+COMBO(cut,              LB3 LB1,      &ht_cut 0 0,           TOGGLE_LAYERS)
+COMBO(clb_history,      LB3 LB2 LB1,  &kp H_CLB_HISTORY,     TOGGLE_LAYERS)
+
+/* vertical combos */
+COMBO_SLOW(screenshot,  LT3 LM3,      KP_SCREENSHOT,         TOGGLE_LAYERS)
+COMBO_SLOW(screenshot_full,  LT2 LM2, KP_SCREENSHOT_FULL,    TOGGLE_LAYERS GAME_LAYERS)
+
+/* diagonal combos */
+COMBO_FAST(ctrl_t,      LT2 LM1,      &kp LC(T),             TOGGLE_LAYERS)
+COMBO_FAST(ctrl_q,      LT2 LM3,      &kp LC(Q),             TOGGLE_LAYERS)
+
+COMBO(numpad,      LM2 LB1,      &num_word NUMPAD,      ALL_LAYERS)
+COMBO(undo,        LB3 LM2,      &kp LC(Z),             TOGGLE_LAYERS GAME_LAYERS)
+COMBO(redo,        LB3 LM1,      &kp LC(LS(Z)),         TOGGLE_LAYERS GAME_LAYERS)
+
+
+/* RIGHT PIECE */
+/* horizontal combos */
+COMBO(colon,            RT1 RT2,      &kp K_COLON,           TOGGLE_LAYERS)
+COMBO(under,            RT2 RT3,      &kp UNDER,             TOGGLE_LAYERS)
+
+COMBO(minus_dash,       RM2 RM3,      &ht_minus_dash 0 0,    TOGGLE_LAYERS)
+COMBO(tab,              RM2 RM1,      &kp TAB,               TOGGLE_LAYERS)
+COMBO(dqt,              RM1 RM3,      &kp K_DQT,             TOGGLE_LAYERS)
+
+COMBO(mouse,            RB2 RB3,      &mouse_word MOUSE,     TOGGLE_LAYERS)
+COMBO(nav_word,         RB1 RB2,      &nav_word NAV,         TOGGLE_LAYERS)

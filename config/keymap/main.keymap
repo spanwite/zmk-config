@@ -1,0 +1,20 @@
+#include <behaviors.dtsi>
+#include <behaviors/num_word.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/mouse.h>
+
+#include "zmk-helpers/helper.h"
+
+#include "./aliases/include.h"
+
+#include "./settings/include.h"
+
+#include "./helpers/include.h"
+
+#include "./behaviors/include.h"
+
+#include "./layers/include.h"
+
+#include "./combos/include.h"
+#include "./leader.dtsi"
