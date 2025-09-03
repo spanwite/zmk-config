@@ -1,6 +1,5 @@
-#include "macro.h"
+#include "macros.h"
 #include "combos.h"
 #include "meh-keys.h"
 #include "mod-morph.h"
-#include "holdtap-keys.h"
-#include "homerow-mods.h"
+#include "holdtap.h"

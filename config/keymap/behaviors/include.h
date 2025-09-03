@@ -3,5 +3,3 @@
 #include "navigation.dtsi"
 #include "shortcuts.dtsi"
 #include "functions.dtsi"
-#include "specific.dtsi"
-#include "games.dtsi"
