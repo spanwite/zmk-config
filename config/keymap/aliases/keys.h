@@ -2,7 +2,6 @@
 #define KP_CHANGE_LANG &kp LC(LSHFT)
 #define KP_SCREENSHOT  &kp PRINTSCREEN
 #define KP_SCREENSHOT_FULL  &kp LS(PRINTSCREEN)
-#define H_CLB_HISTORY LG(V)
 
 // Windows PowerToys
 #define PT_COL_PICK  MAKE_HYPER(F1)

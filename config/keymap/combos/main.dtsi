@@ -10,10 +10,10 @@ COMBO(pin_code,         LM4 LM1,      &mc_my_pin,            ALL_LAYERS)
 COMBO(escape,           LM1 LM3,      &kp ESC,               TOGGLE_LAYERS)
 COMBO(bootloader,       LM0 LM1 LM2,  &bootloader,           TOGGLE_LAYERS)
 
-COMBO(copy,             LB3 LB2,      &ht_copy 0 0,          TOGGLE_LAYERS)
-COMBO(paste,            LB1 LB2,      &ht_paste 0 0,         TOGGLE_LAYERS)
-COMBO(cut,              LB3 LB1,      &ht_cut 0 0,           TOGGLE_LAYERS)
-COMBO(clb_history,      LB3 LB2 LB1,  &kp H_CLB_HISTORY,     TOGGLE_LAYERS)
+COMBO(copy,             LB3 LB2,      &kp LC(C),             TOGGLE_LAYERS)
+COMBO(paste,            LB1 LB2,      &kp LC(V),             TOGGLE_LAYERS)
+COMBO(cut,              LB3 LB1,      &kp LC(X),             TOGGLE_LAYERS)
+COMBO(clb_history,      LB2 LB2 LB1,  &kp LG(V),             TOGGLE_LAYERS)
 
 /* vertical combos */
 COMBO_SLOW(screenshot,  LT3 LM3,      KP_SCREENSHOT,         TOGGLE_LAYERS)

@@ -1,5 +1,4 @@
 #include "alpha.dtsi"
 #include "symbols.dtsi"
 #include "navigation.dtsi"
-#include "shortcuts.dtsi"
 #include "functions.dtsi"
