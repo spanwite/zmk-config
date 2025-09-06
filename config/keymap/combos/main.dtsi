@@ -16,8 +16,7 @@ COMBO(cut,              LB3 LB1,      &kp LC(X),             TOGGLE_LAYERS)
 COMBO(clb_history,      LB2 LB2 LB1,  &kp LG(V),             TOGGLE_LAYERS)
 
 /* vertical combos */
-COMBO_SLOW(screenshot,  LT3 LM3,      KP_SCREENSHOT,         TOGGLE_LAYERS)
-COMBO_SLOW(screenshot_full,  LT2 LM2, KP_SCREENSHOT_FULL,    TOGGLE_LAYERS GAME_LAYERS)
+COMBO_SLOW(screenshot,  LT3 LM3,      &kp PRINTSCREEN,       TOGGLE_LAYERS)
 
 /* diagonal combos */
 COMBO_FAST(ctrl_t,      LT2 LM1,      &kp LC(T),             TOGGLE_LAYERS)

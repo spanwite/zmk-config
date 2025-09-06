@@ -1,7 +1,5 @@
 // Basic
 #define KP_CHANGE_LANG &kp LC(LSHFT)
-#define KP_SCREENSHOT  &kp PRINTSCREEN
-#define KP_SCREENSHOT_FULL  &kp LS(PRINTSCREEN)
 
 // Utils
 #define ___ &trans
