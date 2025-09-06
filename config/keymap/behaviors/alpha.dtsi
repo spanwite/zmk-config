@@ -1,6 +1,6 @@
 /* Caps Word / Caps Lock */
 LAYERTAP(lt_caps, &mm_caps_word)
-MORPH_SINGLE(mm_caps_word, LSFT, &my_caps_word CAPS_WORD, &to CAPS_WORD)
+MORPH_SINGLE(mm_caps_word, LSFT, &my_caps_word SHIFTED, &to SHIFTED)
 ZMK_AUTO_LAYER(my_caps_word,
     continue-list = <
         UNDERSCORE MINUS

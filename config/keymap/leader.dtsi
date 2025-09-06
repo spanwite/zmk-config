@@ -15,7 +15,7 @@
     };
 
 // Layer (L)
-ZMK_LEADER_SEQUENCE(layer_meh,        &to POT_PLAYER,      L P)
+ZMK_LEADER_SEQUENCE(layer_meh,        &to MEH,             L P)
 
 // System (W)
 ZMK_LEADER_SEQUENCE(win_sleep,        &mc_win_sleep,       W W)
