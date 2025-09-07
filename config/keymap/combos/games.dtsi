@@ -1,17 +1,15 @@
 /* LEFT PIECE */
 /* horizontal combos */
-COMBO(game_t,           LT0 LT1,      &kp T,                 GAME_DEFAULT)
-COMBO(game_dota2_t,     LT1 LT2,      &kp T,                 GAME_DOTA2)
-COMBO(game_dota2_g,     LT2 LT3,      &kp G,                 GAME_DOTA2)
-COMBO(game_del,         LT4 LT3,      &kp DEL,               GAME_LAYERS)
+COMBO(dota2_extra_5,    LT1 LT2,      &kp F5,                GAME_DOTA2)
+COMBO(dota2_extra_4,    LT2 LT3,      &kp F4,                GAME_DOTA2)
 
-COMBO(game_bspc,        LM4 LM3,      &kp BSPC,              GAME_LAYERS)
-COMBO(game_enter,       LM1 LM0,      &kp ENTER,             GAME_LAYERS)
+COMBO(game_g,           LM0 LM1,      &kp G,                 GAME_LAYERS)
+COMBO(game_extra_3,     LM3 LM4,      &kp F3,                GAME_LAYERS)
 
-COMBO(game_g,           LB0 LB1,      &kp G,                 GAME_DEFAULT)
 COMBO(game_esc,         LB1 LB3,      &kp ESC,               GAME_LAYERS)
-COMBO(game_b,           LB1 LB2,      &kp B,                 GAME_LAYERS)
+COMBO(game_extra_1,     LB2 LB3,      &kp F1,                GAME_LAYERS)
+COMBO(game_extra_2,     LB1 LB2,      &kp F2,                GAME_LAYERS)
 
 /* layers entry combos */
-COMBO(to_game_default,    LT3 LT1,    &to GAME_DEFAULT,      ALL_LAYERS)
-COMBO_SLOW(to_game_dota2, LT1 LT2 LT3,&to GAME_DOTA2,        ALL_LAYERS)
+COMBO(game_default,    LT3 LT1,       &to GAME_DEFAULT,      ALL_LAYERS)
+COMBO_SLOW(game_dota2, LT1 LT2 LT3,   &to GAME_DOTA2,        ALL_LAYERS)
