@@ -15,14 +15,14 @@
     };
 
 // Layer (L)
-ZMK_LEADER_SEQUENCE(layer_meh,        &to MEH,             L P)
+ZMK_LEADER_SEQUENCE(layer_meh,        &to MEHS,            L P)
 
 // System (W)
 ZMK_LEADER_SEQUENCE(win_sleep,        &mc_win_sleep,       W W)
 ZMK_LEADER_SEQUENCE(win_shutdown,     &mc_win_shutdown,    W S)
 ZMK_LEADER_SEQUENCE(win_restart,      &mc_win_restart,     W R)
 ZMK_LEADER_SEQUENCE(kbd_reset,        &sys_reset,          W G)
-ZMK_LEADER_SEQUENCE(kbd_boot,         &bootloader,         W B)
+ZMK_LEADER_SEQUENCE(kbd_boot,         &bootloader,         W F)
 
 // Shortcuts (S)
 ZMK_LEADER_SEQUENCE(pt_color_pick,    &kp LG(LS(C)),       S C)

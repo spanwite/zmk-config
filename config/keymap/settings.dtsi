@@ -1,3 +1,4 @@
+/* MAIN */
 #define QUICK_TAP_TERM_SLOW  220
 #define QUICK_TAP_TERM_FAST  175
 
@@ -8,10 +9,6 @@
 #define PRIOR_IDLE_TERM      150
 
 #define RELEASE_AFTER        1000
-
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 600
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 20
-
 
 &mt {
     flavor = "tap-preferred";
@@ -44,15 +41,28 @@
     ignore-modifiers;
 };
 
+
+/* MOUSE */
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500 // 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 15  // 10
+
 &mmv {
-    acceleration-exponent = <2>;
-    time-to-max-speed-ms = <500>;
-    delay-ms = <0>;
+    acceleration-exponent = <1>;  // 1
+    time-to-max-speed-ms = <300>; // 300
+    delay-ms = <0>;               // 0
 };
 
 &msc {
-    acceleration-exponent = <2>;
-    time-to-max-speed-ms = <300>;
-    delay-ms = <0>;
+    acceleration-exponent = <0>;  // 1
+    time-to-max-speed-ms = <100>; // 300
+    delay-ms = <0>;               // 0
 };
 
+
+/* COMBOS */
+#define COMBO_TERM_FAST 30
+#define COMBO_TERM 45
+#define COMBO_TERM_SLOW 60
+
+#define COMBO_IDLE_FAST 50
+#define COMBO_IDLE_SLOW 100

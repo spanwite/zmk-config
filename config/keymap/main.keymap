@@ -6,15 +6,15 @@
 
 #include "zmk-helpers/helper.h"
 
-#include "./aliases/_include.h"
+#include "aliases/_include.h"
 
-#include "./settings/_include.h"
+#include "settings.dtsi"
 
-#include "./helpers/_include.h"
+#include "helpers/_include.h"
 
-#include "./behaviors/_include.h"
+#include "behaviors/_include.h"
 
-#include "./layers/_include.h"
+#include "layers/_include.h"
 
-#include "./combos/_include.h"
-#include "./leader.dtsi"
+#include "combos/_include.h"
+#include "leader.dtsi"
