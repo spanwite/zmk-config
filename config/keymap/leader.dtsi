@@ -24,14 +24,25 @@ ZMK_LEADER_SEQUENCE(win_restart,      &mc_win_restart,     W R)
 ZMK_LEADER_SEQUENCE(kbd_reset,        &sys_reset,          W G)
 ZMK_LEADER_SEQUENCE(kbd_boot,         &bootloader,         W F)
 
-// Shortcuts (S)
-ZMK_LEADER_SEQUENCE(pt_color_pick,    &kp LG(LS(C)),       S C)
-ZMK_LEADER_SEQUENCE(pt_cmd_palette,   &kp LG(LS(O)),       S S)
-ZMK_LEADER_SEQUENCE(pt_text_extract,  &kp LG(LS(E)),       S E)
-ZMK_LEADER_SEQUENCE(pt_pin_top,       &kp LG(LS(T)),       S T)
-ZMK_LEADER_SEQUENCE(pt_fancy_zones,   &kp LG(LS(F)),       S F)
-ZMK_LEADER_SEQUENCE(pt_ruler,         &kp LG(LS(R)),       S R)
-ZMK_LEADER_SEQUENCE(pt_paste,         &kp LG(LS(V)),       S V)
-ZMK_LEADER_SEQUENCE(pt_workspaces,    &kp LG(LS(GRAVE)),   S G)
-ZMK_LEADER_SEQUENCE(voice_typing,     &kp LG(H),           S D)
+/* 
+* Group: Shortcuts
+* Key: S
+* */
+/* PowerToys */
+ZMK_LEADER_SEQUENCE(color_pick,    &kp LG(LS(C)),       S C)
+ZMK_LEADER_SEQUENCE(cmd_palette,   &kp LG(LS(O)),       S S)
+ZMK_LEADER_SEQUENCE(text_extract,  &kp LG(LS(E)),       S E)
+ZMK_LEADER_SEQUENCE(pin_top,       &kp LG(LS(T)),       S T)
+ZMK_LEADER_SEQUENCE(fancy_zones,   &kp LG(LS(F)),       S F)
+ZMK_LEADER_SEQUENCE(ruler,         &kp LG(LS(R)),       S R)
+ZMK_LEADER_SEQUENCE(paste,         &kp LG(LS(V)),       S V)
+ZMK_LEADER_SEQUENCE(workspaces,    &kp LG(LS(GRAVE)),   S G)
+
+ZMK_LEADER_SEQUENCE(voice_typing,  &kp LG(H),           S D)
+
+ZMK_LEADER_SEQUENCE(gif,           &mc_gif,             S H)
+ZMK_LEADER_SEQUENCE(overlay,       &mc_overlay,         S J)
+ZMK_LEADER_SEQUENCE(scrnsht,       &mc_scrnsht,         S K)
+ZMK_LEADER_SEQUENCE(record,        &mc_record,          S L)
+ZMK_LEADER_SEQUENCE(replay,        &mc_replay,          S SEMI)
 

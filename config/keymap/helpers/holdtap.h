@@ -16,7 +16,7 @@
 
 #define HT_DOUBLE(NAME, BINDING) \
     HOLDTAP(ht_dbl_ ## NAME, &mc_dbl_ ## NAME, BINDING) \
-    MACRO_0_MS(mc_dbl_ ## NAME, BINDING BINDING)
+    MACRO_FLAT(mc_dbl_ ## NAME, BINDING BINDING)
 
 #define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS) \
 	ZMK_HOLD_TAP(NAME, \
