@@ -3,18 +3,19 @@
 COMBO(delete,           LT3 LT2,      &kp DEL,               ALL_LAYERS)
 COMBO_FAST(equal,       LT2 LT1,      &kp EQL,               ALL_LAYERS)
 
-COMBO(escape,           LM1 LM3,      &kp ESC,               TOGGLE_LAYERS)
+COMBO(escape,           LM3 LM1,      &kp ESC,               ALL_LAYERS)
 COMBO(enter,            LM2 LM1,      &kp ENTER,             ALL_LAYERS)
 COMBO(bspc,             LM3 LM2,      &kp BSPC,              ALL_LAYERS)
-COMBO(pin_code,         LM1 LM0,      &mc_my_pin,            ALL_LAYERS)
+COMBO(pin_code,         LM1 LM0,      &mc_my_pin,            TOGGLE_LAYERS)
+COMBO(save,             LM4 LM3,      &kp LC(S),             TOGGLE_LAYERS)
 
 COMBO(copy,             LB3 LB2,      &kp LC(C),             TOGGLE_LAYERS)
-COMBO(paste,            LB1 LB2,      &kp LC(V),             TOGGLE_LAYERS)
+COMBO(paste,            LB2 LB1,      &kp LC(V),             TOGGLE_LAYERS)
 COMBO(cut,              LB3 LB1,      &kp LC(X),             TOGGLE_LAYERS)
-COMBO(clb_history,      LB3 LB2 LB1,  &kp LG(V),             TOGGLE_LAYERS)
+COMBO(history,          LB3 LB2 LB1,  &kp LG(V),             TOGGLE_LAYERS)
 
 /* vertical combos */
-COMBO_SLOW(screenshot,  LT3 LM3,      &kp LG(LS(S)),         TOGGLE_LAYERS)
+COMBO_SLOW(scrnsht,     LT3 LM3,      &kp LG(LS(S)),         TOGGLE_LAYERS)
 
 /* diagonal combos */
 COMBO_FAST(ctrl_t,      LT2 LM1,      &kp LC(T),             TOGGLE_LAYERS)
@@ -30,7 +31,7 @@ COMBO(colon,            RT1 RT2,      &kp K_COLON,           TOGGLE_LAYERS)
 COMBO(under,            RT2 RT3,      &kp UNDER,             TOGGLE_LAYERS)
 
 COMBO(minus_dash,       RM2 RM3,      &ht_minus_dash 0 0,    TOGGLE_LAYERS)
-COMBO(tab,              RM2 RM1,      &kp TAB,               TOGGLE_LAYERS)
+COMBO(tab,              RM1 RM2,      &kp TAB,               ALL_LAYERS)
 COMBO(dqt,              RM1 RM3,      &kp K_DQT,             TOGGLE_LAYERS)
 
 COMBO(mouse,            RB2 RB3,      &mouse_word MOUSE,     TOGGLE_LAYERS)
