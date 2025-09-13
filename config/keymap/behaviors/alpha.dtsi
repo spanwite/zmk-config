@@ -30,7 +30,6 @@ LAYERTAP(lt_sl, &sl)
 LAYERTAP(lt_sk, &sk)
 LAYERTAP(lt_rpt, &key_repeat)
 LAYERTAP(lt_ldr, &leader)
-LAYERTAP(lt_mc_spc, &mc_spc)
 LAYERTAP(lt_spc_dot, &mm_spc_dot)
 
 /*  Home row mods */

@@ -1,78 +1,118 @@
-// Logical Operators
+/* Coding */
 HOLDTAP(ht_lgc_pipe,        &mc_lgc_or, &mc_pipe)
-MACRO_FAST(mc_lgc_or,      &kp SPACE &kp PIPE &kp PIPE &kp SPACE)
+MACRO_FAST(mc_lgc_or,       &kp SPACE &mc_pipe &mc_pipe &kp SPACE)
 
 HOLDTAP(ht_lgc_amps,        &mc_lgc_and, &mc_amps)
-MACRO_FAST(mc_lgc_and,     &kp SPACE &kp AMPS &kp AMPS &kp SPACE)
+MACRO_FAST(mc_lgc_and,      &kp SPACE &mc_amps &mc_amps &kp SPACE)
 
-// Punctuation
-MORPH_SINGLE(mm_spc_dot,    LSFT, &kp SPC, &kp K_DOT)
+/* Punctuation */
+MORPH_SINGLE(mm_spc_dot,    LSFT, &kp SPC, &mc_dot)
 MACRO_FLAT(mc_spc_dot,      &mc_dot &kp SPACE &sk LSHIFT)
 
-MACRO_FLAT(mc_spc_comma,    &kp K_COMMA &kp SPACE)
+MACRO_FLAT(mc_spc_comma,    &mc_comma &kp SPACE)
 
-MACRO_FAST(mc_em_dash,     &kp SPC &kp MINUS &kp MINUS &kp SPC)
+MACRO_FAST(mc_em_dash,      &kp SPC &kp MINUS &kp MINUS &kp SPC)
 HOLDTAP(ht_minus_dash,      &mc_em_dash, &mc_minus)
 
-// Email
-MACRO_FLAT(mc_at,           &kp K_AT)
-MACRO_FAST(mc_my_email,    MC_MY_EMAIL)
-HOLDTAP(ht_at_email,        &mc_my_email, &mc_at)
+/* Specific */
+MACRO_FAST(mc_email,        &kp E &kp X &kp A &kp M &kp P &kp L &kp E &kp AT_SIGN &kp M &kp A &kp I &kp L &kp DOT &kp R &kp U)
+HOLDTAP(ht_at_email,        &mc_email, &mc_at)
 
-// PIN
-MACRO_FAST(mc_my_pin,      MC_MY_PIN)
+MACRO_FAST(mc_pin_code,     &kp N0 &kp N0 &kp N0)
+
+MACRO_FLAT(mc_up_dir,       &mc_dot &mc_dot &kp SLASH)
+
+/* Common */
+MACRO_FLAT(mc_minus,        &kp MINUS)
 
 /*
 * Symbols: Windows Alt Codes
-* System: Windows
-* Use: When you don't want to install an external keyboard layer
-* Caution: 
-*	- In some apps these symbols may not work
-*	- Don't work in macros
+* OS: Windows
+* Features:
+*	v Works as a text character when typing text
+*	x Does not work as a shortcut in the apps
+*	x Sometimes does not work in zmk macros
+* Use it if you:
+*	- have more than one keyboard layout
+*	- want consistency in symbols typing
+*	- don't want to install an external keyboard layout or modify the existing one
+*	- are a Windows user
 * */
-/* #ifdef SYMBOLS_WINDOWS_ALT_CODES */
-MACRO_ALT_SYMBOL(mc_comma,        &kp KP_N4 &kp KP_N4)
-MACRO_ALT_SYMBOL(mc_at,           &kp KP_N6 &kp KP_N4)
-MACRO_ALT_SYMBOL(mc_colon,        &kp KP_N5 &kp KP_N8)
-MACRO_ALT_SYMBOL(mc_caret,        &kp KP_N9 &kp KP_N4)
-MACRO_ALT_SYMBOL(mc_lbrc,         &kp KP_N1 &kp KP_N2 &kp KP_N3)
-MACRO_ALT_SYMBOL(mc_qst,          &kp KP_N6 &kp KP_N3)
-MACRO_ALT_SYMBOL(mc_pipe,         &kp KP_N1 &kp KP_N2 &kp KP_N4)
-MACRO_ALT_SYMBOL(mc_sqt,          &kp KP_N3 &kp KP_N9)
-MACRO_ALT_SYMBOL(mc_rbrc,         &kp KP_N1 &kp KP_N2 &kp KP_N5)
-MACRO_ALT_SYMBOL(mc_lbkt,         &kp KP_N9 &kp KP_N1)
-MACRO_ALT_SYMBOL(mc_rbkt,         &kp KP_N9 &kp KP_N3)
-MACRO_ALT_SYMBOL(mc_less,         &kp KP_N6 &kp KP_N0)
-MACRO_ALT_SYMBOL(mc_dot,          &kp KP_N4 &kp KP_N6)
-MACRO_ALT_SYMBOL(mc_tilda,        &kp KP_N1 &kp KP_N2 &kp KP_N6)
-MACRO_ALT_SYMBOL(mc_amps,         &kp KP_N3 &kp KP_N8)
-MACRO_ALT_SYMBOL(mc_greater,      &kp KP_N6 &kp KP_N2)
-MACRO_ALT_SYMBOL(mc_dqt,          &kp KP_N3 &kp KP_N4)
-MACRO_ALT_SYMBOL(mc_spc,          &kp KP_N3 &kp KP_N2)
-/* #endif */
-
-
-/* #ifdef SYMBOLS_CUSTOM_KEYBOARD_LAYOUT */
-/* #define K_COMMA RA(N0) */
-/* #define K_COLON RA(N1) */
-/* #define K_AT    RA(N2) */
-/* #define K_PIPE  RA(N3) */
-/* #define K_AMPS  RA(N4) */
-/* #define K_LESS  RA(N5) */
-/* #define K_GRT   RA(N6) */
-/* #define K_QST   RA(N7) */
-/* #define K_LBKT  RA(N8) */
-/* #define K_RBKT  RA(N9) */
-/**/
-/* #define K_SEMI  RS(RA(N0)) */
-/* #define K_RBRC  RS(RA(N1)) */
-/* #define K_LBRC  RS(RA(N2)) */
-/* #define K_TILDA RS(RA(N3)) */
-/* #define K_DQT   RS(RA(N4)) */
-/* #define K_DOT   RS(RA(N5)) */
-/* #define K_DLLR  RS(RA(N6)) */
-/* #define K_CARET RS(RA(N7)) */
-/* #endif */
-
-MACRO_FLAT(mc_minus,        &kp MINUS)
-MACRO_FLAT(mc_up_dir,       &kp DOT &kp DOT &kp SLASH)
+#if defined(SYMBOLS_WINDOWS_ALT_CODES)
+	MACRO_ALT_SYMBOL(mc_comma,        &kp KP_N4 &kp KP_N4)
+	MACRO_ALT_SYMBOL(mc_colon,        &kp KP_N5 &kp KP_N8)
+	MACRO_ALT_SYMBOL(mc_at,           &kp KP_N6 &kp KP_N4)
+	MACRO_ALT_SYMBOL(mc_pipe,         &kp KP_N1 &kp KP_N2 &kp KP_N4)
+	MACRO_ALT_SYMBOL(mc_amps,         &kp KP_N3 &kp KP_N8)
+	MACRO_ALT_SYMBOL(mc_less,         &kp KP_N6 &kp KP_N0)
+	MACRO_ALT_SYMBOL(mc_greater,      &kp KP_N6 &kp KP_N2)
+	MACRO_ALT_SYMBOL(mc_qst,          &kp KP_N6 &kp KP_N3)
+	MACRO_ALT_SYMBOL(mc_lbkt,         &kp KP_N9 &kp KP_N1)
+	MACRO_ALT_SYMBOL(mc_rbkt,         &kp KP_N9 &kp KP_N3)
+	MACRO_ALT_SYMBOL(mc_semi,         &kp KP_N5 &kp KP_N9)
+	MACRO_ALT_SYMBOL(mc_rbrc,         &kp KP_N1 &kp KP_N2 &kp KP_N5)
+	MACRO_ALT_SYMBOL(mc_lbrc,         &kp KP_N1 &kp KP_N2 &kp KP_N3)
+	MACRO_ALT_SYMBOL(mc_tilde,        &kp KP_N1 &kp KP_N2 &kp KP_N6)
+	MACRO_ALT_SYMBOL(mc_dqt,          &kp KP_N3 &kp KP_N4)
+	MACRO_ALT_SYMBOL(mc_dot,          &kp KP_N4 &kp KP_N6)
+	MACRO_ALT_SYMBOL(mc_dllr,         &kp KP_N3 &kp KP_N6)
+	MACRO_ALT_SYMBOL(mc_caret,        &kp KP_N9 &kp KP_N4)
+	MACRO_ALT_SYMBOL(mc_sqt,          &kp KP_N3 &kp KP_N9)
+	/* MACRO_ALT_SYMBOL(mc_spc,          &kp KP_N3 &kp KP_N2) */
+/*
+* Symbols: Custom Keyboard Layout
+* OS: Any
+* Features:
+*	v Works as a text character when typing text
+*	v Works as a shortcut in the apps
+*	v Works in zmk macros
+* Use it if you:
+*	- have more than one keyboard layout
+*	- want consistency in symbols typing
+*	- can install external keyboard layout or modify an existing one
+* */
+#elif defined(SYMBOLS_CUSTOM_KEYBOARD_LAYOUT)
+	MACRO_FLAT(mc_comma, &kp RA(N0))
+	MACRO_FLAT(mc_colon, &kp RA(N1))
+	MACRO_FLAT(mc_at, &kp RA(N2))
+	MACRO_FLAT(mc_pipe, &kp RA(N3))
+	MACRO_FLAT(mc_amps, &kp RA(N4))
+	MACRO_FLAT(mc_less, &kp RA(N5))
+	MACRO_FLAT(mc_greater, &kp RA(N6))
+	MACRO_FLAT(mc_qst, &kp RA(N7))
+	MACRO_FLAT(mc_lbkt, &kp RA(N8))
+	MACRO_FLAT(mc_rbkt, &kp RA(N9))
+	MACRO_FLAT(mc_semi, &kp RS(RA(N0)))
+	MACRO_FLAT(mc_rbrc, &kp RS(RA(N1)))
+	MACRO_FLAT(mc_lbrc, &kp RS(RA(N2)))
+	MACRO_FLAT(mc_tilde, &kp RS(RA(N3)))
+	MACRO_FLAT(mc_dqt, &kp RS(RA(N4)))
+	MACRO_FLAT(mc_dot, &kp RS(RA(N5)))
+	MACRO_FLAT(mc_dllr, &kp RS(RA(N6)))
+	MACRO_FLAT(mc_caret, &kp RS(RA(N7)))
+/*
+* Symbols: Usual
+* Features: Usual symbols that work nicely in English keyboard layout
+* Use it if you:
+*	- have only one English keyboard layout
+* */
+#else
+	MACRO_FLAT(mc_comma, &kp COMMA)
+	MACRO_FLAT(mc_colon, &kp COLON)
+	MACRO_FLAT(mc_at, &kp AT)
+	MACRO_FLAT(mc_pipe, &kp PIPE)
+	MACRO_FLAT(mc_amps, &kp AMPS)
+	MACRO_FLAT(mc_less, &kp LT)
+	MACRO_FLAT(mc_greater, &kp GT)
+	MACRO_FLAT(mc_qst, &kp QMARK)
+	MACRO_FLAT(mc_lbkt, &kp LBKT)
+	MACRO_FLAT(mc_rbkt, &kp RBKT)
+	MACRO_FLAT(mc_semi, &kp SEMI)
+	MACRO_FLAT(mc_rbrc, &kp RBRC)
+	MACRO_FLAT(mc_lbrc, &kp LBRC)
+	MACRO_FLAT(mc_tilde, &kp TILDE)
+	MACRO_FLAT(mc_dqt, &kp DQT)
+	MACRO_FLAT(mc_dot, &kp DOT)
+	MACRO_FLAT(mc_dllr, &kp DLLR)
+	MACRO_FLAT(mc_caret, &kp CARET)
+#endif

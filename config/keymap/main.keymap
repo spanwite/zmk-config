@@ -6,15 +6,37 @@
 
 #include "zmk-helpers/helper.h"
 
-#include "aliases/_include.h"
-
+#include "aliases.h"
 #include "settings.dtsi"
 
-#include "helpers/_include.h"
+/* Helpers */
+#include "helpers/macros.h"
+#include "helpers/combos.h"
+#include "helpers/meh-keys.h"
+#include "helpers/mod-morph.h"
+#include "helpers/holdtap.h"
 
-#include "behaviors/_include.h"
+/* Behaviors */
+#include "behaviors/alpha.dtsi"
+#include "behaviors/symbols.dtsi"
+#include "behaviors/navigation.dtsi"
+#include "behaviors/functions.dtsi"
 
-#include "layers/_include.h"
+#if __has_include("behaviors/.local.dtsi")
+	#include "behaviors/.local.dtsi"
+#endif
 
-#include "combos/_include.h"
+/* Layers */
+#include "layers/alpha.dtsi"
+#include "layers/numbers.dtsi"
+#include "layers/symbols.dtsi"
+#include "layers/navigation.dtsi"
+#include "layers/specific.dtsi"
+#include "layers/games.dtsi"
+#include "layers/function.dtsi"
+
+/* Combos */
+#include "combos/main.dtsi"
+#include "combos/games.dtsi"
+
 #include "leader.dtsi"

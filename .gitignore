@@ -1,4 +1,4 @@
-**/*.private*
+**/*.local*
 .build
 .direnv
 .west

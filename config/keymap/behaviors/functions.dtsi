@@ -1,35 +1,32 @@
-#define WIN_WAIT_MS 500
+#ifdef OS_WINDOWS
+	#define WIN_WAIT_MS 500
+	#define LANG_TAP(KEY) &kp KEY KP_CHANGE_LANG &kp KEY
+	#define WIN_POWER &ht_win_power 0 0
 
-#define LANG_TAP(KEY) &kp KEY KP_CHANGE_LANG &kp KEY
-
-#define WIN_POWER &ht_win_power 0 0
-
-/*
-ZMK_HOLD_TAP(ht_win_power,
-    tapping-term-ms = <300>;
-    bindings = <&mc_win_restart>, <&td_win_power>;
-)
-ZMK_TAP_DANCE(td_win_power,
-    tapping-term-ms = <300>;
-    bindings = <&mc_win_sleep>, <&mc_win_shutdown>;
-)
-*/
-
-ZMK_MACRO(mc_win_sleep,
-    wait-ms = <WIN_WAIT_MS>;
-    tap-ms = <5>;
-    bindings = <&kp LG(X) LANG_TAP(U) LANG_TAP(S)>;
-)
-ZMK_MACRO(mc_win_shutdown,
-    wait-ms = <WIN_WAIT_MS>;
-    tap-ms = <5>;
-    bindings = <&kp LG(X) LANG_TAP(U) LANG_TAP(U)>;
-)
-ZMK_MACRO(mc_win_restart,
-    wait-ms = <WIN_WAIT_MS>;
-    tap-ms = <5>;
-    bindings = <&kp LG(X) LANG_TAP(U) LANG_TAP(R)>;
-)
+	ZMK_MACRO(mc_sleep,
+		wait-ms = <WIN_WAIT_MS>;
+		tap-ms = <5>;
+		bindings = <&kp LG(X) LANG_TAP(U) LANG_TAP(S)>;
+	)
+	ZMK_MACRO(mc_shutdown,
+		wait-ms = <WIN_WAIT_MS>;
+		tap-ms = <5>;
+		bindings = <&kp LG(X) LANG_TAP(U) LANG_TAP(U)>;
+	)
+	ZMK_MACRO(mc_restart,
+		wait-ms = <WIN_WAIT_MS>;
+		tap-ms = <5>;
+		bindings = <&kp LG(X) LANG_TAP(U) LANG_TAP(R)>;
+	)
+	MACRO_FLAT(mc_lock, &kp LG(L))
+	MACRO_FLAT(mc_scrnsht, &kp LG(LS(S)))
+#else
+	MACRO_FLAT(mc_sleep, &kp K_SLEEP)
+	MACRO_FLAT(mc_shutdown, &kp K_PWR)
+	MACRO_FLAT(mc_restart, &trans)
+	MACRO_FLAT(mc_lock, &kp K_LOCK)
+	MACRO_FLAT(mc_scrnsht, &kp PRINTSCREEN),
+#endif
 
 MACRO_FLAT(mc_overlay,      MAKE_MEH(F1))
 MACRO_FLAT(mc_record,       MAKE_MEH(F2))

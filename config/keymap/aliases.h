@@ -1,3 +1,10 @@
+/* Keys */
+#define KP_CHANGE_LANG &kp LC(LSHFT)
+
+#define ___ &trans
+#define XXX &none
+
+/* Layers */
 #define ALPHA         0
 #define SHIFTED       1
 #define NUM_ROW       2

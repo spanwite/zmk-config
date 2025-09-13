@@ -14,13 +14,20 @@
         }; \
     };
 
-// Layer (L)
+/* 
+* Group: Layers
+* Key: L
+* */
 ZMK_LEADER_SEQUENCE(layer_meh,        &to MEHS,            L P)
 
-// System (W)
-ZMK_LEADER_SEQUENCE(win_sleep,        &mc_win_sleep,       W W)
-ZMK_LEADER_SEQUENCE(win_shutdown,     &mc_win_shutdown,    W S)
-ZMK_LEADER_SEQUENCE(win_restart,      &mc_win_restart,     W R)
+
+/* 
+* Group: System
+* Key: W
+* */
+ZMK_LEADER_SEQUENCE(win_sleep,        &mc_sleep,           W W)
+ZMK_LEADER_SEQUENCE(win_shutdown,     &mc_shutdown,        W S)
+ZMK_LEADER_SEQUENCE(win_restart,      &mc_restart,         W R)
 ZMK_LEADER_SEQUENCE(kbd_reset,        &sys_reset,          W G)
 ZMK_LEADER_SEQUENCE(kbd_boot,         &bootloader,         W F)
 
